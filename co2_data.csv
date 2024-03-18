@@ -1,0 +1,1420 @@
+model_id,datasets_size,co2_emission,co2_reported,geographical_location,accuracy,f1,rouge_1,rouge_l,domain,size,auto
+distilgpt2,39769494896,149200.0,1.0,East US,nan,nan,nan,nan,NLP,352833716,False
+en_lg,0,133.0219882109991,1.0,Not Specified,nan,nan,0.525404,0.501696,NLP,308192133,True
+lg_en,0,126.34446293851818,1.0,Not Specified,nan,nan,0.624613,0.58183,NLP,308319365,True
+autonlp-triage-35248482,0,7.989144645413398,1.0,Not Specified,0.9728654124457308,0.949537871674076,nan,nan,NLP,438043821,True
+autonlp-Test-530014983,0,55.10196329868386,1.0,Not Specified,0.9298837645294338,0.9296904373981704,nan,nan,NLP,433331373,True
+autonlp-Feedback1-479512837,0,123.88023112815048,1.0,Not Specified,0.7961119332705503,0.7616345204219084,nan,nan,NLP,1123320237,True
+autonlp-fa-473312409,0,25.12873571489861,1.0,Not Specified,0.7990650945370823,0.7429662929144928,nan,nan,NLP,328541293,True
+nirvana,0,4.214012748213151,1.0,Not Specified,nan,nan,0.4118079999999999,0.313106,NLP,2279631601,True
+autonlp-Scientific_Title_Generator-34558227,0,137.60574081887984,1.0,Not Specified,nan,nan,0.448482,0.4017159999999999,NLP,2279631601,True
+kaggle-comp-test,0,60.744727079482495,1.0,Not Specified,0.8615328555811976,0.8642434650461513,nan,nan,NLP,1340749741,True
+autonlp-pos-tag-bosque,0,6.2107269129101805,1.0,Not Specified,0.9714309035997062,0.9728305785123968,nan,nan,NLP,433465905,True
+autonlp-judulberita-32517788,0,0.9413042739759596,1.0,Not Specified,0.8641304347826086,0.8226950354609929,nan,nan,NLP,442323117,True
+autonlp-formality_scoring_2-32597818,0,8.655894631203154,1.0,Not Specified,nan,nan,nan,nan,NLP,498671021,True
+autonlp-vaccinfaq-22144706,0,27.135492487925884,1.0,Not Specified,0.6377269139700079,0.5181293370145044,nan,nan,NLP,437190509,True
+autonlp-bp-29016523,0,3.273303707756322,1.0,Not Specified,0.8333333333333334,0.7937936978656889,nan,nan,NLP,1340749741,True
+autonlp-Gibb-Detect-515314387,0,70.95647633212745,1.0,Not Specified,0.9760103738923708,0.9728412857204902,nan,nan,NLP,1340745645,True
+aelaectra-danish-electra-small-cased,13187500000,4009.5,1.0,Denmark,nan,0.8008,nan,nan,NLP,57979406,False
+aelaectra-danish-electra-small-uncased,7187500000,4009.5,1.0,Denmark,nan,0.7803,nan,nan,NLP,57979403,False
+autonlp-tweets-classification-23044997,0,4.819872182577655,1.0,Not Specified,0.9997478885667463,0.9991190902836992,nan,nan,NLP,267869297,True
+autonlp-Summarization-AutoNLP-24135330,0,155.8470724053265,1.0,Not Specified,nan,nan,0.526656,0.401268,NLP,2283825905,True
+autonlp-fake-covid-news-36769078,0,23.42719853096565,1.0,Not Specified,0.9817757009345794,0.9808917197452228,nan,nan,NLP,1421611309,True
+autonlp-au_topics-452311620,0,208.0823957145878,1.0,Not Specified,0.8767479025169796,0.8618813750734912,nan,nan,NLP,1341249901,True
+autonlp-pegasus-21664560,0,5.680803958729511,1.0,Not Specified,nan,nan,0.3814909999999999,0.268448,NLP,2279631601,True
+autonlp-123-478412765,0,69.86520391863117,1.0,Not Specified,0.9539955699437724,0.9549699799866576,nan,nan,NLP,1421611309,True
+autonlp-bbc-news-classification-37229289,0,5.448567309047846,1.0,Not Specified,0.9867109634551496,0.9859067529980614,nan,nan,NLP,1340749741,True
+autonlp-bbc-roberta-37249301,0,1.9859980179658825,1.0,Not Specified,0.9833887043189368,0.9832763664701248,nan,nan,NLP,498683309,True
+autonlp-hindi-question-answering-23865268,0,39.76330395590446,1.0,Not Specified,nan,nan,nan,nan,NLP,2235534897,True
+autonlp-imdb-roberta-base-3662644,0,25.894117734124272,1.0,Not Specified,0.92604,0.923522355958142,nan,nan,NLP,498674093,True
+autonlp-prodigy-10-3362554,0,5.340540212393564,1.0,Not Specified,0.9587076867229332,0.7626816212082591,nan,nan,NLP,1336566961,True
+autonlp-toxic-new-30516963,0,30.68499581938628,1.0,Not Specified,0.9688222161294112,0.8338204592901879,nan,nan,NLP,267860081,True
+autonlp-kpmg_nlp-18833547,0,64.58945483765274,1.0,Not Specified,0.9586074193404036,0.9468339778730884,nan,nan,NLP,540872877,True
+autonlp-auto-nlp-lyrics-classification-19333717,0,88.89388195672073,1.0,Not Specified,0.6207088513638894,0.4625080366154476,nan,nan,NLP,1340753837,True
+autonlp-mrcooper_text_classification-529614927,0,5.999771405025692,1.0,Not Specified,0.7636103151862464,0.770630619486531,nan,nan,NLP,438046893,True
+autonlp-group-classification-441411446,0,0.4362732160754736,1.0,Not Specified,0.8222222222222222,0.2912091747693842,nan,nan,NLP,328565869,True
+autonlp-user-review-classification-536415182,0,1.268309634217171,1.0,Not Specified,0.8873239436619719,0.8859416445623343,nan,nan,NLP,438025389,True
+autonlp-alberti-stanza-names-34318169,0,8.612473981829835,1.0,Not Specified,0.6083916083916084,0.5420169617715481,nan,nan,NLP,711639341,True
+autonlp-text-hateful-memes-36789092,0,1.4280361775467445,1.0,Not Specified,0.7666078777189889,0.6532751091703057,nan,nan,NLP,263172209,True
+autonlp-Tweet-Sentiment-Extraction-20114061,0,3.651199395353127,1.0,Not Specified,0.8036219581211093,0.807095210403678,nan,nan,NLP,267863153,True
+autonlp-dialogue-summariztion-583416409,0,72.26141764997115,1.0,Not Specified,nan,nan,0.477785,0.402231,NLP,1625557313,True
+autonlp-cml-412010597,0,10.411685187181709,1.0,Not Specified,0.9475446428571428,0.9548511047070124,nan,nan,NLP,328525933,True
+autonlp-covid-432211280,0,8.898145050355591,1.0,Not Specified,0.9520089285714286,0.958956411072224,nan,nan,NLP,328525933,True
+autonlp-antisemitism-2-21194454,0,2.0686690092905224,1.0,Not Specified,0.7572692793931732,0.7692307692307693,nan,nan,NLP,438019245,True
+tweet-disaster-classifier,0,27.22397099134103,1.0,Not Specified,0.8066924731182795,0.7835463282531184,nan,nan,NLP,267893873,True
+twitter-sentiment,0,186.8637425115097,1.0,Not Specified,0.9233253193796256,0.9240407542958708,nan,nan,NLP,438046893,True
+autonlp-ks-530615016,0,2.2247356264808964,1.0,Not Specified,0.676854818831649,0.3297126297995653,nan,nan,NLP,267866225,True
+sent-sci-irrelevance,0,3.667033499762825,1.0,Not Specified,0.9133333333333332,0.9221556886227544,nan,nan,NLP,1334486957,True
+headline_writer,0,114.71292762345828,1.0,Not Specified,nan,nan,0.524988,0.471727,NLP,557979193,True
+headline_writer2,0,396.629376395644,1.0,Not Specified,nan,nan,0.517922,0.464585,NLP,1625557313,True
+bias-detection-model,2600000,0.319355,1.0,Not Specified,0.62,nan,nan,nan,NLP,268000000,False
+environmental-due-diligence-model,155000,0.1069,1.0,Not Specified,0.71,nan,nan,nan,NLP,268000000,False
+dalle-mini,3500000000,7540.0,1.0,East US,nan,nan,nan,nan,Multimodal,1750000000,False
+autonlp-legal-text-summary-457311749,0,10.14880558843294,1.0,Not Specified,nan,nan,0.324854,0.300602,NLP,2283825905,True
+autonlp-shajBERT-38639804,0,11.98841452241473,1.0,Not Specified,0.86783988957902,0.8669477050676501,nan,nan,NLP,71811793,True
+autonlp-predict_ROI_1-29797722,0,2.7516207978192737,1.0,Not Specified,0.7559139784946236,0.4594734612976928,nan,nan,NLP,438022317,True
+autonlp-predict_ROI_1-29797730,0,2.243912766446172,1.0,Not Specified,0.7596774193548387,0.4740565300039588,nan,nan,NLP,498677165,True
+autonlp-covid-fake-news-36839110,0,123.79523392848652,1.0,Not Specified,0.9714953271028036,0.9694235588972432,nan,nan,NLP,890430161,True
+autonlp-new_tx-607517182,0,3.842950628218143,1.0,Not Specified,0.8679706601466992,0.719846919916469,nan,nan,NLP,498692525,True
+autonlp-txc-17923124,0,133.57087522185148,1.0,Not Specified,0.9325402190077058,0.7283811287183823,nan,nan,NLP,498741741,True
+autonlp-txc-17923129,0,610.861733873082,1.0,Not Specified,0.9264228741381642,0.6730537318152493,nan,nan,NLP,1334577133,True
+autonlp-api-boamente-417310788,0,6.826886567147602,1.0,Not Specified,0.9578392621870884,0.9255813953488372,nan,nan,NLP,1337755565,True
+autonlp-api-boamente-417310793,0,9.446754273734577,1.0,Not Specified,0.9407114624505928,0.9028077753779696,nan,nan,NLP,1337755565,True
+latam-question-quality,0,20.79016987800992,1.0,Not Specified,0.9789,0.9787811745776348,nan,nan,NLP,504004013,True
+autonlp-news-summarization-483413089,0,210.6348731063569,1.0,Not Specified,nan,nan,0.505981,0.4605129999999999,NLP,2283825905,True
+autonlp-Summarization-20684327,0,437.2441955971972,1.0,Not Specified,nan,nan,0.037729,0.035066,NLP,1200770885,True
+autonlp-Summarization-20684328,0,1133.9679082840014,1.0,Not Specified,nan,nan,0.094193,0.079376,NLP,2329700301,True
+xlmindic-base-multiscript-soham,97000000,0.0,1.0,Not Specified,nan,nan,nan,nan,NLP,57007313,False
+xlmindic-base-multiscript,19525445000,28.53,1.0,Not Specified,nan,nan,nan,nan,NLP,57591810,False
+xlmindic-base-uniscript-soham,0,0.21,1.0,Not Specified,nan,nan,nan,nan,NLP,57007313,False
+xlmindic-base-uniscript,0,28.53,1.0,Not Specified,nan,nan,nan,nan,NLP,83391338,False
+it5-base-formal-to-informal,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-headline-generation,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-ilgiornale-to-repubblica,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-informal-to-formal,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-news-summarization,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990284749,False
+it5-base-question-answering,58723160,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-question-generation,58723160,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-repubblica-to-ilgiornale,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-base-wiki-summarization,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,990280781,False
+it5-large-formal-to-informal,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-headline-generation,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-ilgiornale-to-repubblica,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-informal-to-formal,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-news-summarization,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-question-answering,58723160,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-question-generation,58723160,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-repubblica-to-ilgiornale,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-large-wiki-summarization,0,51.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,3132640293,False
+it5-small-formal-to-informal,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-headline-generation,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-ilgiornale-to-repubblica,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-informal-to-formal,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-news-summarization,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-question-answering,58723160,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-question-generation,58723160,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-repubblica-to-ilgiornale,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+it5-small-wiki-summarization,0,8.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,307824645,False
+mt5-base-formal-to-informal,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-headline-generation,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-ilgiornale-to-repubblica,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-informal-to-formal,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-news-summarization,44000000,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-question-answering,58723160,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-question-generation,58723160,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-repubblica-to-ilgiornale,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-base-wiki-summarization,0,40.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,2329728077,False
+mt5-small-formal-to-informal,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-headline-generation,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-ilgiornale-to-repubblica,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-informal-to-formal,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-news-summarization,44000000,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-question-answering,58723160,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-question-generation,58723160,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-repubblica-to-ilgiornale,0,17.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+mt5-small-wiki-summarization,0,14.0,1.0,"Eemshaven, Netherlands, Europe",nan,nan,nan,nan,NLP,1200789509,False
+autonlp-intent-modelling-21895237,0,1.5688902203257171,1.0,Not Specified,nan,nan,0.3241579999999999,0.299278,NLP,1222374713,True
+autonlp-reuters-summarization-31447312,0,206.46626351359515,1.0,Not Specified,nan,nan,0.559215,0.53185,NLP,2283825905,True
+autonlp-song-lyrics-18753417,0,112.75546781635975,1.0,Not Specified,0.6680274633512711,0.5384854358272774,nan,nan,NLP,438031533,True
+autonlp-song-lyrics-18753423,0,55.55298771685949,1.0,Not Specified,0.654110224531453,0.5327761649415296,nan,nan,NLP,263184497,True
+autonlp-shipping_status_2-27366103,0,32.912881644048,1.0,Not Specified,0.9437683592110784,0.8912337662337663,nan,nan,NLP,541344881,True
+autonlp-tele_new_5k-557515810,0,2.96638567287195,1.0,Not Specified,0.9713212700580404,0.9550914803178708,nan,nan,NLP,1336591537,True
+autonlp-tele_red_data_model-585716433,0,2.379476355147211,1.0,Not Specified,0.9724770642201837,0.9566742676723382,nan,nan,NLP,1336591537,True
+autonlp-text2sql-18413376,0,1.4091714704861449,1.0,Not Specified,nan,nan,0.61765,0.613222,NLP,891730879,True
+autonlp-trans_class_arg-32957902,0,0.9756221672668952,1.0,Not Specified,0.8939828080229226,0.8177339901477833,nan,nan,NLP,436415661,True
+autonlp-SST1-529214890,0,49.618294309910624,1.0,Not Specified,0.7042338838232481,0.6164041045783032,nan,nan,NLP,498683309,True
+autonlp-SST2-551215591,0,8.883161797287569,1.0,Not Specified,0.969531605275125,0.9722205769116864,nan,nan,NLP,267860081,True
+autonlp-TREC-classification-522314623,0,15.186006626915717,1.0,Not Specified,0.9643183897529736,0.9493690949638436,nan,nan,NLP,1421627693,True
+autonlp-Gibberish-Detector-492513457,0,5.527544460835904,1.0,Not Specified,0.9735624586913416,0.9736173135739408,nan,nan,NLP,267866225,True
+autonlp-vaccinchat-22134694,0,14.525955245648218,1.0,Not Specified,0.6369376479873717,0.5363181342408181,nan,nan,NLP,467690605,True
+politics-sentence-classifier,0,1.06099358268878,1.0,Not Specified,0.8097826086956522,0.7713543865034599,nan,nan,NLP,442582445,True
+autonlp-FR_another_test-565016091,0,70.54639641012226,1.0,Not Specified,0.8545909432074056,0.7910662503820883,nan,nan,NLP,442610093,True
+autonlp-imdb-test-21134442,0,298.7849611952843,1.0,Not Specified,0.9393,0.9395237620803027,nan,nan,NLP,1340737453,True
+autonlp-imdb-test-21134453,0,38.10256536061048,1.0,Not Specified,0.9355,0.9354418977079372,nan,nan,NLP,328525933,True
+autonlp-reuters-summarization-34018133,0,286.4350821612984,1.0,Not Specified,nan,nan,0.554013,0.5257000000000001,NLP,2283825905,True
+reuters-summarization,0,286.4350821612984,1.0,Not Specified,nan,nan,0.554013,0.5257000000000001,NLP,2283825905,True
+autonlp-Doctor_DE-24595544,0,92.87363201770962,1.0,Not Specified,nan,nan,nan,nan,NLP,269638769,True
+autonlp-Doctor_DE-24595545,0,203.30658367993385,1.0,Not Specified,nan,nan,nan,nan,NLP,439797933,True
+autonlp-Doctor_DE-24595546,0,210.5957437893554,1.0,Not Specified,nan,nan,nan,nan,NLP,439797933,True
+autonlp-Doctor_DE-24595547,0,396.5529429198159,1.0,Not Specified,nan,nan,nan,nan,NLP,1343111405,True
+autonlp-Doctor_DE-24595548,0,183.88911013564527,1.0,Not Specified,nan,nan,nan,nan,NLP,504028589,True
+yelp-rating-classification,0,15.62335109262394,1.0,Not Specified,0.6631428571428571,0.6613073053700258,nan,nan,NLP,328535149,True
+autonlp-bert-covid-407910458,0,9.72797586719897,1.0,Not Specified,0.9119825708061002,0.922664624808576,nan,nan,NLP,267860081,True
+autonlp-bert-covid-407910467,0,10.719439124704492,1.0,Not Specified,0.9516339869281044,0.9563507668108534,nan,nan,NLP,328525933,True
+autonlp-eo-590516680,0,2.3709499644854883,1.0,Not Specified,0.6608695652173913,0.688,nan,nan,NLP,438019245,True
+autonlp-testing-504313966,0,12.994518654810642,1.0,Not Specified,0.9398032027783138,0.9416604338070308,nan,nan,NLP,539688365,True
+headline-test,0,651.3545590912366,1.0,Not Specified,nan,nan,0.028187,0.0273959999999999,NLP,2329700301,True
+autonlp-roberta-large-finetuned-467612250,0,73.72876780772296,1.0,Not Specified,0.9541659567217584,0.9551292743953294,nan,nan,NLP,1421611309,True
+autonlp-sentiment-analysis-456211724,0,22.28263989637389,1.0,Not Specified,0.9119100357812234,0.9163024121741946,nan,nan,NLP,267860081,True
+autonlp-department-classification-534915130,0,1.486285677432006,1.0,Not Specified,0.9204545454545454,0.9103715740678612,nan,nan,NLP,436446381,True
+autonlp-Fake-news-detection-system-29906863,0,3.86243979614321,1.0,Not Specified,0.9084807809640024,0.9428353658536586,nan,nan,NLP,1112266157,True
+autonlp-roberta-large2-479012819,0,71.60954851696604,1.0,Not Specified,0.93951269381496,0.9388879325185058,nan,nan,NLP,1421611309,True
+autonlp-imdb-classification-596216804,0,274.81371614671764,1.0,Not Specified,0.9239,0.9247652001977262,nan,nan,NLP,1334486957,True
+autonlp-emotion-clf,0,23.4692320403666,1.0,Not Specified,0.9438026849828286,0.9093924156122388,nan,nan,NLP,1334503341,True
+election_relevancy_best,0,1.3248523193990855,1.0,Not Specified,nan,nan,nan,nan,NLP,498674093,False
+stop_the_steal_relevancy_analysis-binary,0,0.6503024714880831,1.0,Not Specified,nan,nan,nan,nan,NLP,328525933,False
+autonlp-mt5-xlsum-25085641,0,11.166602089650883,1.0,Not Specified,nan,nan,0.5173530000000001,0.454129,NLP,2329700301,True
+autonlp-AUS-to-US-601516964,0,3.393079684327585,1.0,Not Specified,nan,nan,0.428783,0.428492,NLP,891730879,True
+autonlp-AUS-to-US2-606817121,0,1.1512164322839105,1.0,Not Specified,nan,nan,0.348844,0.3463389999999999,NLP,891730879,True
+autonlp-UK-to-US-600416931,0,1.113131499202784,1.0,Not Specified,nan,nan,0.457945,0.458031,NLP,891730879,True
+autonlp-US-to-AUS3-606917136,0,1.2956300881026075,1.0,Not Specified,nan,nan,0.310639,0.311492,NLP,891730879,True
+autonlp-US-to-UK-604417040,0,3.327166794864461,1.0,Not Specified,nan,nan,0.392808,0.39113,NLP,891730879,True
+autonlp-US-to-UK2-606317091,0,1.1913570653422176,1.0,Not Specified,nan,nan,0.4420349999999999,0.439114,NLP,891730879,True
+autonlp-US_to_AUS-607117159,0,1.4276876566788057,1.0,Not Specified,nan,nan,0.46134,0.458856,NLP,891730879,True
+autonlp-paraphrasing-607217177,0,193.70003779879124,1.0,Not Specified,nan,nan,0.483375,0.422748,NLP,891730879,True
+autonlp-new-text-classification-38319698,0,2.0318857468309206,1.0,Not Specified,0.9909255898366606,0.9951842095089772,nan,nan,NLP,267869297,True
+autonlp-more_fine_tune_24465520-26265897,0,81.7509252560808,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265898,0,82.78379967029494,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265899,0,124.66009281731397,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265900,0,123.16270720220912,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265901,0,80.04360178242067,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265902,0,83.78453848505326,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265903,0,108.13983395548236,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265904,0,108.63800043275934,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265905,0,103.35758036182682,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265906,0,83.00580438705762,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265907,0,103.5636883689371,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265908,0,96.32087452115675,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265909,0,80.25874179679201,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265910,0,77.64468929470678,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-more_fine_tune_24465520-26265911,0,97.58591836686978,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465514,0,54.44076291568145,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465515,0,56.45146749922553,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465516,0,65.5797497320557,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465517,0,54.75747617143382,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465518,0,45.268576304018616,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465519,0,58.19097299648645,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465520,0,57.56554511511173,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465521,0,70.20260764805424,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465522,0,44.450538076574766,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465523,0,56.99866929988893,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465524,0,58.51753681929935,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-roberta-base-squad2-24465525,0,63.99723026110488,1.0,Not Specified,nan,nan,nan,nan,NLP,1109903089,True
+autonlp-ingredient_sentiment_analysis-19126711,0,1.8458289701133035,1.0,Not Specified,0.9790668170284748,0.6885245901639344,nan,nan,NLP,1336542385,True
+Robertabase_Ana4,0,19.964760910364927,1.0,Not Specified,0.8092592592592592,0.8085189591849891,nan,nan,NLP,1340766125,True
+autonlp-poi_train-31237266,0,390.3941117677583,1.0,Not Specified,0.9379398019660156,0.7309841664079478,nan,nan,NLP,1302259629,True
+autonlp-imdb-sentiment-analysis-english-470512388,0,256.38650494338367,1.0,Not Specified,0.9388,0.9394179370421698,nan,nan,NLP,1334486957,True
+autonlp-test-459011902,0,10.9230691350863,1.0,Not Specified,0.7453263867606497,0.630810193227066,nan,nan,NLP,409185453,True
+autonlp-traffic-nlp-451311592,0,1.869714429686524,1.0,Not Specified,0.8042452830188679,0.8450528935905414,nan,nan,NLP,433331373,True
+autonlp-traffic_nlp_binary-537215209,0,1.171798205242445,1.0,Not Specified,0.8597449908925319,0.8760064412238325,nan,nan,NLP,498674093,True
+autonlp-lessons_tagging-606217261,0,7.968891750522204,1.0,Not Specified,0.6777163904235728,0.6817448899563519,nan,nan,NLP,1421639981,True
+autonlp-cyberlandr-ai-4-614417501,0,1.6912535041856878,1.0,Not Specified,0.5,0.3333333333333333,nan,nan,NLP,1340745645,True
+autonlp-cyberlandr-ai-4-614417500,0,1.131603488976132,1.0,Not Specified,0.3333333333333333,0.225,nan,nan,NLP,1334495149,True
+autonlp-optimized-paraphrasing-615217541,0,1.166696812121839,1.0,Not Specified,nan,nan,1.0,1.0,NLP,891730879,True
+autonlp-parrot_paraphrasing-615317556,0,0.8335491678002559,1.0,Not Specified,nan,nan,1.0,1.0,NLP,891730879,True
+autonlp-swahili-sentiment-615517563,0,1.9057858628956457,1.0,Not Specified,0.695364238410596,0.6088819062581828,nan,nan,NLP,438022317,True
+autonlp-abbb-622117836,0,2.22514962526191,1.0,Not Specified,0.7973333333333333,0.4600907658897848,nan,nan,NLP,409640685,True
+autonlp-imdb-sentiment-analysis-623817873,0,147.38973865706626,1.0,Not Specified,0.9306,0.930026214962694,nan,nan,NLP,1334486957,True
+autonlp-cat333-624217911,0,2.267288583123193,1.0,Not Specified,0.90989010989011,0.7398394202169645,nan,nan,NLP,409243885,True
+autonlp-cat33-624317932,0,1.2490471218570545,1.0,Not Specified,0.8717391304347826,0.6625543939916455,nan,nan,NLP,409253165,True
+autonlp-mono-625317956,0,1.1406456838043837,1.0,Not Specified,0.8982035928143712,0.7843756230226546,nan,nan,NLP,267924657,True
+autonlp-kaggledays-625717986,0,68.73074770596023,1.0,Not Specified,0.6118427330852181,0.6112554383858383,nan,nan,NLP,438022317,True
+autonlp-kaggledays-625717992,0,28.622267513847277,1.0,Not Specified,0.6022282660559214,0.6024258279848015,nan,nan,NLP,263175281,True
+first,0,0.8335491678002559,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autonlp-savesome-631818261,0,5.714250590300453,1.0,Not Specified,0.8792873051224944,0.839261602941426,nan,nan,NLP,467189229,True
+autonlp-Text-Classification-Catalonia-Independence-AutoNLP-633018323,0,3.622203603306694,1.0,Not Specified,0.709136109384711,0.6987186860138147,nan,nan,NLP,433334445,True
+autonlp-mut_uchile-640218740,0,43.078469852596,1.0,Not Specified,0.7887341933835739,0.5756730305293746,nan,nan,NLP,439573741,True
+autonlp-cai-out-of-scope-649919112,0,0.499244806825336,1.0,Not Specified,0.8064516129032258,0.8571428571428572,nan,nan,NLP,267860081,True
+autonlp-cai-out-of-scope-649919118,0,0.3996916853309825,1.0,Not Specified,0.8064516129032258,0.8548387096774193,nan,nan,NLP,267860081,True
+autonlp-cai-out-of-scope-649919116,0,2.438401649319185,1.0,Not Specified,0.7526881720430108,0.7964601769911505,nan,nan,NLP,1334486957,True
+autonlp-ctrip-653519223,0,24.879856894708396,1.0,Not Specified,0.9676666666666668,0.9768441155407016,nan,nan,NLP,409160877,True
+autonlp-JD-bert-653619233,0,5.919372931976555,1.0,Not Specified,0.952650883627876,0.9520917678812416,nan,nan,NLP,409160877,True
+autonlp-test-654919306,0,0.7013851565380207,1.0,Not Specified,nan,nan,0.727273,0.727273,NLP,891730879,True
+autonlp-email-classification-657119381,0,3.516233232503715,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1334486957,True
+autonlp-MeQSum-1-660519466,0,35.86552134392392,1.0,Not Specified,nan,nan,0.521593,0.5011410000000001,NLP,2279631601,True
+markingMultiClass,0,0.5712537632313806,1.0,Not Specified,0.8,0.6,nan,nan,NLP,267863153,True
+unhappyZebra100,0,0.6969569001670619,1.0,Not Specified,1.0,1.0,nan,nan,NLP,328525933,True
+autotrain-parrot_finetune_v1-667919695,0,207.64739623144084,1.0,Not Specified,nan,nan,0.705184,0.704464,NLP,891730879,True
+autotrain-phrasinator-reverse-670319725,0,149.95517950000834,1.0,Not Specified,nan,nan,0.6758329999999999,0.675812,NLP,891730879,True
+is-legit-kwd-march-27,0,0.5745216001459987,1.0,Not Specified,0.8057228915662651,0.7974882260596545,nan,nan,NLP,267860081,True
+autotrain-xlm-roberta-base-reviews-672119797,0,1019.0229633198009,1.0,Not Specified,0.5688083333333334,0.5640966271895913,nan,nan,NLP,1112275373,True
+autotrain-xlm-roberta-base-reviews-672119798,0,1013.8825767332372,1.0,Not Specified,0.5789333333333333,0.5775792001871465,nan,nan,NLP,1112275373,True
+autotrain-xlm-roberta-base-reviews-672119799,0,1583.7188188958198,1.0,Not Specified,0.5827541666666667,0.5806748283026683,nan,nan,NLP,1112275373,True
+autotrain-xlm-roberta-base-reviews-672119800,0,2011.6528745969176,1.0,Not Specified,0.5830708333333333,0.5789149828346194,nan,nan,NLP,1112275373,True
+autotrain-xlm-roberta-base-reviews-672119801,0,999.5670927087938,1.0,Not Specified,0.5738333333333333,0.5698748846905103,nan,nan,NLP,1112275373,True
+autotrain-harassement-675420038,0,2.633283687190505,1.0,Not Specified,0.7085201793721974,0.579743989078862,nan,nan,NLP,540872877,True
+TweetClimateAnalysis,0,133.1949127628479,1.0,Not Specified,0.865424430641822,0.7665472174344069,nan,nan,NLP,1421676909,True
+autotrain-mut_all_text-680820343,0,115.48848403681228,1.0,Not Specified,0.9462770369425126,0.7836898686625933,nan,nan,NLP,439662957,True
+autotrain-security-texts-classification-roberta-688020754,0,3.1151249696839685,1.0,Not Specified,0.8928571428571429,0.9066666666666666,nan,nan,NLP,498674093,True
+autotrain-security-texts-classification-distilroberta-688220764,0,2.0817207656772445,1.0,Not Specified,0.903061224489796,0.9140271493212668,nan,nan,NLP,328525933,True
+autotrain-security-text-classification-albert-688320769,0,3.670416179055797,1.0,Not Specified,0.8826530612244898,0.8977777777777778,nan,nan,NLP,46755537,True
+autotrain-IWant-689220804,0,39.40549299946679,1.0,Not Specified,nan,nan,0.549813,0.5403990000000001,NLP,891730879,True
+autotrain-commonsence-689620825,0,20.656741915705204,1.0,Not Specified,0.6354949675117849,0.6283932978308872,nan,nan,NLP,267860081,True
+autotrain-bbc-news-summarization-694821095,0,2313.403707902693,1.0,Not Specified,nan,nan,0.021467,0.021524,NLP,1131209487,True
+autotrain-commonsense_1-696121179,0,4.355285184457145,1.0,Not Specified,0.8544333807491702,0.8317808219178082,nan,nan,NLP,498674093,True
+autotrain-sentiment_analysis_project-705021428,0,10.03748863138583,1.0,Not Specified,0.768964665184087,0.7629008163259284,nan,nan,NLP,1112269229,True
+autotrain-Create_Question_Model-708521506,0,7.419693550936528,1.0,Not Specified,nan,nan,0.300761,0.272745,NLP,2950904711,True
+autotrain-intentclassificationfilipino-715021714,0,0.0033415164956729,1.0,Not Specified,0.8,0.6709090909090909,nan,nan,NLP,436444589,True
+bert_MultiClass_TextClassification,0,5.080390550458655,1.0,Not Specified,0.9269102990033222,0.9261839948926328,nan,nan,NLP,438209965,True
+distilbert_MultiClass_TextClassification,0,2.258363491829382,1.0,Not Specified,0.9042081949058692,0.9079200295131094,nan,nan,NLP,263362929,True
+Roberta_Multiclass_TextClassification,0,0.0145676379854259,1.0,Not Specified,0.9180509413067552,0.9157418163085091,nan,nan,NLP,498864813,True
+bert_TextClassification,0,7.025108874009706,1.0,Not Specified,0.9186046511627908,0.9202890631142154,nan,nan,NLP,433522093,True
+autotrain-TestProj-722121991,0,8.052949236815056,1.0,Not Specified,nan,nan,0.561275,0.51986,NLP,3132852901,True
+autotrain-livedoor_news-722922024,0,0.0192994914581561,1.0,Not Specified,0.9457627118644067,0.9404319054946132,nan,nan,NLP,444940461,True
+autotrain-T5Base1_1-728922203,0,583.728921803621,1.0,Not Specified,nan,nan,0.543928,0.503552,NLP,990438349,True
+autotrain-amazon_text_sum-730222226,0,2986.6520132805163,1.0,Not Specified,nan,nan,0.196069,0.192706,NLP,242085627,True
+autotrain-livedoor_news-732022289,0,0.0288663513112763,1.0,Not Specified,0.9471186440677966,0.9441816841379956,nan,nan,NLP,444940461,True
+autotrain-iine_classification10-737422470,0,7.351885824089346,1.0,Not Specified,0.8279088689991864,0.2810198300283286,nan,nan,NLP,442559661,True
+autotrain-wikihow-737822494,0,361.800665798794,1.0,Not Specified,nan,nan,0.052053,0.052419,NLP,4918578681,True
+autotrain-trec-fine-bert-739422530,0,0.0223882029910544,1.0,Not Specified,0.9321753515301904,0.9066706944656866,nan,nan,NLP,438157613,True
+koelectra-small-v3-generator-apeach,0,0.0185623904203696,1.0,Not Specified,0.7740053050397878,0.8025034770514604,nan,nan,NLP,56576041,True
+autotrain-iris-744122711,0,0.0006493037575021,1.0,Not Specified,0.9666666666666668,0.9665831244778612,nan,nan,Not Specified,0,True
+autotrain-titanic-744222727,0,0.0050930354577298,1.0,Not Specified,0.8378378378378378,0.8846153846153846,nan,nan,Not Specified,0,True
+soongsil-bert-small-apeach,787000,0.01856239,1.0,Not Specified,nan,nan,nan,nan,NLP,223256685,False
+goemos,0,31.11935827749309,1.0,Not Specified,0.93625,0.9075787460059076,nan,nan,NLP,1340753837,True
+autotrain-BerTweet-749522913,0,4.093939667345746,1.0,Not Specified,0.75,0.7506205181665155,nan,nan,NLP,1421615405,True
+emo_nojoylove,0,12.236769332727215,1.0,Not Specified,0.9397905759162304,0.9096049124431982,nan,nan,NLP,1334495149,True
+carer_2,0,2.370895196595982,1.0,Not Specified,0.9345549738219896,0.9016011681330568,nan,nan,NLP,328532077,True
+hateval_re,0,5.301132895184483,1.0,Not Specified,0.7529411764705882,0.8255726151522779,nan,nan,NLP,438019245,True
+dvs_f,0,8.758858538967111,1.0,Not Specified,0.9471454508775468,0.4564315352697096,nan,nan,NLP,433331373,True
+hs_dvs,0,5.1746636998598445,1.0,Not Specified,0.9493645350010088,0.3802469135802469,nan,nan,NLP,263172209,True
+imp_hatred,0,15.91710539314839,1.0,Not Specified,0.7746741154562383,0.5796696218586866,nan,nan,NLP,498677165,True
+imp_hatred_f,0,0.0528650561726386,1.0,Not Specified,0.7616387337057728,0.6428050387135232,nan,nan,NLP,438022317,True
+autotrain-NLU_crypto_sentiment_analysis-754123133,0,0.0053000308538672,1.0,Not Specified,0.8658536585365854,0.7724053724053724,nan,nan,NLP,328529005,True
+autotrain-Online_orders-755323156,0,2.4120667129093043,1.0,Not Specified,0.9550898203592816,0.8880388927888968,nan,nan,NLP,263279857,True
+autotrain-mental-health-analysis-752423172,0,313.3534743349287,1.0,Not Specified,0.805171240644137,0.7253473044054398,nan,nan,NLP,498689453,True
+autotrain-twitterMbti-758223271,0,0.3313142450338848,1.0,Not Specified,0.6438828259620908,0.5757131072506373,nan,nan,NLP,1340794797,True
+Roberta_Sentiment_Analysis,0,4.453029772491864,1.0,Not Specified,0.8302828618968386,0.8302447939743022,nan,nan,NLP,1421611309,True
+BERT_sentiment_analysis,0,0.0293633978449355,1.0,Not Specified,0.799017824663514,0.8021508522962549,nan,nan,NLP,438022317,True
+SentimentAnalysisDistillBERT,0,0.0155367469092942,1.0,Not Specified,0.7962895598399418,0.7997458031044901,nan,nan,NLP,267863153,True
+autotrain-financial-sentiment-765323474,0,0.0075013546359948,1.0,Not Specified,0.9823788546255506,0.974405452470854,nan,nan,NLP,433334445,True
+autotrain-ner-778023879,0,43.26533004662002,1.0,Not Specified,0.9999996519918594,0.0,nan,nan,NLP,260809205,True
+autotrain-NMT-778623908,0,1.0568409665060603,1.0,Not Specified,nan,nan,nan,nan,NLP,1200743045,True
+kekbot-beta-1-medium,20800000,370.0,1.0,"West Java, Indonesia",nan,nan,nan,nan,NLP,1444581337,False
+carer_new,0,3.9861818439722594,1.0,Not Specified,0.9389179755671904,0.9055551236566716,nan,nan,NLP,498680237,True
+kekbot-beta-2-medium,46000000,940.0,1.0,"West Java, Indonesia",nan,nan,nan,nan,NLP,1444566873,False
+autotrain-final-784824218,0,237.58504390669623,1.0,Not Specified,0.9734973172736224,0.0,nan,nan,NLP,265497077,True
+autotrain-final-784824206,0,354.2174590750517,1.0,Not Specified,0.9785765909606228,0.0,nan,nan,NLP,430968305,True
+autotrain-final-784824213,0,443.6253241508679,1.0,Not Specified,0.9823625038850629,0.0,nan,nan,NLP,435656177,True
+autotrain-final-784824209,0,0.8282546197737336,1.0,Not Specified,0.9639925673427912,0.0,nan,nan,NLP,265497077,True
+autotrain-final-784824211,0,292.55119229577315,1.0,Not Specified,0.9732196168090091,0.0,nan,nan,NLP,260809205,True
+fake-news-debunker,0,4.415122243239347,1.0,Not Specified,0.9998886538247412,0.999883273024396,nan,nan,NLP,328525933,True
+isear_bert,0,0.0260270554349944,1.0,Not Specified,0.7272727272727273,0.7230931630686932,nan,nan,NLP,498689453,True
+carer_5way,0,4.164757528958762,1.0,Not Specified,0.944234404536862,0.9437256923758108,nan,nan,NLP,498683309,True
+kekbot-beta-3-medium,26000000,660.0,1.0,"West Java, Indonesia",nan,nan,nan,nan,NLP,1444566873,False
+autotrain-Test_2-789524315,0,2.0134443204822188,1.0,Not Specified,0.6904761904761905,0.272300469483568,nan,nan,NLP,442582445,True
+autotrain-nsut-nlp-project-textsummarization-791824374,0,1119.6398037843474,1.0,Not Specified,nan,nan,0.385315,0.323742,NLP,1625557313,True
+summarizer1,0,736.9366247330848,1.0,Not Specified,nan,nan,0.378222,0.312959,NLP,557979193,True
+summarizer2,0,4444.804304528572,1.0,Not Specified,nan,nan,0.465461,0.38526,NLP,2283825905,True
+autotrain-Rule-793324440,0,0.0025078722090032,1.0,Not Specified,0.9473684210526316,0.9473684210526316,nan,nan,NLP,409160877,True
+autotrain-nlp-text-summarization-by-faisal-793224456,0,27.26671996544415,1.0,Not Specified,nan,nan,0.387852,0.321082,NLP,2950904711,True
+autotrain-Question-translation-797524592,0,27.564419884224776,1.0,Not Specified,nan,nan,nan,nan,NLP,4918480377,True
+autotrain-mbtiNlp-798824628,0,121.67185089502216,1.0,Not Specified,0.8472124039775673,0.7812978033330673,nan,nan,NLP,267903153,True
+pro-cell-expert,0,0.0048148231383673,1.0,Not Specified,0.9,0.925925925925926,nan,nan,NLP,433331373,True
+cuad_contract_type,0,0.0761094407164004,1.0,Not Specified,0.991150442477876,0.9912087912087912,nan,nan,NLP,1421705581,True
+autotrain-sentiment-4-812425472,0,0.0075975707447408,1.0,Not Specified,0.8268156424581006,0.6020923520923521,nan,nan,NLP,1340745645,True
+emo_go_new,0,20.58663910106142,1.0,Not Specified,0.5920355494787216,0.4844439507523978,nan,nan,NLP,498750957,True
+rumor,0,0.0561862580928194,1.0,Not Specified,0.9738805970149254,0.9385964912280702,nan,nan,NLP,1340737453,True
+autotrain-Bart_683-825526269,0,28.12268287254098,1.0,Not Specified,nan,nan,0.319867,0.210603,NLP,1625553217,True
+autotrain-maysix-828926405,0,0.0025866919829264,1.0,Not Specified,0.9318181818181818,0.9268292682926828,nan,nan,NLP,409160877,True
+autotrain-test-831226565,0,134.3402063080293,1.0,Not Specified,nan,nan,0.8998909999999999,0.8974209999999999,NLP,2283825905,True
+Wiki-Complexity,0,0.2169160611944522,1.0,Not Specified,0.996223414828066,0.996179398826373,nan,nan,NLP,267860081,True
+autotrain-chemprot-re-838426740,0,0.0911766483095575,1.0,Not Specified,0.9137332672285572,0.6518117007658014,nan,nan,NLP,1334532013,True
+autotrain-inference_probability_2-840226804,0,0.0292088692643832,1.0,Not Specified,nan,nan,0.912874,0.912874,NLP,2950904711,True
+test-hub-pr-1,0,172.04481351504182,1.0,Not Specified,0.927,0.9287020109689214,nan,nan,NLP,1334486957,True
+autotrain-ok-848227025,0,5.096755166899446,1.0,Not Specified,0.4466666666666666,0.2029167780472512,nan,nan,NLP,1346953645,True
+autotrain-Traimn-853827191,0,1.712176860015081,1.0,Not Specified,0.973421926910299,0.9735224586288418,nan,nan,NLP,438028461,True
+autotrain-imdb-sentiment-analysis-864927559,0,0.2033402242358345,1.0,Not Specified,nan,nan,nan,nan,NLP,267860081,False
+autotrain-hi_ner_xlmr-869827677,0,4.365496441173981,1.0,Not Specified,0.7411180773249739,0.546242774566474,nan,nan,NLP,1109949233,True
+turkish-sentiment-analysis,0,120.82460124309924,1.0,Not Specified,0.9697853317600073,0.9482820974460786,nan,nan,NLP,737474733,True
+autotrain-Napkin-872827783,0,0.0201622114189035,1.0,Not Specified,0.9325714285714286,0.9254931094274172,nan,nan,NLP,438031533,True
+autotrain-smm4h_large_roberta_clean-874027878,0,9.123490454955585,1.0,Not Specified,0.8571428571428571,0.8224852071005917,nan,nan,NLP,1421611309,True
+autotrain-test-project-879428192,0,13.170344687762716,1.0,Not Specified,0.9796652588768966,0.9891176963000168,nan,nan,NLP,498674093,True
+autotrain-KeywordExtraction-882328335,0,0.2137346810800018,1.0,Not Specified,0.9128,0.9095810866860224,nan,nan,NLP,711504045,True
+bloom,1759220000000,24700000.0,1.0,"Orsay, France",nan,nan,nan,nan,NLP,375000000000,False
+autotrain-gudel-department-classifier-clean-886428460,0,14.294320632050567,1.0,Not Specified,0.9894490035169988,0.9930609097918272,nan,nan,NLP,1343115501,True
+biobert-procell-demo,55000,0.598841432,1.0,Not Specified,0.802816901,0.867924528,nan,nan,NLP,433331373,False
+autotrain-inference_probability_3-900329401,0,3.807314953201688,1.0,Not Specified,nan,nan,0.940693,0.940693,NLP,891730879,True
+autotrain-name_vsv_all-901529445,0,110.53225910657004,1.0,Not Specified,0.9897211856745716,0.9521499063085572,nan,nan,NLP,265497077,True
+autotrain-company_vs_all-902129475,0,111.96508441754436,1.0,Not Specified,0.9970010185146536,0.9820678194318264,nan,nan,NLP,265497077,True
+sdg_classifier_osdg,9000000,0.065326317,1.0,Not Specified,0.897254458,0.869436973,nan,nan,NLP,438059181,False
+autotrain-company_all-903429548,0,0.848790823793881,1.0,Not Specified,0.9979930566588804,0.9816077764228254,nan,nan,NLP,265497077,True
+autotrain-company_all-903429540,0,119.04546626922829,1.0,Not Specified,0.9981441241415306,0.983292789968652,nan,nan,NLP,265497077,True
+autotrain-job_all-903929564,0,192.68222884611995,1.0,Not Specified,0.9989412009896036,0.9874236219367322,nan,nan,NLP,260809205,True
+autotrain-name_all-904029569,0,0.527083766435658,1.0,Not Specified,0.9989951257999512,0.9911648034619546,nan,nan,NLP,265497077,True
+autotrain-name_all-904029577,0,0.8375653425894861,1.0,Not Specified,0.9989316041363876,0.9905539954046464,nan,nan,NLP,265497077,True
+autotrain-test-frank-896929583,0,20.85550802376653,1.0,Not Specified,0.717983651226158,0.6850466044284794,nan,nan,NLP,1340762029,True
+Arabic_poem_meter_3,554000000,404.6698645,1.0,Not Specified,0.949355409,0.753735309,nan,nan,NLP,442624237,False
+autotrain-News-916530070,0,62.61326668998836,1.0,Not Specified,0.9773220921733938,0.0290877038342882,nan,nan,NLP,328525933,True
+Poem_Qafiyah_Detection,165000000,1.804676644,1.0,Not Specified,0.912351981,nan,nan,nan,NLP,497957165,False
+autotrain-sentiment_polarity-918130222,0,4.280488237750762,1.0,Not Specified,0.9504804036293304,0.9719076444852428,nan,nan,NLP,328525933,True
+autotrain-Arabic_Poetry_by_Subject-920730227,0,0.0617037401910781,1.0,Not Specified,0.8687837028160575,0.7777187122151491,nan,nan,NLP,442630381,True
+autotrain-Arabic_Poetry_by_Subject-920730230,0,0.0744521984740964,1.0,Not Specified,0.8785200718993409,0.8208042310550474,nan,nan,NLP,497926381,True
+autotrain-TNC_Domain_WangchanBERTa-921730254,0,25.144394918865917,1.0,Not Specified,0.7775925925925926,0.7758012615987406,nan,nan,NLP,421087597,True
+autotrain-hi_ner_xlmr_large-924630372,0,5.880084418778246,1.0,Not Specified,0.7745009890307498,0.6285289747399703,nan,nan,NLP,2235596465,True
+autotrain-TNC_Data1000_wangchanBERTa-927730545,0,0.0388231840613338,1.0,Not Specified,0.9212962962962964,0.9193830593356196,nan,nan,NLP,421087597,True
+autotrain-TNC_Data2500_WangchanBERTa-928030564,0,0.0729336291315811,1.0,Not Specified,0.8445845697329377,0.8407629450432429,nan,nan,NLP,421087597,True
+autotrain-Adult-934630783,0,38.42484725553464,1.0,Not Specified,0.8628221244500315,0.6751023446222553,nan,nan,Not Specified,0,True
+masress-medcrit-camel,0,0.0101748763809847,1.0,Not Specified,0.7551020408163265,0.7202470830473576,nan,nan,NLP,436418733,True
+BERT-Banking77,919050,0.0333065101415592,1.0,Not Specified,0.9264,0.9268371013605567,nan,nan,NLP,438249901,True
+DistilBERT-Banking77,919050,5.632805352029529,1.0,Not Specified,0.9199,0.9199390885956756,nan,nan,NLP,268090737,True
+autotrain-chat-bot-responses-949231426,0,0.0112353453775142,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1340745645,True
+autotrain-song_title_generate-939531516,0,11.013963276910236,1.0,Not Specified,nan,nan,0.549539,0.548616,NLP,891730879,True
+autotrain-expand-928531583,0,3.4552892403407167,1.0,Not Specified,nan,nan,0.687226,0.597235,NLP,2283825905,True
+2ch-text-classification,0,0.0856428106791965,1.0,Not Specified,0.8671983356449375,0.8062721294891249,nan,nan,NLP,1334486957,True
+autotrain-expand-parrot-956131825,0,0.647019768976749,1.0,Not Specified,nan,nan,0.533589,0.484928,NLP,891730879,True
+gpt2wilkinscoffee,39769491688,149200.0,1.0,East US,nan,nan,nan,nan,NLP,0,False
+autotrain-car-review-project-966432120,0,0.061185706621337,1.0,Not Specified,0.724822695035461,0.7077087000886584,nan,nan,NLP,498677165,True
+autotrain-car-review-project-966432121,0,0.2152988836837717,1.0,Not Specified,0.737791286727457,0.729171012281939,nan,nan,NLP,1421615405,True
+kekbot-mini,26000000,10.0,1.0,"West Java, Indonesia",nan,nan,nan,nan,NLP,333969117,False
+autotrain-Twitter_Sentiment-975432358,0,5.0728502681092005,1.0,Not Specified,0.7271750805585392,0.7350855235711306,nan,nan,NLP,267860081,True
+kekbot-beta-4-medium,26000000,840.0,1.0,"West Java, Indonesia",nan,nan,nan,nan,NLP,1444566873,False
+autotrain-PAN-976832386,0,7.17945527948844,1.0,Not Specified,0.7591666666666667,0.8470089994706194,nan,nan,NLP,328525933,True
+autotrain-pan-977432399,0,27.081173251466467,1.0,Not Specified,0.8841666666666667,0.9231619679380874,nan,nan,NLP,498674093,True
+autotrain-pan-977432388,0,13.776410975057908,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-dontknowwhatImdoing-980432459,0,0.0121473985779178,1.0,Not Specified,0.9917355371900828,0.9936708860759492,nan,nan,NLP,1334486957,True
+bert2gpt2SUMM,0,0.1068550128808479,1.0,Not Specified,nan,nan,nan,nan,NLP,1079058281,False
+pegasus-pdm-news,0,258.9123940027299,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+bert2gpt2Summy,0,894.9753853627794,1.0,Not Specified,nan,nan,0.193642,0.1614799999999999,NLP,2329732045,True
+T5_mlsum,0,976.8219757938544,1.0,Not Specified,nan,nan,0.2021079999999999,0.169554,NLP,4918578681,True
+autotrain-journals-covid-990032813,0,1.52810485048449,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-Psychiatry_Article_Identifier-990132822,0,13.4308931494349,1.0,Not Specified,0.9177471636953,0.9082952086962772,nan,nan,NLP,438074605,True
+bertGpt2Summ,0,2.4722651844547827,1.0,Not Specified,nan,nan,0.161218,0.130085,NLP,1135171497,True
+autotrain-Robertatogpt2-995132944,0,611.0958349328379,1.0,Not Specified,nan,nan,0.166344,0.135872,NLP,1135171497,True
+bert2gpt2frenchSumm,0,999.838587232387,1.0,Not Specified,nan,nan,0.257023,0.186776,NLP,1079058281,True
+biomedical-ner-all,2000000,0.027939989,1.0,Not Specified,nan,nan,nan,nan,NLP,265743541,False
+biomedical-ner-all,30000000,0.027939989,1.0,Not Specified,nan,nan,nan,nan,NLP,265743541,False
+autotrain-blaze_text_classification-1004733283,0,10.8014599472142,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-yes-or-no-classifier-on-circa-1009033469,0,0.1287915253247826,1.0,Not Specified,0.8722054859679721,0.6340608446004876,nan,nan,NLP,1421635885,True
+autotrain-GlueModels-1010733562,0,60.24263131580023,1.0,Not Specified,0.9252564102564104,0.923920135717082,nan,nan,NLP,438019245,True
+autotrain-mlsec-1013333726,0,33.183779535405364,1.0,Not Specified,0.9226923076923076,0.9223238438747908,nan,nan,NLP,267860081,True
+autotrain-mlsec-1013333734,0,308.7012650779217,1.0,Not Specified,0.9396153846153846,0.940357097632012,nan,nan,NLP,1421611309,True
+autotrain-GlueFineTunedModel-1013533786,0,57.79463560530838,1.0,Not Specified,0.926153846153846,0.92632386799693,nan,nan,NLP,438019245,True
+autotrain-GlueFineTunedModel-1013533798,0,56.65990763623749,1.0,Not Specified,0.4998717948717949,0.0,nan,nan,NLP,438019245,True
+autotrain-qn-classification-1015534072,0,0.0131704400140432,1.0,Not Specified,0.7333333333333333,0.6777777777777777,nan,nan,NLP,1421664557,True
+autotrain-vision_528a5bd60a4b4b1080538a6ede3f23c7-260265,0,8.217704896005591,1.0,Not Specified,0.914,0.912823674084623,nan,nan,Computer Vision,110417455,True
+autotrain-dog-vs-food,0,2.050948967287266,1.0,Not Specified,0.9976190476190476,0.9973261861865684,nan,nan,Computer Vision,343266993,True
+autotrain-avar-1016534299,0,0.0781596601881881,1.0,Not Specified,nan,nan,nan,nan,NLP,4918480377,True
+autotrain_cifar10_vit_base,136627438,32.86964815711988,1.0,Not Specified,0.9834,0.9834026834840476,nan,nan,Computer Vision,343291569,True
+EN-RSK,0,19.740487511182447,1.0,Not Specified,nan,nan,nan,nan,NLP,4918480377,True
+bert_wikipedia_sst2,0,16.368556687663705,1.0,Not Specified,0.9503340757238308,0.9556748161399324,nan,nan,NLP,438019245,True
+autotrain-Wikipeida_Article_Classifier_by_Chap-1022634731,0,19.2150872382377,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-Wikipeida_Article_Classifier_by_Chap-1022634735,0,16.816741650923202,1.0,Not Specified,0.9027552674230146,0.8938134766263609,nan,nan,NLP,1334560749,True
+autotrain-Wikipeida_Article_Classifier_by_Chap-1022634736,0,0.0759956950556571,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-atc,0,2.288443953210163,1.0,Not Specified,0.7619047619047619,0.7041420118343196,nan,nan,NLP,267860081,True
+autotrain-atc2,0,3.1566482249518177,1.0,Not Specified,0.7523809523809524,0.6338028169014086,nan,nan,NLP,328525933,True
+autotrain_fashion_mnist_vit_base,36530473,0.2438639401641305,1.0,Not Specified,0.9473,0.9473921270228504,nan,nan,Computer Vision,343291569,True
+agric-eng-lug,0,0.0408791067153807,1.0,Not Specified,nan,nan,0.558225,0.544274,NLP,308202053,True
+autotrain-formality-1026434913,0,7.300283563922049,1.0,Not Specified,nan,nan,nan,nan,NLP,433328301,True
+autotrain-acronym-identification-7324788,9733236,10.435358044493652,1.0,Not Specified,0.9708090976211484,0.9151284109149278,nan,nan,NLP,430964529,True
+autotrain-bert_wikipedia_sst_2-1034235509,0,17.051424016530056,1.0,Not Specified,0.954046028210839,0.9588293980711672,nan,nan,NLP,438019245,True
+autotrain-bert_wikipedia_sst_2-1034235513,0,16.686945384446037,1.0,Not Specified,0.952783964365256,0.9577296291373122,nan,nan,NLP,438019245,True
+autotrain-finetunedmodelbert-1034335535,0,7.180506910995884,1.0,Not Specified,0.9793615441722346,0.9815085805507516,nan,nan,NLP,267860081,True
+autotrain-finetunedmodel1-1034535555,0,29.194903746653303,1.0,Not Specified,0.9402375649591684,0.9462939488958568,nan,nan,NLP,267860081,True
+autotrain-finetuned1-1035435583,0,0.0360866056291979,1.0,Not Specified,0.8816629547141797,0.8935772466283884,nan,nan,NLP,16339473,True
+autotrain-my-sum-1040935781,0,326.52733725745725,1.0,Not Specified,nan,nan,0.004843,0.004843,NLP,4918578681,True
+autotrain-sum-1042335811,0,426.15271368095927,1.0,Not Specified,nan,nan,0.00536,0.00536,NLP,4918578681,True
+autotrain-oms-ner-bi-1044135953,0,1.425282392185522,1.0,Not Specified,0.8957797220792589,0.6102610261026103,nan,nan,NLP,435729969,True
+bart_cnn_auto,0,4581.794954519826,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-glue1-1046836019,0,3.869994913020229,1.0,Not Specified,0.6606574761399788,0.750390015600624,nan,nan,NLP,438019245,True
+dalle-mega,3500000000,450300.0,1.0,East US,nan,nan,nan,nan,Multimodal,10737418240,False
+autotrain-tweet-sentiment-classifier-1055036381,0,17.43982800509071,1.0,Not Specified,0.7306006137658921,0.719534854339415,nan,nan,NLP,267863153,True
+autotrain-country-recognition-1059336697,0,0.0295218822349136,1.0,Not Specified,0.9879569162920872,0.9765004449554612,nan,nan,NLP,267918513,True
+autotrain-chinese-title-summarization-1060936832,0,3.841483701875158,1.0,Not Specified,nan,nan,0.273016,0.273016,NLP,1200743045,True
+title_generator,0,0.2263611804615655,1.0,Not Specified,nan,nan,0.003375,0.003375,NLP,1200743045,True
+autotrain-imdbtestmodel-9215210,0,0.2757084122251468,1.0,Not Specified,0.9372,0.9378857414147808,nan,nan,NLP,438006125,True
+country-recognition,0,141.11976199388627,1.0,Not Specified,0.9859325979151908,0.9715036017680622,nan,nan,NLP,2239816045,True
+autotrain-livedoor_news_summarization-1065437005,0,1.854603770877255,1.0,Not Specified,nan,nan,0.234405,0.231304,NLP,4918578681,True
+EN-ROM,0,30.06853713677673,1.0,Not Specified,nan,nan,nan,nan,NLP,4918480377,True
+autotrain-60-50-1067437104,0,29.54716889998106,1.0,Not Specified,nan,nan,0.774054,0.771503,NLP,2283825905,True
+autotrain-120-50-1067537149,0,0.1197363010890659,1.0,Not Specified,nan,nan,0.80211,0.7953589999999999,NLP,2283825905,True
+autotrain-120-0-1067937173,0,0.0862544284419052,1.0,Not Specified,nan,nan,0.837457,0.832649,NLP,2283825905,True
+autotrain-260-0-1068537269,0,19.045065953636296,1.0,Not Specified,nan,nan,0.8543219999999999,0.848782,NLP,2283825905,True
+eng-lug,0,0.0408791067153807,1.0,Not Specified,nan,nan,0.558225,0.544274,NLP,308202053,True
+autotrain-test_3-1071537591,0,0.0398540179893401,1.0,Not Specified,0.7389705882352942,0.4180327868852458,nan,nan,NLP,409160877,True
+autotrain-test-4-macbert-1071837613,0,0.0122251179073363,1.0,Not Specified,0.7408088235294118,0.4527813712807245,nan,nan,NLP,409160877,True
+autotrain-dataset-en-5-mini-1-50-truncate-1076038122,0,6.1987408118248375,1.0,Not Specified,nan,nan,0.764469,0.7631279999999999,NLP,1625557313,True
+autotrain-dataset-en-5-mini-1-50-num-1076338146,0,5.239170170576799,1.0,Not Specified,nan,nan,0.7640340000000001,0.7623300000000001,NLP,1625557313,True
+autotrain-sum-200-random-1082438930,0,4.994502035089263,1.0,Not Specified,nan,nan,0.7845340000000001,0.782595,NLP,557979193,True
+distilbart-wikilingua-autotrain,0,1850.790132860878,1.0,Not Specified,nan,nan,0.403451,0.309608,NLP,1222374713,True
+autotrain-chinese-title-summarization-1-1084539138,0,0.004484038360707,1.0,Not Specified,nan,nan,0.222222,0.222222,NLP,1200743045,True
+autotrain-kaggle-effective-arguments-1086739296,0,5.249720686430607,1.0,Not Specified,0.6719238613188308,0.5450301061253738,nan,nan,NLP,263175281,True
+autotrain-chineses-title-summarization-3-1087939403,0,0.0049000878426465,1.0,Not Specified,nan,nan,0.238095,0.238095,NLP,1200743045,True
+autotrain-test-1088139436,0,0.122040594036971,1.0,Not Specified,nan,nan,0.004566,0.004566,NLP,1200743045,True
+autotrain-iris-logistic-regression,0,0.0006300767567816,1.0,Not Specified,0.9,0.899749373433584,nan,nan,Not Specified,0,True
+autotrain-iris-knn,0,0.1502870119905602,1.0,Not Specified,0.9,0.899749373433584,nan,nan,Not Specified,0,True
+autotrain-iris-xgboost,0,1.9138035947108896,1.0,Not Specified,0.8666666666666667,0.8666666666666668,nan,nan,Not Specified,0,True
+autotrain-adult-census-xgboost,0,0.1269359057786197,1.0,Not Specified,0.8750191923844618,0.7191166321601105,nan,nan,Not Specified,0,True
+autotrain-Text-Generate-1089139622,0,7.256654556879194,1.0,Not Specified,nan,nan,0.154155,0.1232569999999999,NLP,2950904711,True
+autotrain-deephate2-1093539673,0,7.663051290039914,1.0,Not Specified,0.8843120070113936,0.8771237753798016,nan,nan,NLP,71791313,True
+autotrain-ZuoZhuan-1100540141,0,8.343592303925112,1.0,Not Specified,0.8795777325860159,0.8292385373953709,nan,nan,NLP,496390961,True
+autotrain-ZuoZhuan-1100540143,0,14.50120424968173,1.0,Not Specified,0.8799234894798035,0.8273035872656656,nan,nan,NLP,496390961,True
+autotrain-chinese-title-summarization-8-1101140174,0,1.4118255120710663,1.0,Not Specified,nan,nan,0.493333,0.493333,NLP,1200743045,True
+autotrain-autotrain-chinese-title-summarization-9-1101340178,0,1.565396518204961,1.0,Not Specified,nan,nan,0.292308,0.292308,NLP,1200743045,True
+autotrain-amazon-shoe-reviews-classification-1104340243,0,27.982443349742287,1.0,Not Specified,0.5843,0.5801009597024507,nan,nan,NLP,498683309,True
+autotrain-jk123-1105140277,0,0.1863935648335355,1.0,Not Specified,0.9808,0.9808013970263608,nan,nan,NLP,409156973,True
+autotrain-first-test-html-1136241676,0,684.7105644305452,1.0,Not Specified,nan,nan,0.634452,0.633343,NLP,1625537793,True
+autotrain-first-test-html-1136241677,0,19.49742293318862,1.0,Not Specified,nan,nan,0.842283,0.839066,NLP,2283800049,True
+autotrain-article_pred-1142742075,0,3.973071565343572,1.0,Not Specified,0.7227722772277227,0.7777777777777779,nan,nan,NLP,1421584365,True
+gs3n-roberta-model,0,0.0278462829709136,1.0,Not Specified,nan,nan,nan,nan,NLP,435226605,False
+autotrain-CompanyDescription-1149642380,0,4.803822525731932,1.0,Not Specified,nan,nan,0.578827,0.5642090000000001,NLP,557969145,True
+autotrain-argument-feedback-1154042510,0,39.98165454365982,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-argument-feedback-1154042511,0,50.94211122225772,1.0,Not Specified,0.672331747110809,0.5302988889038903,nan,nan,NLP,1340715821,True
+autotrain-Flexport_Classification_Desc-1155542601,0,206.60369255723003,1.0,Not Specified,0.9578838092484788,0.9360695960738428,nan,nan,NLP,439645613,True
+autotrain-summtest1-11405516,0,28.375764585180136,1.0,Not Specified,nan,nan,0.419534,0.347507,NLP,990450547,True
+autotrain-imdb-1166543171,0,0.0730830214040682,1.0,Not Specified,0.9138,0.9150404100137984,nan,nan,NLP,267854321,True
+auditor_sentiment_finetuned,0,3.165771608457648,1.0,Not Specified,0.848937,0.8448284352912685,nan,nan,NLP,439087469,True
+Sentence_Classification4DesignTutor,0,0.0098649438704349,1.0,Not Specified,0.8263473053892215,0.7776555055392036,nan,nan,NLP,1421588461,True
+NER4DesignTutor,0,0.0040326569882286,1.0,Not Specified,0.8129095674967235,0.4625346901017577,nan,nan,NLP,430970673,True
+autotrain-amazon-summarization-1170943400,0,25.718350806012065,1.0,Not Specified,nan,nan,0.21072,0.189156,NLP,2283800049,True
+autotrain-amz-1171143428,0,5.4331208624177245,1.0,Not Specified,nan,nan,0.193601,0.174309,NLP,1625533697,True
+autotrain-MS2-1173943517,0,0.687008092853648,1.0,Not Specified,nan,nan,0.000342,0.000242,NLP,1789277169,True
+autotrain-ms-2-1174443640,0,4.619328856849087,1.0,Not Specified,nan,nan,0.159713,0.121778,NLP,891700799,True
+autotrain-summarization-test-1177043812,0,1166.308824861558,1.0,Not Specified,nan,nan,0.395734,0.33257,NLP,1625537793,True
+test-model,0,6.160395825083539,1.0,Not Specified,nan,nan,0.216224,0.190725,NLP,1625533697,True
+stress_twitter,0,2.7282806494855265,1.0,Not Specified,nan,nan,nan,nan,NLP,1421584365,False
+autotrain-j-multi-classification-1181044057,0,1.2309703499286415,1.0,Not Specified,0.7192982456140351,0.5870079610791685,nan,nan,NLP,540868973,True
+autotrain-tk-1181244086,0,0.0046630444734851,1.0,Not Specified,0.8263097949886105,0.4883720930232558,nan,nan,NLP,430970673,True
+distilgpt2,39769494896,149200.0,1.0,East US,nan,nan,nan,nan,NLP,352833716,False
+led_pubmed_sumpubmed_1,1930000000,1027.9,1.0,Not Specified,nan,nan,45.861,23.565,NLP,1839604721,False
+autotrain-Hello_there-1209845735,0,3602.3174355473616,1.0,Not Specified,nan,nan,0.38448,0.2208,NLP,3132671411,True
+autotrain-APM2-1212245840,0,2.355843472980154,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1334461229,True
+autotrain-not_interested_2-1213045881,0,1.695519133475222,1.0,Not Specified,0.535,0.306,nan,nan,NLP,438024557,True
+autotrain-not_interested_1-1213145894,0,1.5489539045493723,1.0,Not Specified,0.735,0.566,nan,nan,NLP,498678765,True
+autotrain-APMv2Multiclass-1216046004,0,2.4364900803769225,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1340711725,True
+autotrain-Biomedical_sc_summ-1217846144,0,3198.3976606503647,1.0,Not Specified,nan,nan,0.38839,0.21994,NLP,3132671411,True
+autotrain-Biomedical_sc_summ-1217846142,0,16.211223325053414,1.0,Not Specified,nan,nan,0.40236,0.2325499999999999,NLP,3132671411,True
+autotrain-Biomedical_sc_summ-1217846148,0,13.651986586580763,1.0,Not Specified,nan,nan,0.38768,0.21946,NLP,3132671411,True
+autotrain-News_Summariser_Eng-1224546522,0,35.7814981860994,1.0,Not Specified,nan,nan,0.4453199999999999,0.40372,NLP,2283800049,True
+unisumm_3-1228646724,0,1368.894142563709,1.0,Not Specified,nan,nan,0.43703,0.23715,NLP,1222361081,True
+autotrain-LegalLong_on_contracts-1230246837,0,47.64808387548789,1.0,Not Specified,0.943,0.944,nan,nan,NLP,505310557,True
+not_interested_v0,0,2.307650736568978,1.0,Not Specified,0.788,0.743,nan,nan,NLP,1421608941,True
+autotrain-Sum-1235946916,0,292.2926477361632,1.0,Not Specified,nan,nan,0.2380699999999999,0.21142,NLP,2279605745,True
+LRO_v1.0.0,0,2.223269909428516,1.0,Not Specified,0.869,0.868,nan,nan,NLP,1340715821,True
+autotrain-dl-assignment-two-part-one,0,80.72035225699715,1.0,Not Specified,0.747,0.474,nan,nan,NLP,438015341,True
+SpecLab,0,7540.0,1.0,East US,nan,nan,nan,nan,Not Specified,0,False
+CL_1,0,151.97297148175758,1.0,Not Specified,0.862,0.862,nan,nan,NLP,409224621,True
+CL_or_not,0,0.8697328559727794,1.0,Not Specified,0.925,0.925,nan,nan,NLP,409148333,True
+Non_CL,0,8.667918502534315,1.0,Not Specified,0.986,0.972,nan,nan,NLP,409292333,True
+autotrain-ara-transliterate-1259548205,0,1938.877077145461,1.0,Not Specified,nan,nan,nan,nan,NLP,305508165,True
+autotrain-roberta-base-imdb-1275248775,0,0.4007631537389439,1.0,Not Specified,0.948,0.948,nan,nan,NLP,498660333,True
+autotrain-roberta-base-imdb-1275248776,0,14.863369152434291,1.0,Not Specified,0.903,0.904,nan,nan,NLP,498660333,True
+autotrain-roberta-base-imdb-1275248777,0,21.172831206976703,1.0,Not Specified,0.92,0.918,nan,nan,NLP,498660333,True
+autotrain-roberta-base-imdb-1275248778,0,23.591266130909247,1.0,Not Specified,0.933,0.932,nan,nan,NLP,498660333,True
+autotrain-roberta-base-imdb-1275248779,0,60.57306835110813,1.0,Not Specified,0.946,0.947,nan,nan,NLP,498660333,True
+autotrain-DistilBERT-imdb-1275448780,0,27.53980623987047,1.0,Not Specified,0.927,0.926,nan,nan,NLP,267854321,True
+autotrain-DistilBERT-imdb-1275448782,0,0.046874191375647,1.0,Not Specified,0.9,0.902,nan,nan,NLP,267854321,True
+autotrain-DistilBERT-imdb-1275448783,0,0.0719533080486796,1.0,Not Specified,0.912,0.913,nan,nan,NLP,267854321,True
+autotrain-DistilBERT-imdb-1275448784,0,0.1220211502437376,1.0,Not Specified,0.926,0.926,nan,nan,NLP,267854321,True
+autotrain-BERTBase-imdb-1275748790,0,0.2731220001956151,1.0,Not Specified,0.929,0.932,nan,nan,NLP,438006125,True
+autotrain-BERTBase-imdb-1275748791,0,13.99540148555101,1.0,Not Specified,0.876,0.882,nan,nan,NLP,438006125,True
+autotrain-BERTBase-imdb-1275748792,0,20.106886369086105,1.0,Not Specified,0.904,0.907,nan,nan,NLP,438006125,True
+autotrain-BERTBase-imdb-1275748793,0,24.593648079365725,1.0,Not Specified,0.92,0.921,nan,nan,NLP,438006125,True
+autotrain-BERTBase-imdb-1275748794,0,57.54724654942287,1.0,Not Specified,0.936,0.936,nan,nan,NLP,438006125,True
+nubank,0,0.0127226218915613,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+metadata_postprocess,0,259.9202187566575,1.0,Not Specified,nan,nan,0.95334,0.93922,NLP,2283800049,True
+autotrain-metadata_postprocess-1277848897,0,0.5973129947175277,1.0,Not Specified,nan,nan,0.94055,0.93235,NLP,2950844807,True
+autotrain-metadata_postprocess-1277848906,0,1.5546260967293355,1.0,Not Specified,nan,nan,0.95246,0.93809,NLP,2283800049,True
+autotrain-metadata_postprocess-1277848909,0,0.673674776711824,1.0,Not Specified,nan,nan,0.94162,0.93416,NLP,2950844807,True
+autotrain-metadata_postprocess-1277848903,0,137.41419193661346,1.0,Not Specified,nan,nan,0.94135,0.93259,NLP,2950844807,True
+autotrain-MedicalTokenClassification-1279048948,0,12.16859664557857,1.0,Not Specified,0.959,0.879,nan,nan,NLP,435664689,True
+autotrain-RobertaBaseTweetEval-1281048986,0,10.100684026651312,1.0,Not Specified,0.737,0.699,nan,nan,NLP,498663405,True
+autotrain-RobertaBaseTweetEval-1281048987,0,16.685914259874124,1.0,Not Specified,0.734,0.69,nan,nan,NLP,498663405,True
+autotrain-RobertaBaseTweetEval-1281048988,0,22.606335926892854,1.0,Not Specified,0.747,0.722,nan,nan,NLP,498663405,True
+autotrain-DistilBERT-TweetEval-1281148992,0,10.676055974144631,1.0,Not Specified,0.728,0.71,nan,nan,NLP,267857393,True
+autotrain-DistilBERT-TweetEval-1281148993,0,14.1190727870385,1.0,Not Specified,0.734,0.716,nan,nan,NLP,267857393,True
+autotrain-DistilBERT-TweetEval-1281148994,0,18.089819787009866,1.0,Not Specified,0.745,0.727,nan,nan,NLP,267857393,True
+autotrain-DistilBERT-TweetEval-1281148995,0,6.436434120056388,1.0,Not Specified,0.729,0.712,nan,nan,NLP,267857393,True
+autotrain-BERTBase-TweetEval-1281248997,0,0.075275331860936,1.0,Not Specified,0.743,0.719,nan,nan,NLP,438009197,True
+autotrain-BERTBase-TweetEval-1281248996,0,0.0421631536796155,1.0,Not Specified,0.743,0.719,nan,nan,NLP,438009197,True
+autotrain-BERTBase-TweetEval-1281248998,0,0.1031242092898596,1.0,Not Specified,0.746,0.718,nan,nan,NLP,438009197,True
+autotrain-BERTBase-TweetEval-1281248999,0,0.1376507540502216,1.0,Not Specified,0.739,0.716,nan,nan,NLP,438009197,True
+autotrain-BERTBase-TweetEval-1281249000,0,0.0486890565891514,1.0,Not Specified,0.743,0.723,nan,nan,NLP,438009197,True
+autotrain-RobertaBaseTweetEval-1281048989,0,28.05396378146021,1.0,Not Specified,0.751,0.719,nan,nan,NLP,498663405,True
+autotrain-RobertaBaseTweetEval-1281048990,0,11.322528589983463,1.0,Not Specified,0.747,0.729,nan,nan,NLP,498663405,True
+autotrain-DistilBERT-TweetEval-1281148991,0,7.445009513630644,1.0,Not Specified,0.739,0.721,nan,nan,NLP,267857393,True
+ni_model_8_19,0,7.709202932471896,1.0,Not Specified,0.849,0.632,nan,nan,NLP,1334489901,True
+autotrain-texto_sem_enelvo-1283649112,0,1.761944621737621,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-neurips_chanllenge-1287149278,0,0.0395580279061519,1.0,Not Specified,0.907,0.602,nan,nan,NLP,1334461229,True
+autotrain-neurips_chanllenge-1287149282,0,25.138742530638098,1.0,Not Specified,0.911,0.591,nan,nan,NLP,1421584365,True
+autotrain-test1-1297049687,0,0.0704648578577701,1.0,Not Specified,0.738,0.725,nan,nan,NLP,442568685,True
+autotrain-pat-abst-1298049754,0,428.11928889922655,1.0,Not Specified,nan,nan,0.6456000000000001,0.5671200000000001,NLP,2283800049,True
+autotrain-bert-NER-favsbot,0,0.0120349160313963,1.0,Not Specified,0.71,0.468,nan,nan,NLP,1336549553,True
+autotrain-indian-food-image-classification,0,17.39230724017564,1.0,Not Specified,0.762,0.758,nan,nan,Computer Vision,343506865,True
+autotrain-app_review_bert_train-1310050094,0,4.094086460501482,1.0,Not Specified,0.8,0.849,nan,nan,NLP,438006125,True
+autotrain-app_review_train_roberta-1314150168,0,0.0159004761183563,1.0,Not Specified,0.801,0.848,nan,nan,NLP,498660333,True
+autotrain-app_review_train_dilbert-1314250179,0,0.0044442935958964,1.0,Not Specified,0.809,0.856,nan,nan,NLP,267854321,True
+autotrain-app_review_train_albert-1314550196,0,0.0154491824293936,1.0,Not Specified,0.813,0.855,nan,nan,NLP,46753425,True
+demo_knots_1_1,0,0.021557396511961,1.0,Not Specified,0.833,0.829,nan,nan,NLP,1680217005,True
+demo_knots_1_4,0,0.0330523943939798,1.0,Not Specified,0.88,0.923,nan,nan,NLP,1680217005,True
+demo_knots_all,0,0.1285808899475734,1.0,Not Specified,0.982,0.991,nan,nan,NLP,1680217005,True
+demo_knots_12_error,0,0.0198666409221839,1.0,Not Specified,0.792,0.761,nan,nan,NLP,1680217005,True
+demo_knots_1_8,0,0.0635778215050862,1.0,Not Specified,0.931,0.962,nan,nan,NLP,1680217005,True
+bart-base-cnn-swe,800000000,0.0334,1.0,"Fredericia, Denmark",nan,nan,22.2046,nan,NLP,557723065,False
+doe2vec-d2-m8-ls24-VAE-kl0.001,26000000,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,220000,False
+demo_knots_1_2,0,0.0401933452212558,1.0,Not Specified,0.857,0.901,nan,nan,NLP,1680217005,True
+autotrain-enhanced-tosdr-summariser-1339851270,0,0.007732320614947,1.0,Not Specified,nan,nan,0.3506499999999999,0.20884,NLP,920019705,True
+autotrain-enhanced-tosdr-summariser-1339851272,0,0.0119601182774247,1.0,Not Specified,nan,nan,0.34945,0.19876,NLP,920019705,True
+attribute-classification,0,0.0028470089436147,1.0,Not Specified,0.949,0.947,nan,nan,NLP,328518765,True
+comments-text-classification-model,0,0.0067037448010476,1.0,Not Specified,0.619,0.36,nan,nan,NLP,1334473517,True
+LRO_v1.0.2a,0,1.2585708613878817,1.0,Not Specified,0.818,0.817,nan,nan,NLP,498663405,True
+doe2vec-d2-m8-ls32-VAE-kl0.001,0,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,0,False
+doe2vec-d5-m8-ls24-VAE-kl0.001,0,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,0,False
+doe2vec-d5-m8-ls32-VAE-kl0.001,0,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,0,False
+doe2vec-d10-m8-ls24-VAE-kl0.001,0,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,0,False
+doe2vec-d10-m8-ls32-VAE-kl0.001,0,0.0363,1.0,"Leiden, The Netherlands",nan,nan,nan,nan,Not Specified,0,False
+LRO_v1.0.2b,0,5.027600666336915,1.0,Not Specified,0.833,0.833,nan,nan,NLP,1340715821,True
+PromptGeneration-base,0,2.4412207269598545,1.0,Not Specified,nan,nan,0.99696,0.99689,NLP,2279605745,True
+summarization_trial_model,0,1116.1106035336509,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-Lucy-Alicorp-1356152290,0,0.6615928015918582,1.0,Not Specified,1.0,1.0,nan,nan,NLP,437130033,True
+autotrain-ecomm1.8-1360552485,0,0.0347977376041225,1.0,Not Specified,0.914,0.903,nan,nan,NLP,1341474285,True
+autotrain-cuisine_classification-1361652530,0,181.0388682785841,1.0,Not Specified,0.731,0.669,nan,nan,NLP,1340998701,True
+autotrain-emotion-detection-1366352626,0,0.0371606670722015,1.0,Not Specified,0.394,0.197,nan,nan,NLP,438039917,True
+autotrain-arabic_cuisine-1367052683,0,0.0243096886515892,1.0,Not Specified,0.439,0.133,nan,nan,NLP,442743405,True
+dark_IntentCLF,0,0.0602773344712369,1.0,Not Specified,nan,nan,nan,nan,NLP,438184493,True
+autotrain-citizen_nlu_bn-1370652766,0,0.0843150353265822,1.0,Not Specified,0.971,0.971,nan,nan,NLP,334011693,True
+autotrain-citizen_nlu_hindi-1370952776,0,0.0628354508876492,1.0,Not Specified,0.974,0.974,nan,nan,NLP,334011693,True
+autotrain-ad_detection_ver_1-1395053127,0,0.0096526980679869,1.0,Not Specified,0.941,nan,nan,nan,Computer Vision,343266993,True
+autotrain-person-classifier-1401653210,0,0.0143182831771501,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347596479,True
+autotrain-hurricane3-1415853436,0,1.2190828686910384,1.0,Not Specified,0.224,0.067,nan,nan,Computer Vision,110445167,True
+autotrain-donut-vs-croissant-1417653460,0,2.2028215716577684,1.0,Not Specified,0.994,nan,nan,nan,Computer Vision,347596479,True
+autotrain-encyclopedia_britannica-1423853554,0,3.1471897890349294,1.0,Not Specified,0.993,nan,nan,nan,Computer Vision,347596479,True
+autotrain-human_art_or_not-1432453604,0,1.7172622019575956,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347596479,True
+hedhikaa-classifier,0,0.0059374716509795,1.0,Not Specified,0.976,0.961,nan,nan,Computer Vision,347604671,True
+butterflies,0,0.0116594714817232,1.0,Not Specified,0.88,0.844,nan,nan,Computer Vision,347895743,True
+autotrain-tosdr_tldr_legal_summarisation_v1-1434353657,0,2.9024601099439225,1.0,Not Specified,nan,nan,0.3296099999999999,0.2055099999999999,NLP,920019705,True
+autotrain-climate-text-classification-1437253674,0,2.621274122165296,1.0,Not Specified,0.884,0.699,nan,nan,NLP,1334461229,True
+autotrain-furrygendataset-1436353679,0,2.482027438387914,1.0,Not Specified,0.896,0.895,nan,nan,Computer Vision,347616959,True
+autotrain-trial-run-1444253725,0,0.0097739269807768,1.0,Not Specified,0.98,0.76,nan,nan,NLP,496331185,True
+autotrain-pruebaa-1470254048,0,0.0177064308388526,1.0,Not Specified,0.738,0.739,nan,nan,NLP,1337733933,True
+autotrain-food101-1471154050,0,135.18748471833436,1.0,Not Specified,0.89,0.89,nan,nan,Computer Vision,343571505,True
+autotrain-food101-1471154053,0,179.11544810549532,1.0,Not Specified,0.915,0.915,nan,nan,Computer Vision,348002367,True
+autotrain-ratnakar_1000_sample_curated-1474454086,0,2.180256368490792,1.0,Not Specified,0.957,0.863,nan,nan,NLP,1330303153,True
+autotrain-graphwerk-1472254089,0,0.0037659513202956,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,110392879,True
+autotrain-graphwerk-1472254090,0,0.8959954972786571,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343266993,True
+autotrain-gahhaha-1478754178,0,39.86630127427062,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-firsttransformersproject-1478954182,0,5.113476145275885,1.0,Not Specified,nan,nan,0.04247,0.0426,NLP,4918515385,True
+autotrain-anli-1480954206,0,2.44759580195597,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-qjnwjkwnw-1490354394,0,148.66763338560511,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-akakka-1492154441,0,4.471184695619804,1.0,Not Specified,nan,nan,nan,nan,NLP,310020485,True
+Interlinguetranslator,0,0.2617035619368602,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+Kvenfinnishtranslator,0,0.007023045912239,1.0,Not Specified,nan,nan,nan,nan,NLP,310020485,True
+earnings-transcript-summary,0,1.3579793641309694,1.0,Not Specified,nan,nan,0.3210499999999999,0.26838,NLP,1625537793,True
+autotrain-stripai_test-1499654675,0,5.167876375083602,1.0,Not Specified,0.776,nan,nan,nan,Computer Vision,343266993,True
+autotrain-line_clip_no_nut_boltline_clip_no_nut_bolt-1523955096,0,10.423410288264847,1.0,Not Specified,0.798,0.542,nan,nan,Computer Vision,110420527,True
+autotrain-dogs-and-cats-1527055142,0,0.8187420113922029,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343266993,True
+autotrain-test-dogs-cats-1527155150,0,0.7873922658787444,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347596479,True
+imdb,0,0.0185647651897548,1.0,Not Specified,0.487,0.218,nan,nan,Not Specified,0,True
+test-fake_news_classification,0,34.12749821455322,1.0,Not Specified,1.0,1.0,nan,nan,NLP,263166449,True
+autotrain-lucy-song-request-1537055286,0,1.0504382303760451,1.0,Not Specified,0.997,0.997,nan,nan,NLP,265497461,True
+yoda-fits,0,18.026996827523217,1.0,Not Specified,nan,nan,0.62134,0.60269,NLP,4918515385,True
+bart-base-cnn-xsum-swe,0,0.0334,1.0,"Fredericia, Denmark",nan,nan,nan,nan,NLP,557723065,False
+autotrain-byt5-summary-1562255681,0,2.2525628167913614,1.0,Not Specified,nan,nan,0.12572,0.11701,NLP,2326697929,True
+autotrain-sphere-banking77-1565555714,0,0.0403225925465886,1.0,Not Specified,0.919,0.92,nan,nan,NLP,268084977,True
+autotrain-sphere-emotion-1565855719,0,0.0242924820006723,1.0,Not Specified,0.943,0.915,nan,nan,NLP,267866609,True
+autotrain-sphere-intent-classification-1584456046,0,1.893124351907886,1.0,Not Specified,0.744,0.678,nan,nan,NLP,267860465,True
+autotrain-auto-train-intent-classification-20220928-1584756071,0,1.0197546564964108,1.0,Not Specified,0.666,0.618,nan,nan,NLP,267857393,True
+autotrain-emotion-detection-1587956110,0,2.3491292126039087,1.0,Not Specified,0.888,0.823,nan,nan,NLP,438018413,True
+magpie-idioms-xlmroberta,0,9.232131148683266,1.0,Not Specified,0.985,0.0,nan,nan,NLP,1109889457,True
+autotrain-distilbert-risk-ranker-1593356256,0,0.0201678425471772,1.0,Not Specified,0.511,0.506,nan,nan,NLP,267857393,True
+idiom-xlm-roberta,0,0.0421576133189314,1.0,Not Specified,0.996,0.0,nan,nan,NLP,1109889457,True
+test1,0,0.1069,1.0,Not Specified,nan,nan,nan,nan,NLP,0,False
+GermantoNorthFrisian,0,21.087082943674982,1.0,Not Specified,nan,nan,nan,nan,NLP,295861701,True
+GermantoInterlingua,0,74.90468999750897,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+GermantoLinguaFrancaNova,0,0.262567988153626,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+GermantoSwabian,0,0.2690788847590159,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+newSentiment_1Oct22,0,1.3744604633696438,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-text-classification-kunuz-1630257501,0,22.431314788743983,1.0,Not Specified,0.647,0.542,nan,nan,NLP,556862191,True
+dog_food,0,6.799888815236616,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347600575,True
+autotrain-bart-meeting-summarization-1648858537,0,0.3760970336042794,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-fake-news-1649058538,0,0.0409785418562958,1.0,Not Specified,0.815,0.745,nan,nan,NLP,556846831,True
+autotrain-fake-news-1649058539,0,0.0402978723064698,1.0,Not Specified,0.779,0.635,nan,nan,NLP,737766955,True
+autotrain-fake-news-1649058540,0,4.630852478388675,1.0,Not Specified,0.725,0.523,nan,nan,NLP,438006125,True
+autotrain-fake-news-1649058541,0,4.695596043893512,1.0,Not Specified,0.779,0.646,nan,nan,NLP,433318253,True
+autotrain-fake-news-1649058542,0,12.699762619910535,1.0,Not Specified,0.637,0.039,nan,nan,NLP,1334461229,True
+autotrain-damages-1652858619,0,0.0073164334313121,1.0,Not Specified,0.989,nan,nan,nan,Computer Vision,343266993,True
+autotrain-person-name-validity1-1655358687,0,0.0150120248218022,1.0,Not Specified,0.991,0.0,nan,nan,NLP,1336512689,True
+autotrain-khilhlkhlk-1656058698,0,0.0295948437133704,1.0,Not Specified,nan,nan,0.64877,0.64527,NLP,557969145,True
+AI-image-detector,0,7.940487247386902,1.0,Not Specified,0.942,0.958,nan,nan,Computer Vision,347596479,True
+bart-base-cnn-xsum-cite-swe,0,0.0334,1.0,"Fredericia, Denmark",nan,nan,nan,nan,NLP,557723065,False
+autotrain-in-class-test-demo-1659958764,0,3.2447037790637503,1.0,Not Specified,0.991,0.988,nan,nan,Not Specified,0,True
+autotrain-in-class-test-demo-1659958767,0,0.1503169877612804,1.0,Not Specified,0.983,0.976,nan,nan,Not Specified,0,True
+autotrain-sphere-lecture-demo-1671659193,0,0.0047353241110689,1.0,Not Specified,0.658,0.478,nan,nan,NLP,737770027,True
+GermantoHunsrik,0,2.3711122483132376,1.0,Not Specified,nan,nan,nan,nan,NLP,295861701,True
+autotrain-stocks-ner-2000-sample-test-1676759313,0,0.0110294087066048,1.0,Not Specified,0.973,0.912,nan,nan,NLP,1330303153,True
+autotrain-chest-xray-demo-1677859324,0,13.219748263433518,1.0,Not Specified,0.934,nan,nan,nan,Computer Vision,347596479,True
+autotrain-isuzu-f-left-1681159381,0,0.8519213945001354,1.0,Not Specified,0.99,nan,nan,nan,Computer Vision,343266993,True
+EnglishtoAncientGreek,0,45.2679908890355,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-name_classification-1685059436,0,0.3857777634696358,1.0,Not Specified,0.988,0.989,nan,nan,NLP,265491317,True
+autotrain-name_classification_3-1686659457,0,1.0819688360882111,1.0,Not Specified,0.978,0.983,nan,nan,NLP,435643185,True
+html-bart-78.8,0,4721.333535315218,1.0,Not Specified,nan,nan,0.7885,0.78683,NLP,557969145,True
+autotrain-vision_6_categories_70_images_each-1691759542,0,1.8709463080714803,1.0,Not Specified,0.988,0.988,nan,nan,Computer Vision,347612863,True
+EnglishtoLinguaFrancaNova,0,13.980549591928089,1.0,Not Specified,nan,nan,nan,nan,NLP,295861701,True
+autotrain-amx2-1702259725,0,7.704828730137597,1.0,Not Specified,0.827,0.53,nan,nan,Not Specified,0,True
+autotrain-amx2-1702259728,0,0.0082468973760525,1.0,Not Specified,0.831,0.521,nan,nan,Not Specified,0,True
+autotrain-amx2-1702259729,0,0.0027665450339142,1.0,Not Specified,0.824,0.543,nan,nan,Not Specified,0,True
+EnglishtoAncientGreekV2,0,47.55255625240336,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+EnglishtoAncientGreekV3,0,0.642110734276787,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+EnglishtoOldEastSlavic,0,101.24633341477742,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-intelligize-edgar-analysis-2-1722460190,0,0.9669951284881568,1.0,Not Specified,nan,nan,0.50229,0.50229,NLP,557969145,True
+EnglishtoSaterlandFrisian,0,2.82976037007073,1.0,Not Specified,nan,nan,nan,nan,NLP,314179909,True
+RussiantoChukchi,0,96.54051975402358,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-movie-rationales-1734060527,0,5.912842155368309,1.0,Not Specified,0.934,0.934,nan,nan,NLP,737766955,True
+autotrain-t5-clickbait-binary-1750661108,0,8.44003619525122,1.0,Not Specified,0.998,0.999,nan,nan,NLP,498660333,True
+autotrain-fbert-singlish-1755361190,0,1.3946229895659434,1.0,Not Specified,0.843,0.832,nan,nan,NLP,438009197,True
+autotrain-jwan-autotrain1-1768961489,0,2.9876405883375106,1.0,Not Specified,0.983,0.976,nan,nan,Not Specified,0,True
+autotrain-poem-sentiment-analysis-1770161500,0,1.2662388515647711,1.0,Not Specified,0.81,0.59,nan,nan,NLP,556852975,True
+autotrain-poem-sentiment-analysis-1770161501,0,1.6081724212150736,1.0,Not Specified,0.821,0.677,nan,nan,NLP,737773099,True
+autotrain-poem-sentiment-analysis-1770161502,0,0.9444638089570118,1.0,Not Specified,0.799,0.58,nan,nan,NLP,438012269,True
+autotrain-poem-sentiment-analysis-1770161503,0,1.118838634517984,1.0,Not Specified,0.804,0.583,nan,nan,NLP,433324397,True
+autotrain-poem-sentiment-analysis-1770161504,0,1.463756126402436,1.0,Not Specified,0.732,0.507,nan,nan,NLP,1334469421,True
+autotrain-us-housing-prices-1771761510,0,4.466856397835458,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-us-housing-prices-1771761511,0,32.513983893680546,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-us-housing-prices-1771761512,0,50.53686341531619,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-us-housing-prices-1771761513,0,0.1297870838472963,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-us-housing-prices-1771761514,0,0.1288210176412382,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-in-class-test-1780161764,0,3.162191628403084,1.0,Not Specified,0.974,0.964,nan,nan,Not Specified,0,True
+autotrain-17102022-cert-1781461794,0,16.43804270120875,1.0,Not Specified,0.994,0.847,nan,nan,NLP,667179825,True
+autotrain-17102022133-cert-1781761805,0,20.262915394129607,1.0,Not Specified,0.995,0.844,nan,nan,NLP,667179825,True
+autotrain-17101457-1200cut_rich_neg-1782461850,0,15.90515729014607,1.0,Not Specified,0.994,0.769,nan,nan,NLP,667179825,True
+autotrain-17102022_only_sceond_label_no_split-1783361880,0,18.179473658039548,1.0,Not Specified,0.997,0.854,nan,nan,NLP,667179825,True
+autotrain-17102022_change_modlel-1783861900,0,22.12649933027385,1.0,Not Specified,0.994,0.871,nan,nan,NLP,1109929393,True
+autotrain-17102022_modifty_split_func_cert-1783761910,0,0.0796750250015584,1.0,Not Specified,0.995,0.867,nan,nan,NLP,667179825,True
+autotrain-17102022_relabel-1786061945,0,16.970831166674337,1.0,Not Specified,0.994,0.868,nan,nan,NLP,667179825,True
+autotrain-17102022-cert_update_date-1786462003,0,18.37074974959855,1.0,Not Specified,0.995,0.851,nan,nan,NLP,667179825,True
+autotrain-171022-update_label2-1788462049,0,19.661735872263936,1.0,Not Specified,0.991,0.783,nan,nan,NLP,667179825,True
+autotrain-ethos-sentiments-1790262079,0,0.8438685047317921,1.0,Not Specified,0.755,0.751,nan,nan,NLP,556846831,True
+autotrain-ethos-sentiments-1790262080,0,1.1703390276575862,1.0,Not Specified,0.83,0.848,nan,nan,NLP,737766955,True
+autotrain-ethos-sentiments-1790262081,0,1.14595289523453,1.0,Not Specified,0.795,0.83,nan,nan,NLP,438006125,True
+autotrain-ethos-sentiments-1790262082,0,0.8181506582658064,1.0,Not Specified,0.775,0.807,nan,nan,NLP,433318253,True
+autotrain-ethos-sentiments-1790262083,0,2.331522912581982,1.0,Not Specified,0.72,0.778,nan,nan,NLP,1334461229,True
+autotrain-17102022-update_scope_and_date-1789062099,0,19.692537664708304,1.0,Not Specified,0.992,0.801,nan,nan,NLP,667179825,True
+autotrain-181022022-cert-1796662109,0,18.56487105177345,1.0,Not Specified,0.991,0.79,nan,nan,NLP,667179825,True
+autotrain-animals-1797562141,0,0.6998538355363139,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347596479,True
+autotrain-strano-o-normale-1798362191,0,0.6330824015396253,1.0,Not Specified,0.75,0.667,nan,nan,NLP,439787885,True
+autotrain-18102022_retoken-1799162225,0,20.17997164723111,1.0,Not Specified,0.993,0.86,nan,nan,NLP,667179825,True
+autotrain-pachyderm-1799762243,0,1.2406150246482144,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1330262193,True
+autotrain-yash-1801862270,0,0.9492814628505252,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-yash-1801862271,0,1.51853168148008,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-sexy-or-ugly-1802962297,0,0.316594943692132,1.0,Not Specified,0.8,0.5,nan,nan,NLP,265491317,True
+autotrain-mercuryorsodium-1804662320,0,0.3397575484174952,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,110392879,True
+autotrain-only-rssi-1813762559,0,1.3554114117578944,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-code_classification-1815762639,0,11.438220107218369,1.0,Not Specified,0.794,0.788,nan,nan,NLP,556982127,True
+swin-muppet-faces,0,0.0115298552909659,1.0,Not Specified,0.963,0.935,nan,nan,Computer Vision,347686655,True
+autotrain-21102022-cert-1827562840,0,19.94429730071814,1.0,Not Specified,0.992,0.851,nan,nan,NLP,667179825,True
+autotrain-21102022_cert_check_date-1828162855,0,22.87049697186888,1.0,Not Specified,0.994,0.89,nan,nan,NLP,667179825,True
+autotrain-600-dragino-1839063122,0,0.127629627488599,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-person-intruder-classification-1840363138,0,0.5267790340228428,1.0,Not Specified,0.818,nan,nan,nan,Computer Vision,343266993,True
+autotrain-model1-binary-class-1843363194,0,4.092983833698762,1.0,Not Specified,1.0,1.0,nan,nan,Not Specified,0,True
+autotrain-model2-text-class-1843563203,0,3.652284357860415,1.0,Not Specified,0.921,0.832,nan,nan,NLP,1334461229,True
+m2m100_418M_br_fr,4000000000,2100.0,1.0,"Paris, France",nan,nan,nan,nan,NLP,1935795713,False
+autotrain-231022022-cert4-1847463269,0,17.781243387408683,1.0,Not Specified,0.999,0.962,nan,nan,NLP,667179825,True
+autotrain-24102022_cert-1855763468,0,15.043841231531312,1.0,Not Specified,0.999,0.947,nan,nan,NLP,667179825,True
+autotrain-24102022-cert2-1856563478,0,16.894326665784842,1.0,Not Specified,0.999,0.968,nan,nan,NLP,667179825,True
+autotrain-cat_vs_dogs-1858163503,0,0.7950743476524714,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,110392879,True
+autotrain-24102022-cert4-1858363508,0,19.82493725454133,1.0,Not Specified,0.999,0.967,nan,nan,NLP,667179825,True
+autotrain-24102022-cert5-1858763528,0,15.97111881210848,1.0,Not Specified,0.999,0.966,nan,nan,NLP,667179825,True
+autotrain-abunawaf-cognition-1859363548,0,0.9315924025671088,1.0,Not Specified,0.837,0.81,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-1859363549,0,1.0566666951225436,1.0,Not Specified,0.854,0.832,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-1859363550,0,1.173820365058826,1.0,Not Specified,0.846,0.817,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-1859363551,0,1.7828199447393138,1.0,Not Specified,0.858,0.837,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-1859363552,0,1.1831906042914635,1.0,Not Specified,0.854,0.827,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-auto-1859563553,0,1.7868012751172693,1.0,Not Specified,0.854,0.827,nan,nan,NLP,556846831,True
+autotrain-abunawaf-cognition-auto-1859563554,0,1.1747519267416993,1.0,Not Specified,0.813,0.798,nan,nan,NLP,737766955,True
+autotrain-abunawaf-cognition-auto-1859563555,0,1.0328202141613765,1.0,Not Specified,0.866,0.834,nan,nan,NLP,438006125,True
+autotrain-abunawaf-cognition-auto-1859563556,0,0.7623869342782728,1.0,Not Specified,0.829,0.809,nan,nan,NLP,433318253,True
+autotrain-abunawaf-cognition-auto-1859563557,0,3.157823361506444,1.0,Not Specified,0.833,0.802,nan,nan,NLP,1334461229,True
+autotrain-abunawaf-information-1859863558,0,0.7147232414393694,1.0,Not Specified,0.865,0.851,nan,nan,NLP,438006125,True
+autotrain-abunawaf-information-1859863559,0,0.6822182565490778,1.0,Not Specified,0.853,0.824,nan,nan,NLP,438006125,True
+autotrain-abunawaf-information-1859863560,0,1.8754846173690545,1.0,Not Specified,0.878,0.86,nan,nan,NLP,438006125,True
+autotrain-abunawaf-information-1859863561,0,1.588438196368296,1.0,Not Specified,0.869,0.852,nan,nan,NLP,438006125,True
+autotrain-abunawaf-information-1859863562,0,1.5985216080073748,1.0,Not Specified,0.857,0.836,nan,nan,NLP,438006125,True
+autotrain-abunawaf-interaction-1859963563,0,0.7644156643824811,1.0,Not Specified,0.91,0.935,nan,nan,NLP,438006125,True
+autotrain-abunawaf-interaction-1859963564,0,0.8413403809338463,1.0,Not Specified,0.902,0.931,nan,nan,NLP,438006125,True
+autotrain-abunawaf-interaction-1859963565,0,0.6502317465394943,1.0,Not Specified,0.922,0.944,nan,nan,NLP,438006125,True
+autotrain-abunawaf-interaction-1859963566,0,0.8147216061910044,1.0,Not Specified,0.906,0.933,nan,nan,NLP,438006125,True
+autotrain-abunawaf-interaction-1859963567,0,1.0555869183889894,1.0,Not Specified,0.91,0.934,nan,nan,NLP,438006125,True
+autotrain-abunawaf-performance-1860063568,0,1.0292657249217083,1.0,Not Specified,0.812,0.8,nan,nan,NLP,438006125,True
+autotrain-abunawaf-performance-1860063569,0,0.6232110285492835,1.0,Not Specified,0.841,0.835,nan,nan,NLP,438006125,True
+autotrain-abunawaf-performance-1860063570,0,0.9744207053095344,1.0,Not Specified,0.824,0.812,nan,nan,NLP,438006125,True
+autotrain-abunawaf-performance-1860063571,0,0.6594479502465727,1.0,Not Specified,0.824,0.815,nan,nan,NLP,438006125,True
+autotrain-abunawaf-performance-1860063572,0,0.8429873610442068,1.0,Not Specified,0.788,0.792,nan,nan,NLP,438006125,True
+autotrain-24102022-cert6-1859663573,0,19.238000251078866,1.0,Not Specified,0.999,0.969,nan,nan,NLP,667179825,True
+autotrain-abunawaf-user-1860163583,0,0.6436453501778651,1.0,Not Specified,0.869,0.652,nan,nan,NLP,438006125,True
+autotrain-abunawaf-user-1860163584,0,1.0492185026433665,1.0,Not Specified,0.89,0.733,nan,nan,NLP,438006125,True
+autotrain-abunawaf-user-1860163585,0,1.0008458491802985,1.0,Not Specified,0.89,0.722,nan,nan,NLP,438006125,True
+autotrain-abunawaf-user-1860163586,0,1.2062625201613788,1.0,Not Specified,0.89,0.727,nan,nan,NLP,438006125,True
+autotrain-abunawaf-user-1860163587,0,1.58506390711431,1.0,Not Specified,0.878,0.688,nan,nan,NLP,438006125,True
+autotrain-mikrotik-7-7-1860563588,0,1.538605928853103,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-mikrotik-7-7-1860563590,0,7.101169339115312,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-mikrotik-7-7-1860563597,0,1.3260818006120507,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-dragino-7-7-1860763606,0,0.000588925557747,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-24102022-cert7-1860363608,0,0.0825722192587215,1.0,Not Specified,0.999,0.978,nan,nan,NLP,667179825,True
+autotrain-dragino-7-7-max_495m-1860863627,0,0.0112423262668447,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-dragino-7-7-max_300m-1861063640,0,0.128606860489453,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-24102022-cert9-1861563662,0,18.678658475473995,1.0,Not Specified,0.999,0.964,nan,nan,NLP,667179825,True
+autotrain-book_recommender-1867863842,0,10.620169750625417,1.0,Not Specified,0.594,0.387,nan,nan,NLP,737779243,True
+autotrain-25102022-cert1-1871763939,0,22.29520077707259,1.0,Not Specified,0.999,0.975,nan,nan,NLP,667179825,True
+autotrain-25102022-cert2-1871863945,0,23.303137544479885,1.0,Not Specified,1.0,0.985,nan,nan,NLP,667179825,True
+bart-base-cantonese,0,6.29,1.0,Not Specified,nan,nan,nan,nan,NLP,439094139,False
+improve-a-v1,0,0.9899872350262614,1.0,Not Specified,nan,nan,0.66429,0.66188,NLP,557969145,True
+tag-h-v1,0,607.9833800689026,1.0,Not Specified,nan,nan,0.53144,0.5266299999999999,NLP,1625537793,True
+tag-caption-v1,0,339.29944607016967,1.0,Not Specified,nan,nan,0.30426,0.29262,NLP,1625537793,True
+Movie_review_sentiment_analysis_model,0,6.99192089941968,1.0,Not Specified,0.95,0.95,nan,nan,NLP,737766955,True
+autotrain-27102022-cert1-1899464570,0,16.254745105263574,1.0,Not Specified,0.999,0.975,nan,nan,NLP,667179825,True
+autotrain-27102022-cert-1899564594,0,22.03607609264655,1.0,Not Specified,0.999,0.981,nan,nan,NLP,667179825,True
+lojban-translation,0,53.16467716910746,1.0,Not Specified,nan,nan,nan,nan,NLP,310020485,True
+xlm-roberta-finetuned-sentiment,0,19.11641413955588,1.0,Not Specified,0.563,0.555,nan,nan,NLP,1112261613,True
+distilbert-multilingual-finetuned-sentiment,0,5.523107849339405,1.0,Not Specified,0.514,0.504,nan,nan,NLP,541348337,True
+Translation_en_to_fr_project,0,0.6863820434350988,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+autotrain-28102022-1914864930,0,19.19485186697524,1.0,Not Specified,1.0,0.983,nan,nan,NLP,667179825,True
+autotrain-28102022-cert2-1916264970,0,17.982023070008026,1.0,Not Specified,1.0,0.983,nan,nan,NLP,667179825,True
+autotrain-planes-1918465011,0,0.1981134535019566,1.0,Not Specified,0.997,0.916,nan,nan,Not Specified,0,True
+TLDR-Vegan-Studies,0,57.779835625872906,1.0,Not Specified,nan,nan,0.44317,0.41369,NLP,2950844807,True
+EnglishtoBulgarian,0,41.90097830745309,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+English2Sardinian,0,14.908336657166226,1.0,Not Specified,nan,nan,nan,nan,NLP,340870277,True
+autotrain-fbert-singlish-2-1937065404,0,1.04277637543434,1.0,Not Specified,0.858,0.717,nan,nan,NLP,438009197,True
+improve-figcaption-v2,0,2.4435817864698777,1.0,Not Specified,nan,nan,0.63261,0.63239,NLP,557969145,True
+autotrain-fbert-singlish-5-1943965533,0,2.1095744631067883,1.0,Not Specified,0.88,0.766,nan,nan,NLP,438009197,True
+predict-page-is-junk-0.1.0,0,4.157527125888868,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+href-v1,0,2.970316260186869,1.0,Not Specified,nan,nan,0.27046,0.24913,NLP,1625537793,True
+autotrain-hjuihu-1974565969,0,49.67104326560968,1.0,Not Specified,nan,nan,0.36489,0.18766,NLP,1625533697,True
+autotrain-bart_normaldata-1976866012,0,41.152874017879256,1.0,Not Specified,nan,nan,0.34318,0.1846,NLP,1625533697,True
+autotrain-testtextexists-1966366048,0,0.3550338626114656,1.0,Not Specified,nan,nan,nan,nan,NLP,737763883,True
+autotrain-testtextexists-1966366051,2000,0.838233151,1.0,Not Specified,nan,nan,nan,nan,NLP,1421580269,False
+autotrain-wine-1986366196,0,23.98337622177028,1.0,Not Specified,0.705,0.345,nan,nan,Not Specified,0,True
+autotrain-english-to-interlingua-translator-2002766502,0,19.067960229529483,1.0,Not Specified,nan,nan,nan,nan,NLP,340870277,True
+autotrain-hmaet-2037366889,0,0.0405645225064915,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-hmaet-2037366891,0,0.3032763853118019,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+wikicat_ca,0,47.543878831739285,1.0,Not Specified,0.787,0.776,nan,nan,NLP,1421617133,True
+autotrain-okmjn-moo-2088667188,0,1.361181216223394,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,1392724369,True
+autotrain-pachyderms-v2-2088767193,0,1.190285924893865,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,1392724369,True
+autotrain-pachyderms-v3-2088867198,0,1.5875017032028491,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,1392724369,True
+autotrain-14112022-cert-2086767210,0,18.953935307959163,1.0,Not Specified,1.0,0.988,nan,nan,NLP,667186033,True
+autotrain-documentos-oficiais-2092367351,0,6.461431564881563,1.0,Not Specified,0.986,0.0,nan,nan,NLP,1333543089,True
+autotrain-furryornot-2093267379,0,0.0074725601621924,1.0,Not Specified,0.909,nan,nan,nan,Computer Vision,1392724369,True
+autotrain-disease_tokens-2095367455,0,1.569698418187329,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1336508593,True
+autotrain-15112022-cert2-2099767621,0,30.88105111466208,1.0,Not Specified,0.999,0.986,nan,nan,NLP,667186033,True
+autotrain-15112022-cert3-2101567677,0,0.0847161246389862,1.0,Not Specified,1.0,0.991,nan,nan,NLP,667186033,True
+autotrain-15112022-cert4-2103567748,0,18.55067964060936,1.0,Not Specified,1.0,0.991,nan,nan,NLP,667186033,True
+autotrain-15112022-cert6-2103867793,0,0.0843114319344479,1.0,Not Specified,1.0,0.99,nan,nan,NLP,667186033,True
+autotrain-15112022-cert7-2105067828,0,0.0817743318404079,1.0,Not Specified,0.999,0.991,nan,nan,NLP,667186033,True
+autotrain-15112022-cert8-2105867883,0,0.0952584031790109,1.0,Not Specified,0.999,0.986,nan,nan,NLP,667186033,True
+autotrain-16112022-cert-2114268313,0,0.086994101215413,1.0,Not Specified,0.999,0.986,nan,nan,NLP,667186033,True
+autotrain-16112022-cert2-2115868392,0,20.85124428527041,1.0,Not Specified,0.999,0.984,nan,nan,NLP,667186033,True
+autotrain-question-generation4-2116768409,0,4.806834090498112,1.0,Not Specified,nan,nan,0.32336,0.30175,NLP,712383415,True
+welcome_message_prod,0,0.0042327719742692,1.0,Not Specified,0.958,0.968,nan,nan,NLP,438006125,True
+activity-classifier,0,12.734050517307358,1.0,Not Specified,0.812,0.684,nan,nan,NLP,442676333,True
+autotrain-18112022-cert-2140369076,0,17.745493294511153,1.0,Not Specified,0.999,0.987,nan,nan,NLP,667186033,True
+autotrain-consumer-nature-speech_finbert-2147169289,0,0.0043719752543122,1.0,Not Specified,0.913,0.78,nan,nan,NLP,439084397,True
+good-reads-string,0,0.0470068041759547,1.0,Not Specified,0.686,0.534,nan,nan,NLP,737779243,True
+idk,0,1.7850904815735922,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,346858475,True
+autotrain-goodreads_without_bookid-2171169881,0,10.018792119596627,1.0,Not Specified,0.66,0.422,nan,nan,NLP,737779243,True
+autotrain-goodreads_without_bookid-2171169880,0,11.598027053629249,1.0,Not Specified,0.654,0.547,nan,nan,NLP,556859119,True
+autotrain-goodreads_without_bookid-2171169882,0,6.409243088343928,1.0,Not Specified,0.586,0.373,nan,nan,NLP,438018413,True
+autotrain-goodreads_without_bookid-2171169883,0,7.7592453257413565,1.0,Not Specified,0.579,0.36,nan,nan,NLP,433330541,True
+autotrain-goodreads_without_bookid-2171169884,0,21.014243837592847,1.0,Not Specified,0.666,0.454,nan,nan,NLP,1334477613,True
+old-beta1,0,0.9758714074673084,1.0,Not Specified,0.701,0.416,nan,nan,NLP,438030701,True
+old-beta2,0,1.2815143214785871,1.0,Not Specified,0.747,0.513,nan,nan,NLP,556871407,True
+autotrain-healthcare_summarization_uta-2207670804,0,7.541213010226726,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-my-train-2209070896,0,48.01845367300684,1.0,Not Specified,nan,nan,nan,nan,NLP,4918417081,True
+whisper-medium-nlcv11,1000000000,2930.0,1.0,"Ghent, Belgium",nan,nan,nan,nan,Audio,3055754841,False
+autotrain-wikicat_es-2213570987,0,10.4216765068249,1.0,Not Specified,0.786,0.758,nan,nan,NLP,498681837,True
+ell-phraseology,0,3.8479338857094207,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+ell-cohesion,0,4.569992504332477,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+ell-grammar,0,2.437473438795388,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+ell-vocabulary,0,2.371997852718524,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+ell-conventions,0,2.6341173422087247,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+ell-syntax,0,6.2662711223675815,1.0,Not Specified,nan,nan,nan,nan,NLP,328515693,True
+autotrain-mt5_xlsum_msamsum-2231571360,0,52.2418341683463,1.0,Not Specified,nan,nan,0.43587,0.3832,NLP,2329700173,True
+autotrain-25112022-cert-2235671445,0,18.043415297084504,1.0,Not Specified,0.999,0.986,nan,nan,NLP,667186033,True
+autotrain-25112022-cert2-2236171465,0,17.128542622750768,1.0,Not Specified,0.999,0.986,nan,nan,NLP,667186033,True
+autotrain-analyze-vehicle-images-2256371855,0,2.9415774139015696,1.0,Not Specified,0.932,0.87,nan,nan,Computer Vision,347649727,True
+autotrain-country-to-country-code-2-2266072007,0,0.0233638657506133,1.0,Not Specified,0.94,0.741,nan,nan,NLP,1335014701,True
+led-large-legal-summary,0,0.1413928133684925,1.0,Not Specified,nan,nan,0.36855,0.33547,NLP,1839604721,True
+bert-autotrain-1,0,0.6063524119726759,1.0,Not Specified,0.876,0.914,nan,nan,NLP,438006125,True
+anchored-ant,0,69.23178007707939,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+auto_train,0,1.2620473255629745,1.0,Not Specified,0.517,0.549,nan,nan,NLP,433345901,True
+autotrain-training-2307973005,0,3.7679548759427006,1.0,Not Specified,0.508,0.559,nan,nan,NLP,1334498093,True
+test2,0,0.9679834304164028,1.0,Not Specified,0.812,0.872,nan,nan,NLP,439084397,True
+autotrain-faseiii_diciembre-2311773112,0,4.041080293052415,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-faseiii_final-2312773135,0,2.814484312003443,1.0,Not Specified,0.996,0.985,nan,nan,NLP,433318253,True
+autotrain-textcat-paul-2315373253,0,7.014613433979796,1.0,Not Specified,0.944,0.942,nan,nan,NLP,737766955,True
+autotrain-what-animal-are-you-2318373345,0,0.442974318420001,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,344458929,True
+autotrain-4-2331273589,0,0.9127749760143646,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-whatsapp_chat_summarization-2331373597,0,8.016185733770428,1.0,Not Specified,nan,nan,0.45685,0.38559,NLP,1625537793,True
+autotrain-dippatel_summarizer-2331873599,0,68.41274041098731,1.0,Not Specified,nan,nan,0.49434,0.41176,NLP,2279605745,True
+autotrain-dippatel_summarizer-2331873598,0,71.50478540100151,1.0,Not Specified,nan,nan,0.49414,0.41157,NLP,2279605745,True
+autotrain-bart-2332573622,0,17.308721714114615,1.0,Not Specified,nan,nan,0.40163,0.30916,NLP,1625533697,True
+autotrain-bart-large-samsum-lid-2333073627,0,4.671853339537159,1.0,Not Specified,nan,nan,0.47617,0.39771,NLP,557969145,True
+autotrain-t5-base-samsum-2333773650,0,49.83285188931273,1.0,Not Specified,nan,nan,0.52508,0.44903,NLP,3132789733,True
+autotrain-acc-2337673709,0,1.6543357301983936,1.0,Not Specified,0.492,0.457,nan,nan,NLP,438033773,True
+autotrain-t5-large-summary-2338073717,0,0.2958140546196442,1.0,Not Specified,nan,nan,0.45911,0.36497,NLP,990450547,True
+autotrain-pegasus-large-summary-2.0-2338573727,0,74.34647142824745,1.0,Not Specified,nan,nan,0.45675,0.3675,NLP,2274842165,True
+autotrain-ciap-2345673819,0,4.04378848235129,1.0,Not Specified,0.631,0.542,nan,nan,NLP,1338184941,True
+autotrain-acc_keys-2347073860,0,1.3599341780747405,1.0,Not Specified,0.5,0.445,nan,nan,NLP,438033773,True
+autotrain-ciap2-2347173866,0,4.825567476024859,1.0,Not Specified,0.681,0.609,nan,nan,NLP,1338184941,True
+autotrain-tc_ac-2349273884,0,1.196433244085964,1.0,Not Specified,0.517,0.465,nan,nan,NLP,438033773,True
+short-description-generator-6k,0,135.05744541394728,1.0,Not Specified,nan,nan,0.30629,0.27506,NLP,2950844807,True
+autotrain-07122022-2-exam_cert-2364774382,0,24.71153691821318,1.0,Not Specified,0.995,0.924,nan,nan,NLP,667210609,True
+autotrain-07-12-2022-exam-cert3-2365574505,0,26.625950331996258,1.0,Not Specified,0.995,0.937,nan,nan,NLP,667210609,True
+subtitle-v2,0,4.325625308048844,1.0,Not Specified,nan,nan,0.4188199999999999,0.39859,NLP,1625537793,True
+improve-a-v2,0,1984.9185935944208,1.0,Not Specified,nan,nan,0.63536,0.63217,NLP,557969145,True
+tag-h-v2,0,2510.751427379945,1.0,Not Specified,nan,nan,0.52842,0.52252,NLP,1625537793,True
+href-v2,0,2295.967887402507,1.0,Not Specified,nan,nan,0.2691,0.2480399999999999,NLP,1625537793,True
+tag-caption-v2,0,5.33165635098582,1.0,Not Specified,nan,nan,0.39655,0.38522,NLP,891700799,True
+autotrain-visaboxx-2379774567,0,34.58613148731854,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-finance-consumer-complaints-issue-classification-2380974646,0,89.45199951708611,1.0,Not Specified,0.782,0.78,nan,nan,NLP,438015341,True
+autotrain-test_row2-2384274652,0,1.2351509468215165,1.0,Not Specified,0.97,0.965,nan,nan,Computer Vision,347608767,True
+autotrain-medical-2387774761,0,0.7237073793849912,1.0,Not Specified,0.99,0.0,nan,nan,NLP,406784817,True
+autotrain-fine_tune_tscholak-2392374839,0,11.023749088725204,1.0,Not Specified,nan,nan,0.94982,0.94629,NLP,3132576741,True
+autotrain-fine_tune_tscholak-2392374841,0,11.39130569365672,1.0,Not Specified,nan,nan,0.92363,0.92026,NLP,3132576741,True
+autotrain-dreambooth-marsupilami,0,56.66697547427793,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+khu-text-classification-roberta-base-sept-2022,0,2.8092927891228863,1.0,Not Specified,0.84,0.834,nan,nan,NLP,498708213,True
+text_classification-roberta_base_sept2022,0,2.029312802544045,1.0,Not Specified,0.846,0.826,nan,nan,NLP,498709549,True
+autotrain-disparities_pubmed_mit-2407875110,0,0.7254914669916961,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+row3_96,0,0.3575974781341657,1.0,Not Specified,0.96,0.946,nan,nan,Computer Vision,343276209,True
+chinese_spam_detect,0,0.8147876753762673,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-edsa-sa-language-classification-2420175384,0,2.255966091405494,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-lottery_v2-2420075390,0,0.0139531447303239,1.0,Not Specified,0.966,0.962,nan,nan,NLP,409147757,True
+autotrain-lottery_v2-2420075389,0,0.0604793403284594,1.0,Not Specified,0.965,0.961,nan,nan,NLP,1302235053,True
+yahoo-answers-small,0,1.56957741717827,1.0,Not Specified,nan,nan,0.11323,0.09397,Not Specified,307908421,True
+autotrain-intent_classification_chope-2429575593,0,4.711456517910571,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-sentiment-analysis-2435575634,0,0.0803280731181239,1.0,Not Specified,0.873,0.87,nan,nan,Not Specified,0,True
+autotrain-rustance-stance-xlmr-2440275732,0,2.3986554105301314,1.0,Not Specified,0.861,0.455,nan,nan,NLP,1112258541,True
+autotrain-preesmetextclassifier-2437575785,0,3.321230337361748,1.0,Not Specified,0.97,0.572,nan,nan,NLP,442568685,True
+autotrain-hamantest-2444675858,0,0.3689978392965571,1.0,Not Specified,0.8,nan,nan,nan,Computer Vision,347596479,True
+autotrain-victormautotraindreambooth-FS8JGUBRYX-2450175922,0,60.20045215291253,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+autotrain-ner-only-effect-2451175943,0,0.8232221958822463,1.0,Not Specified,0.965,0.0,nan,nan,NLP,406784817,True
+autotrain-recipes-2451975972,0,9.62915730999643,1.0,Not Specified,0.989,0.933,nan,nan,NLP,438006125,True
+autotrain-recipes-2451975973,0,6.990639915807625,1.0,Not Specified,0.989,0.936,nan,nan,NLP,433318253,True
+MassiveCatalanIntents,0,13.789236303098791,1.0,Not Specified,0.882,0.855,nan,nan,NLP,1421809837,True
+autotrain-feet-typelok-2473576411,0,0.5534616165654265,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,780988623,True
+pickonai-best,0,0.482684204457421,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+autotrain-text2itinerary-2479576495,0,35.1760357885458,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-medical-reports-summarizer-2484176581,0,0.0185081541168912,1.0,Not Specified,nan,nan,0.44555,0.44168,NLP,990406605,True
+autotrain-butterflies-new-17716424,0,111.21012328795236,1.0,Not Specified,0.317,0.043,nan,nan,Computer Vision,123976577,True
+autotrain-butterflies-new-17716422,0,138.53332005624384,1.0,Not Specified,0.496,0.204,nan,nan,Computer Vision,121503343,True
+autotrain-butterflies-new-17716423,0,185.36475571171792,1.0,Not Specified,0.46,0.146,nan,nan,Computer Vision,354377457,True
+autotrain-butterflies-new-17716425,0,150.8589874762091,1.0,Not Specified,0.548,0.259,nan,nan,Computer Vision,362405631,True
+autotrain-butterflies-new-17716426,0,0.8632390143249431,1.0,Not Specified,0.497,0.179,nan,nan,Computer Vision,357968939,True
+row4_accu100,0,0.0039350798740081,1.0,Not Specified,0.99,0.99,nan,nan,Computer Vision,110402095,True
+row4_98,0,1.893737751807574,1.0,Not Specified,0.98,0.98,nan,nan,Computer Vision,346867691,True
+told_br_binary_sm,0,4.429755329718354,1.0,Not Specified,0.8,0.759,nan,nan,NLP,435769709,True
+row5_100,0,2.647537931755994,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347608767,True
+told_br_binary_sm_bertimbau,0,1.778776476039011,1.0,Not Specified,0.815,0.793,nan,nan,NLP,435769709,True
+autotrain-butterfly-similarity-2490576840,0,21.263808199884835,1.0,Not Specified,0.609,0.409,nan,nan,Computer Vision,345438641,True
+autotrain-Consequenv05-WEW6KM47ET-2492376867,0,39.499488037662175,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+yahoo-answers-test-model,27400000,3.128325676,1.0,Not Specified,nan,nan,14.002,11.022,Not Specified,557969145,False
+autotrain-butterfly_similarity_swin-2490776951,0,28.296015693616063,1.0,Not Specified,0.689,0.488,nan,nan,Computer Vision,350491071,True
+autotrain-sea-slug-similarity-2498977005,0,13.759124872304856,1.0,Not Specified,0.837,0.778,nan,nan,Computer Vision,348592767,True
+andro-micro,0,2.843258817349137,1.0,Not Specified,0.901,0.897,nan,nan,NLP,498706477,True
+CovidAutoTrainTest,0,1.7646991170797304,1.0,Not Specified,0.319,0.231,nan,nan,NLP,540875117,True
+autotrain-twitter-covid-19-spam-detection-2512177276,0,1.0218403202204225,1.0,Not Specified,0.906,0.945,nan,nan,NLP,433318253,True
+biomedical_text_summarization,425000,3198.397661,1.0,Not Specified,nan,nan,39.4086,nan,NLP,3132667369,False
+autotrain-sima-2512277279,0,1.7528609470694885,1.0,Not Specified,nan,nan,0.10778,0.0828599999999999,NLP,891700799,True
+autotrained_spoof_detector,0,2.251071897861615,1.0,Not Specified,0.73,nan,nan,nan,Computer Vision,347599761,True
+autotrain-rf_auto_gen-2522877431,0,2.118580608507536,1.0,Not Specified,0.79,nan,nan,nan,Computer Vision,347599761,True
+honor,0,14.46129742532204,1.0,Not Specified,0.989,0.989,nan,nan,NLP,433320053,True
+autotrain-20-12-2022-2540377772,0,14.305842162020754,1.0,Not Specified,0.994,0.828,nan,nan,NLP,667193901,True
+CatsandDogsPOC-Resnet,49662722,1.6189148718411266,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,94374989,True
+CatsandDogsPOC-Swin,0,1.165641024416945,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+autotrain-20-12-2022-exam4-2541677824,0,11.026710036149494,1.0,Not Specified,0.994,0.804,nan,nan,NLP,667206189,True
+autotrain-12-20-2022_rated_speed_only_exam-2542677876,0,7.9382600757577935,1.0,Not Specified,0.999,0.666,nan,nan,NLP,667150829,True
+autotrain-20-12-2022_rated_speed_exam-2543177886,0,16.824773531345276,1.0,Not Specified,1.0,0.897,nan,nan,NLP,667150829,True
+autotrain-20-12-2022_rated_speed_exam2-2543577904,0,18.10539257374316,1.0,Not Specified,1.0,0.846,nan,nan,NLP,667150829,True
+autotrain-20-12-2022_general_info_exam-2543777917,0,21.038593211432406,1.0,Not Specified,0.998,0.945,nan,nan,NLP,667187757,True
+autotrain-20-12-2022_exam_part3-2543877946,0,21.733051144065605,1.0,Not Specified,0.998,0.762,nan,nan,NLP,667206189,True
+autotrain-tscholak_finetune_2-2548477985,0,17.282664720294886,1.0,Not Specified,nan,nan,0.96687,0.96016,NLP,3132580677,True
+autotrain-csgo_dust2_or_mirage-2555378112,0,3.586661186521151,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343268717,True
+autotrain-20-12-2022_rated_speed3_exam-2544978148,0,17.12192796383268,1.0,Not Specified,1.0,0.835,nan,nan,NLP,667150829,True
+autotrain-21-12-2022_rated_speed2-2557778169,0,14.90637346423708,1.0,Not Specified,1.0,0.991,nan,nan,NLP,667150829,True
+autotrain-21-12-2022_exam_part3_1-2557478179,0,20.48292260935143,1.0,Not Specified,0.998,0.802,nan,nan,NLP,667206189,True
+autotrain-21-12-2022_exam_part5-2557978193,0,11.403028098792594,1.0,Not Specified,1.0,0.993,nan,nan,NLP,667172333,True
+autotrain-21-12-2022_overspeed_governor-2557878199,0,0.0497938898991906,1.0,Not Specified,1.0,0.992,nan,nan,NLP,667193901,True
+autotrain-21-12-2022_exam_part4_1-2558278221,0,17.974413129541247,1.0,Not Specified,1.0,0.984,nan,nan,NLP,667200045,True
+autotrain-21-12-2022_exam_part3-2559178277,0,20.464916479903486,1.0,Not Specified,0.999,0.955,nan,nan,NLP,667206189,True
+autotrain-GoodhuesChairDemo-KPRJBJ8D95-2568578395,0,26.147409089438984,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+auto-arabic-summarization,9000000,23.93485568,1.0,Not Specified,nan,nan,1.132,1.137,NLP,557175853,False
+English-to-Aramaic-or-Syriac,0,186.95204500157936,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+friedeberg,0,23.966933198902527,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+maxdekdt,0,86.12664300406121,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+drug-recommend-reco-v1,0,2.748256947165376,1.0,Not Specified,0.987,0.988,nan,nan,NLP,409149557,True
+autotrain-drugrecommendtiny-2617979261,0,1.30441791792016,1.0,Not Specified,0.923,0.928,nan,nan,NLP,46187471,True
+autotrain-lottery_prod-2626879382,0,11.554897545219454,1.0,Not Specified,0.96,0.955,nan,nan,NLP,1302236789,True
+mT5-OrangeSum,0,675.7789931017469,1.0,Not Specified,nan,nan,0.33348,0.2421,NLP,2329702453,True
+mT5-dialogSum,0,248.06396898781733,1.0,Not Specified,nan,nan,0.40914,0.33122,NLP,2329702453,True
+autotrain-t5-cnn-v6,0,6.1132277010358,1.0,Not Specified,nan,nan,0.23476,0.1926599999999999,NLP,242071641,True
+autotrain-age3-2658279907,0,5.065800795931951,1.0,Not Specified,0.77,0.768,nan,nan,Computer Vision,1392751597,True
+autotrain-t5-cnn,0,10.839262225533137,1.0,Not Specified,nan,nan,0.2386499999999999,0.19696,NLP,242071641,True
+English2AlgerianArabic,0,90.58305184650668,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+English2AlgerianArabicV2,0,60.07025137574803,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-finance_data_classification-2694580522,0,4.221526489857838,1.0,Not Specified,0.95,0.931,nan,nan,NLP,438017141,True
+autotrain-fine_tune_table_tm2-2695480537,0,6.3826736622439215,1.0,Not Specified,nan,nan,0.5006499999999999,0.46018,NLP,3132580677,True
+autotrain-genderage-2709480568,0,8.240977060159542,1.0,Not Specified,0.56,0.56,nan,nan,Computer Vision,1392792557,True
+autotrain-tm3_model-2711480628,0,9.38482304577412,1.0,Not Specified,nan,nan,0.94638,0.93188,NLP,3132580677,True
+autotrain-tm3_model-2711480629,0,8.016071286117265,1.0,Not Specified,nan,nan,0.94701,0.92992,NLP,3132580677,True
+autotrain-tm3_model-2711480631,0,9.180873432477254,1.0,Not Specified,nan,nan,0.94701,0.93006,NLP,3132580677,True
+indobert-sentiment-analysis,0,1.3428141985163928,1.0,Not Specified,0.96,0.969,nan,nan,NLP,442311797,True
+Pacc,0,4.8390309824523134,1.0,Not Specified,0.708,0.698,nan,nan,Computer Vision,347612049,True
+70btclassification,0,0.0112914208925239,1.0,Not Specified,0.708,0.695,nan,nan,Computer Vision,343277933,True
+autotrain-tamil_emotion_11_tamilbert-2710380899,0,0.0198551858623125,1.0,Not Specified,0.434,0.238,nan,nan,NLP,1112281781,True
+autotrain-disaster_tweets_autotrain-2730481027,0,3.296830635621752,1.0,Not Specified,0.856,0.818,nan,nan,NLP,556848625,True
+autotrain-animalsbull-2741281174,0,0.7219356485793302,1.0,Not Specified,0.5,0.667,nan,nan,NLP,1740396281,True
+autotrain-jayefam-XTVOGKX3RD-2742681219,0,34.13925460566729,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,True
+python-code-explainer,0,5.393079045128973,1.0,Not Specified,nan,nan,0.29375,0.25445,NLP,2950733825,True
+autotrain-real-vs-fake-news-2757281767,0,2.0552688377356976,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267855533,True
+autotrain-real-vs-fake-news-2757281768,0,1.4525417907263476,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267855533,True
+autotrain-real-vs-fake-news-2757281769,0,1.5370516791351636,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267855533,True
+autotrain-real-vs-fake-news-2757281770,0,1.1122429329446866,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267855533,True
+autotrain-real-vs-fake-news-2757281771,0,2.3993982522584325,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267855533,True
+autotrain-gend-ma-classification-2764081811,0,1.0453005361524643,1.0,Not Specified,0.839,0.774,nan,nan,NLP,438007925,True
+autotrain-sherlockholmes20230107002-2767381827,0,3.2051992210410623,1.0,Not Specified,0.745,0.803,nan,nan,NLP,1334464117,True
+autotrain-sherlockholmes20230107003-2767481829,0,1.7166828546754431,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-ag-news-classification-2680881849,0,12.806489367828096,1.0,Not Specified,0.882,0.765,nan,nan,NLP,737777977,True
+arabertv2_flodusta,0,3.6263155149619295,1.0,Not Specified,0.953,0.951,nan,nan,NLP,540858485,True
+marbertv2_flodusta,0,0.0261715151601056,1.0,Not Specified,0.948,0.945,nan,nan,NLP,651450485,True
+camelbert-mix_flodusta,0,0.010214592292905,1.0,Not Specified,0.949,0.946,nan,nan,NLP,436410485,True
+autotrain-pidgintranslation_-2795382481,0,62.58086434891094,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+navigation-chinese,0,2.1130584322221275,1.0,Not Specified,0.998,0.984,nan,nan,NLP,406832685,True
+autotrain-lots_of_text-2797882537,0,2.7585473731043173,1.0,Not Specified,0.97,nan,nan,nan,Computer Vision,347599761,True
+autotrain-pidgintranslation2-2798082543,0,5.960829912309611,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-pidgintranslationmix-2798982563,0,9.975347552307484,1.0,Not Specified,nan,nan,nan,nan,NLP,295863749,True
+multiclass_message_classifier,0,1.531642698505257,1.0,Not Specified,0.95,0.949,nan,nan,NLP,737774905,True
+GPTxLege_FoxHunter,0,74.07891296294748,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-15-2806382679,0,5.399037757901585,1.0,Not Specified,nan,nan,0.97949,0.97949,NLP,2279610349,True
+autotrain-software_picture_preselection_classifier-2804582686,0,2.0734204068239874,1.0,Not Specified,0.973,0.98,nan,nan,Computer Vision,111352101,True
+FoxHunter_V0.02,0,183.00320092703035,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+Fenrir59-072,0,392.8528382524423,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-improved-pidgin-model-2837583189,0,4.315660252959388,1.0,Not Specified,nan,nan,nan,nan,NLP,295863749,True
+autotrain-clauses_classifier-2847083403,0,2.3063999928355314,1.0,Not Specified,0.807,0.827,nan,nan,NLP,556867057,True
+autotrain-clauses_classifier-2847083405,0,0.712310551029896,1.0,Not Specified,0.795,0.81,nan,nan,NLP,438026357,True
+autotrain-productkit-customer-insights-2851583532,0,0.3252141705527131,1.0,Not Specified,nan,nan,0.43528,0.34718,NLP,1625537293,True
+autotrain-2023011302-2864483894,0,1.594123660832492,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+FoxHunter_PigIron,0,25.44757706430333,1.0,Not Specified,nan,nan,0.60232,0.4791499999999999,NLP,2283804653,True
+autotrain-cuad-document-type-2883884341,0,4.141997048700727,1.0,Not Specified,0.938,0.869,nan,nan,NLP,438084789,True
+autotrain-cuad-document-type-cleaned-2883984346,0,4.9342799418113215,1.0,Not Specified,0.982,0.949,nan,nan,NLP,438078645,True
+autotrain-books-rating-analysis-2885184365,0,13.050690238461922,1.0,Not Specified,0.652,0.425,nan,nan,NLP,737781049,True
+autotrain-text-sentiment-indonlu-smse-2885384370,0,5.395117116799661,1.0,Not Specified,0.9,0.866,nan,nan,NLP,711495797,True
+autotrain-test_auto_nlp-2885884378,0,1.139809838906873,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+autotrain-contract_types-2926484993,0,0.0041854392608065,1.0,Not Specified,0.981,0.977,nan,nan,NLP,433338485,True
+autotrain-mm-2927885005,0,0.3584667794035356,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,86733677,True
+autotrain-mm-2927885009,0,0.3747546351485631,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,86733677,True
+test,0,1.9626027616152408,1.0,Not Specified,0.925,0.925,nan,nan,Computer Vision,343274861,True
+autotrain-let-2932785109,0,0.0171096411570498,1.0,Not Specified,0.372,0.228,nan,nan,Computer Vision,343321005,True
+autotrain-let-2932785111,0,3.216116887212137,1.0,Not Specified,0.376,0.269,nan,nan,Computer Vision,347669457,True
+Humiliated_Dolphin,0,0.3524550149496619,1.0,Not Specified,nan,nan,0.69284,0.61472,NLP,2283804653,True
+Self-Reliant_Bison,0,160.69662192250064,1.0,Not Specified,nan,nan,0.6587099999999999,0.55782,NLP,2283804653,True
+autotrain-modelo_hate_detection-2946985361,0,0.9675589686679076,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347603857,True
+autotrain-convnext_test_masterage-2947785378,0,2.59724118879757,1.0,Not Specified,0.408,0.261,nan,nan,Computer Vision,350417325,True
+Wobbly-Caribou,0,84.43005367170522,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-flyswot-jan-2950385442,0,3.560791710013544,1.0,Not Specified,0.941,0.919,nan,nan,Computer Vision,347624337,True
+autotrain-pos_neg_v4-2955385528,0,0.745848768023924,1.0,Not Specified,1.0,1.0,nan,nan,NLP,433320053,True
+autotrain-contract-new-classifier-19thjan-2958385563,0,5.453836274077357,1.0,Not Specified,0.965,0.964,nan,nan,NLP,438023285,True
+autotrain-reconocimiento_banderas-2960885598,0,1.3323699904171715,1.0,Not Specified,0.95,0.943,nan,nan,Computer Vision,343271789,True
+autotrain-enchondroma-vs-low-grade-chondrosarcoma-histology-2962985627,0,3.6593488665934646,1.0,Not Specified,0.887,nan,nan,nan,Computer Vision,343268717,True
+moderate-101-rejection-examiner,0,3.752263652532065,1.0,Not Specified,0.851,0.566,nan,nan,NLP,556848625,True
+conservative-101-rejection-examiner,0,1.761467513119125,1.0,Not Specified,0.854,0.424,nan,nan,NLP,438007925,True
+WaspImageRecComap,0,0.8068778967193102,1.0,Not Specified,0.697,nan,nan,nan,Computer Vision,343268717,True
+autotrain-contract_risk_identification-2978385936,0,1.583281503071558,1.0,Not Specified,0.67,0.667,nan,nan,NLP,438010997,True
+autotrain-test2-2979285951,0,22.168745481272524,1.0,Not Specified,nan,nan,nan,nan,NLP,2950733825,True
+rottentomato-classifier,0,0.7137118018641835,1.0,Not Specified,0.808,0.808,nan,nan,NLP,267855533,True
+autotrain-retrain-db16d58-2983986070,0,0.5759791564661282,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,110397937,True
+Bronze_Buffalo_89,0,611.8280914546775,1.0,Not Specified,nan,nan,0.89446,0.87385,NLP,2283804653,True
+autotrain-artunit-50-500-2970786288,0,43.92017027932009,1.0,Not Specified,0.207,0.197,nan,nan,NLP,268003181,True
+autotrain-artunit-50-500-2970786289,0,35.90162156358881,1.0,Not Specified,0.208,0.207,nan,nan,NLP,263315309,True
+Whole-Ostrich88_157,0,674.392653539903,1.0,Not Specified,nan,nan,0.8879900000000001,0.8645499999999999,NLP,2283804653,True
+autotrain-230121_t5_lcw99-2991486314,0,49.15616288291169,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-230121_lcw99_test2-2993186318,0,44.24408554718138,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+Not-My-Hat,0,3.243662517,1.0,Not Specified,0.721,0.72,nan,nan,NLP,737768761,False
+testwebhook,0,0.2345,1.0,Not Specified,nan,nan,nan,nan,Multimodal,0,False
+EnglishtoAncientGreekV4,0,0.220278718686126,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+flan-t5-large,60000,4.954208349,1.0,Not Specified,nan,nan,62.583,59.779,NLP,3132793669,False
+autotrain-8-class-contract-classify-3016886646,0,9.023147775262212,1.0,Not Specified,0.968,0.972,nan,nan,NLP,737787193,True
+autotrain-contract_risk_identification_3-3017886667,0,1.5048732544943952,1.0,Not Specified,0.823,0.836,nan,nan,NLP,438007925,True
+autotrain-auto-retrain-190471b-3020886685,0,0.5727250562055856,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,110397937,True
+autotrain-big_tm4-3021286705,0,14.606662709582208,1.0,Not Specified,nan,nan,1.0,1.0,NLP,3132580677,True
+TurkishAirlines-SentimentAnalysisModel,0,1.271844016424588,1.0,Not Specified,0.839,0.767,nan,nan,NLP,429738117,True
+autotrain-final_model-3026786824,0,3.5122512070831804,1.0,Not Specified,0.94,0.532,nan,nan,NLP,1336683629,True
+autotrain-tm4_2_big-3033986980,0,14.618973710629987,1.0,Not Specified,nan,nan,1.0,1.0,NLP,3132580677,True
+autotrain-enterprise_v_consumer-3052187265,0,1.1718652256627062,1.0,Not Specified,0.824,0.848,nan,nan,NLP,737768761,True
+GPT-DMV-125m,4000000,20.0,1.0,"Oregon, USA",nan,nan,nan,nan,NLP,551186797,False
+GPT-Greentext-125m,0,60.0,1.0,"Oregon, USA",nan,nan,nan,nan,NLP,551186797,False
+autotrain-text2sql-t5-3071587538,0,37.36786127948564,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+text_to_sql_5,0,14.683238550750524,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+text_to_sql_2,5425876,14.712742960025288,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+text_to_sql_3,0,20.566492426746724,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+text_to_sql_1,0,16.03787641705279,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+text_to_sql_4,0,15.216605611144294,1.0,Not Specified,nan,nan,nan,nan,NLP,3132580677,True
+sunnishia_textclass,0,2.79648714853368,1.0,Not Specified,0.98,0.979,nan,nan,NLP,442548341,True
+r-nr-categorization-patent-deberta,0,17.1013640357776,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+biomedical-ner-all,2000000,0.027939989,1.0,Not Specified,nan,nan,nan,nan,NLP,265743541,False
+biomedical-ner-all,30000000,0.027939989,1.0,Not Specified,nan,nan,nan,nan,NLP,265743541,False
+Moist-Pony,0,140.6871460520222,1.0,Not Specified,nan,nan,0.5792499999999999,0.44952,NLP,1222363741,True
+ssclass_best,0,3.830888580049552,1.0,Not Specified,0.98,0.981,nan,nan,NLP,442551413,True
+Poem-Sentimentale,0,0.7402856123778213,1.0,Not Specified,nan,nan,nan,nan,NLP,433326197,False
+autotrain-lucy-light-control-3122788375,0,0.5335980780308736,1.0,Not Specified,1.0,1.0,nan,nan,NLP,265507877,True
+autotrain-ex-and-pt-3122688386,0,0.6202842405816136,1.0,Not Specified,0.571,0.389,nan,nan,Computer Vision,110407153,True
+autotrain-ex-and-pt-3122688387,0,0.5722366196083666,1.0,Not Specified,0.571,0.444,nan,nan,Computer Vision,343281005,True
+autotrain-ex-and-pt-3122688388,0,0.2158114227532694,1.0,Not Specified,0.0,0.0,nan,nan,Computer Vision,94407757,True
+autotrain-ex-and-pt-3122688389,0,0.7206152092702812,1.0,Not Specified,0.286,0.25,nan,nan,Computer Vision,347616145,True
+autotrain-ex-and-pt-3122688390,0,0.4228512772358779,1.0,Not Specified,0.286,0.214,nan,nan,Computer Vision,346872697,True
+is-this-furry,0,2.875222895985932,1.0,Not Specified,0.933,0.938,nan,nan,Computer Vision,347599761,True
+GPT-Greentext-355m,800000,60.0,1.0,"Oregon, USA",nan,nan,nan,nan,NLP,1444569373,False
+Reviews-Sentiment-Analysis,10000000,24.76716845,1.0,Not Specified,0.952,0.951,nan,nan,NLP,737768761,False
+autotrain-chest-xray-demo-3129688461,0,8.032313770239128,1.0,Not Specified,0.774,nan,nan,nan,Computer Vision,94374989,True
+Food-Classification,70000000,2.774520323,1.0,Not Specified,0.977,0.977,nan,nan,Computer Vision,347620241,False
+garbage-image-detection,0,1.817950842757937,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+ClaimBuster-DeBERTaV2,0,23.10234958653748,1.0,Not Specified,0.842,0.753,nan,nan,NLP,737771833,True
+helloworld,0,1.5063043935583178,1.0,Not Specified,0.848,0.7,nan,nan,NLP,409150133,True
+autotrain-test-text-classification-3175589570,0,3.2260052742267447,1.0,Not Specified,0.665,0.424,nan,nan,NLP,433369269,True
+autotrain-hello_summarization-3171289572,0,25.535336151027007,1.0,Not Specified,nan,nan,0.38529,0.38154,NLP,2329702453,True
+pneumo_v3,0,1.9594067819084715,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343268717,True
+autotrain-pneumo-v3-3180589690,0,3.4021330886626298,1.0,Not Specified,0.964,nan,nan,nan,Computer Vision,343268717,True
+autotrain-text-classification-ingredients-3187189756,0,0.0381073097260659,1.0,Not Specified,0.66,0.5,nan,nan,NLP,444163765,True
+wine_quality,0,8.276808778335907,1.0,Not Specified,0.569,0.296,nan,nan,Not Specified,0,True
+autotrain-wine_quality-3195889865,0,0.8738507920594603,1.0,Not Specified,0.545,0.226,nan,nan,Not Specified,0,True
+autotrain-okr_iptal-3196789879,0,2.66060887304261,1.0,Not Specified,0.941,0.95,nan,nan,NLP,1112254133,True
+autotrain-text_cla_2-3198889905,0,3.141305501873425,1.0,Not Specified,0.964,0.966,nan,nan,NLP,409167989,True
+autotrain-wzd_111-3200189938,0,0.0141117061535212,1.0,Not Specified,0.993,0.994,nan,nan,NLP,409167989,True
+rose_charlotte,0,2.1409787540187346,1.0,Not Specified,0.846,nan,nan,nan,Computer Vision,347599761,True
+RecipeGPT,0,21.35830579428,1.0,Not Specified,nan,nan,nan,nan,NLP,0,False
+autotrain-koles_score-3215890190,0,0.0090072003921208,1.0,Not Specified,0.542,0.368,nan,nan,NLP,1334476405,True
+autotrain-sns-fake-news-3229590413,0,0.0156658667652406,1.0,Not Specified,0.832,0.836,nan,nan,NLP,737768761,True
+csgo-weapon-classification,0,0.0421564161796381,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,347636625,False
+food-category-classification,0,0.0202275837591701,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,347636625,False
+autotrain-ai-generated-image-classification-3250490787,0,0.0106218167696346,1.0,Not Specified,0.941,nan,nan,nan,Computer Vision,110394865,True
+2_Labels,0,2.038789255434584,1.0,Not Specified,0.97,nan,nan,nan,Computer Vision,347599761,True
+Quick-Summarization,32000000,460.6785691,1.0,Not Specified,nan,nan,41.066,nan,NLP,2283804653,False
+UltraSound-Lung,0,1.3971381846584354,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,343271789,True
+autotrain-encyclopaedia-illustrations-blog-post-3327992158,0,13.45295564861545,1.0,Not Specified,0.992,nan,nan,nan,Computer Vision,344436077,True
+autotrain-encyclopaedia-illustrations-blog-post-3327992159,0,4.608389135708385,1.0,Not Specified,0.992,nan,nan,nan,Computer Vision,111349029,True
+autotrain-document-text-language-ar-en-zh-3338392240,0,2.2266908460523576,1.0,Not Specified,0.882,0.862,nan,nan,Computer Vision,110401009,True
+3_Labels,0,2.650072914067399,1.0,Not Specified,0.95,0.951,nan,nan,Computer Vision,347603857,True
+autotrain-greek-sentiment-analysis-3351392404,0,4.129267471119826,1.0,Not Specified,0.844,0.844,nan,nan,NLP,737768761,True
+food-category-classification-v2.0,450000000,12.45627893,1.0,Not Specified,0.96,0.959,nan,nan,Computer Vision,347640721,False
+autotrain-ma-detection-test-3372892714,0,1.2555854454965398,1.0,Not Specified,0.941,0.928,nan,nan,NLP,438007925,True
+autotrain-builty-2-table-searcher-3373492718,0,7.738626953271278,1.0,Not Specified,0.871,0.824,nan,nan,Not Specified,0,True
+resnet50_mask_classification,0,1.5544780289204296,1.0,Not Specified,0.977,nan,nan,nan,Computer Vision,94374989,True
+autotrain-dataset-mentions-3390592983,0,0.0089996665628707,1.0,Not Specified,0.997,0.998,nan,nan,NLP,263167661,True
+autotrain-histopathological_image_classification-3393093035,0,4.012874943915816,1.0,Not Specified,0.933,0.931,nan,nan,Computer Vision,110413297,True
+autotrain-histopathological_image_classification-3393093036,0,4.820448255825163,1.0,Not Specified,0.933,0.933,nan,nan,Computer Vision,343287149,True
+autotrain-histopathological_image_classification-3393093038,0,3.5030531186190697,1.0,Not Specified,0.966,0.959,nan,nan,Computer Vision,347624337,True
+autotrain-histopathological_image_classification-3393093039,0,3.927473671872376,1.0,Not Specified,0.91,0.928,nan,nan,Computer Vision,346878841,True
+autotrain-histopathological_image_classification-3393093037,0,4.00147854080629,1.0,Not Specified,0.348,0.21,nan,nan,Computer Vision,94424141,True
+FoxHunterSwift,0,17.381617143515218,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+kebersihan_jalan_detection,0,1.5317579633796956,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,344436077,False
+autotrain-lottery_prod_v3-3409393337,0,3.67386840637788,1.0,Not Specified,0.909,0.898,nan,nan,NLP,409149557,True
+autotrain-nlp-exercise-3413793400,0,7.21478572426289,1.0,Not Specified,0.896,0.861,nan,nan,NLP,1334468213,True
+autotrain-ia_covers-3416193421,0,1.69724123660189,1.0,Not Specified,0.904,nan,nan,nan,Computer Vision,343268717,True
+dappradar-categories-prediction,0,2.3855196066520623,1.0,Not Specified,0.801,0.771,nan,nan,NLP,267877037,True
+pdf-classification-multi,0,6.061459826922492,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1334505077,True
+kualitas_lemon,0,2.02289641653325,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,347599761,False
+autotrain-customers_email_sentiment-3449294006,0,26.328823791893843,1.0,Not Specified,0.991,0.986,nan,nan,NLP,1334468213,True
+autotrain-bert-nlp-3450894022,0,1.9463833241540096,1.0,Not Specified,0.833,0.8,nan,nan,NLP,1340718709,True
+autotrain-preesmefirstpageclassificationnew-3451994032,0,8.769306773648797,1.0,Not Specified,0.978,0.953,nan,nan,NLP,442576565,True
+FoxHunterSwift2,0,17.222411531644617,1.0,Not Specified,nan,nan,0.51336,0.4389099999999999,NLP,1222363741,True
+autotrain-ant-bee-3482194557,0,0.7388274047348641,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+text-classification-multi,0,7.761992510873142,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1334509173,True
+autotrain-flant5_jobs_description_summary-3501894907,0,14.862574077492916,1.0,Not Specified,nan,nan,0.24927,0.23311,NLP,3132793669,True
+autotrain-finetune_17-0-3516595138,0,0.1345018657300824,1.0,Not Specified,nan,nan,0.52561,0.3747399999999999,NLP,990452905,True
+autotrain-glenn_epa_second_pooled_25-3519195196,0,0.020216018970584,1.0,Not Specified,0.534,0.343,nan,nan,NLP,556919345,True
+autotrain-dataset-mentions-160223-3522695252,0,0.1275346561915165,1.0,Not Specified,1.0,1.0,nan,nan,NLP,433320053,True
+autotrain-bbc-news-classifier-3523995259,0,0.0058878580675376,1.0,Not Specified,1.0,1.0,nan,nan,NLP,267864749,True
+autotrain-koles_score2-3525195294,0,0.0093307307788541,1.0,Not Specified,0.55,0.502,nan,nan,NLP,1334476405,True
+1000_respostas-MODELO_2,0,1.7141641973570885,1.0,Not Specified,0.863,0.821,nan,nan,NLP,435796085,True
+1000_respostas-MODELO_1,0,0.0070902146820632,1.0,Not Specified,0.863,0.823,nan,nan,NLP,435796085,True
+autotrain-reklambox-3527295358,0,3.5346662598120697,1.0,Not Specified,0.572,0.209,nan,nan,NLP,504056501,True
+autotrain-reklambox-3527295357,0,5.001923750904775,1.0,Not Specified,0.57,0.162,nan,nan,NLP,1343140597,True
+autotrain-jobs_description_distilbart-cnn-12-6-3538095538,0,3.180367417858415,1.0,Not Specified,nan,nan,0.64059,0.48572,NLP,1222363741,True
+autotrain-wilderv2-3544295625,0,2.829794634796424,1.0,Not Specified,0.94,nan,nan,nan,Computer Vision,1214905133,True
+EnglishtoChurchSlavonicV1,0,0.6456799104854907,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-patentmatch-3547495705,0,54.78280971868554,1.0,Not Specified,0.948,0.948,nan,nan,NLP,556848625,True
+EnglishtoAncientGreekV5,0,0.1070018436405666,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoAncientGreekV6,0,10.516087938863189,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoRusynV1,0,13.36932256664444,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoRusynV2,0,0.0518521274361566,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoChurchSlavonicV2,0,152.26214749444304,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-pegasus_jobs_description-3576596204,0,0.1123734297287905,1.0,Not Specified,nan,nan,0.50657,0.39248,NLP,2283804653,True
+EnglishtoArliRomaniV1,0,60.82575206712663,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoArliRomaniV2,0,71.97851742122822,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+e621TagAutocomplete,153000000,100.0,1.0,Not Specified,0.3865,nan,nan,nan,NLP,333970169,False
+autotrain-ant-image-classification-3599096563,0,4.384842539782406,1.0,Not Specified,0.975,0.966,nan,nan,Computer Vision,347607953,True
+autotrain-ant-image-classification-3599096564,0,6.825955089798696,1.0,Not Specified,0.975,0.966,nan,nan,Computer Vision,346866553,True
+autotrain-cat-vs-dog-3608196586,0,0.0041382370503284,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,110394865,True
+autotrain-cat-vs-dog-3608196590,0,0.0069014005878672,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,346860409,True
+autotrain-cat-vs-dog-3608196587,0,0.7752428902322911,1.0,Not Specified,0.99,nan,nan,nan,Computer Vision,343268717,True
+autotrain-cat-vs-dog-3608196589,0,0.9014000947977684,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+autotrain-summarization-pubmed-sample-3609596599,0,132.759647304653,1.0,Not Specified,nan,nan,0.13684,0.1176,NLP,2950848513,True
+EnglishtoOttomanTurkishV1,0,38.89288850572544,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOttomanTurkishV2,0,31.152945095580463,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-traductor-en-es-2023-3608896666,0,0.0100931012359453,1.0,Not Specified,nan,nan,nan,nan,NLP,931126725,True
+autotrain-traductor-en-es-2023-3608896670,0,2.5094872306394733,1.0,Not Specified,nan,nan,nan,nan,NLP,931126725,True
+EnglishtoOttomanTurkishV3,0,11.116575217857822,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-flight-delay-3621096840,0,3.325994852017075,1.0,Not Specified,0.748,0.271,nan,nan,Not Specified,0,True
+BetterMTL-mk9,0,0.0156907328034992,1.0,Not Specified,nan,nan,nan,nan,NLP,0,False
+autotrain-glenn_ntsa_1-3621496854,0,7.937797482362119,1.0,Not Specified,0.905,0.714,nan,nan,NLP,1334533813,True
+EnglishtoOldEastSlavicV2,0,0.0912491426275244,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOldEastSlavicV3,0,19.11966832204106,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOldEastSlavicV4,0,0.0310110956466163,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOldEastSlavicV5,0,0.0242105702870484,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-email_tagger-3627996965,0,2.342053571382714,1.0,Not Specified,0.667,0.55,nan,nan,NLP,1334476405,True
+autotrain-cat-vs-dog250_250-3628796986,0,0.7636424791869872,1.0,Not Specified,0.992,nan,nan,nan,Computer Vision,110394865,True
+autotrain-cat-vs-dog250_250-3628796988,0,0.3777240528794812,1.0,Not Specified,0.72,nan,nan,nan,Computer Vision,94374989,True
+autotrain-cat-vs-dog250_250-3628796987,0,1.9499455569359816,1.0,Not Specified,0.992,nan,nan,nan,Computer Vision,343268717,True
+autotrain-cat-vs-dog250_250-3628796989,0,0.8217037020492457,1.0,Not Specified,0.996,nan,nan,nan,Computer Vision,347599761,True
+autotrain-cat-vs-dog250_250-3628796990,0,1.1778070728273002,1.0,Not Specified,0.976,nan,nan,nan,Computer Vision,346860409,True
+autotrain-reklam-filtered-3631097041,0,6.219004242367904,1.0,Not Specified,0.563,0.175,nan,nan,NLP,1343140597,True
+autotrain-dappradar-long-desc-summariation-3632397064,0,25.51459781019821,1.0,Not Specified,nan,nan,0.5262100000000001,0.50804,NLP,557971229,True
+danbooruTagAutocomplete,0,100.0,1.0,Not Specified,nan,nan,nan,nan,NLP,333970169,False
+autotrain-touring3-3635197158,0,0.1003350588418796,1.0,Not Specified,nan,nan,0.46956,0.46087,NLP,2950848513,True
+EnglishtoAncientHebrewV1,0,0.0657901960270338,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+adultcontentclassifier,0,0.0043891444981216,1.0,Not Specified,0.925,0.925,nan,nan,NLP,651444341,True
+skillber-ner,0,5.36905635369359,1.0,Not Specified,0.88,0.516,nan,nan,NLP,439426541,True
+jobbert,0,0.0147709560047834,1.0,Not Specified,0.907,0.591,nan,nan,NLP,430972397,True
+jobbert3-60,0,0.0168866724818305,1.0,Not Specified,0.908,0.602,nan,nan,NLP,430972397,True
+autotrain-jobbert4-3646397468,0,2.4992396645881394,1.0,Not Specified,0.908,0.62,nan,nan,NLP,430972397,True
+jobbert-61,0,0.0161303759558398,1.0,Not Specified,0.912,0.618,nan,nan,NLP,430972397,True
+autotrain-prepaid_test-3647497488,0,0.007422353485058,1.0,Not Specified,0.975,0.975,nan,nan,NLP,409149557,True
+autotrain-intent-classification-roberta-3647697496,0,1.1197250732252992,1.0,Not Specified,0.875,0.867,nan,nan,NLP,498692789,True
+autotrain-jobbert-8-3660397715,0,1.190898950142825,1.0,Not Specified,0.957,0.7,nan,nan,NLP,430960109,True
+autotrain-jobbert-8-3660397718,0,5.24940369998092,1.0,Not Specified,0.958,0.699,nan,nan,NLP,430960109,True
+autotrain-jobbert-9-3660597735,0,1.8006765324830052,1.0,Not Specified,0.958,0.677,nan,nan,NLP,430960109,True
+jobbert-skill,0,1.0574234641160185,1.0,Not Specified,0.935,0.357,nan,nan,NLP,430960109,True
+autotrain-jobbert11-3660997753,0,0.0147402482426394,1.0,Not Specified,0.905,0.622,nan,nan,NLP,430966253,True
+autotrain-jobbert-12-3661497769,0,1.6328250714339845,1.0,Not Specified,0.91,0.561,nan,nan,NLP,430960109,True
+autotrain-finetuned_distillbart-3664997842,0,0.0276297623136641,1.0,Not Specified,nan,nan,0.69451,0.5820799999999999,NLP,1222363741,True
+autotrain-ia-useful-covers-3665397856,0,0.0048131167261957,1.0,Not Specified,0.924,nan,nan,nan,Computer Vision,110394865,True
+autotrain-209_distillbart-3666897870,0,3.665817434216617,1.0,Not Specified,nan,nan,0.68184,0.5602900000000001,NLP,1222363741,True
+autotrain-translate-large-3667097880,0,3.0879484646170616,1.0,Not Specified,nan,nan,nan,nan,NLP,314181957,True
+autotrain-translate-big-3667697890,0,0.1342238084031298,1.0,Not Specified,nan,nan,nan,nan,NLP,2950733825,True
+autotrain-selenophake-3668397922,0,0.5710813789332319,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343268717,True
+jobbert-short-sentences-f60,0,1.6240218297608988,1.0,Not Specified,0.902,0.603,nan,nan,NLP,430972397,True
+autotrain-jobberta-20-3670698025,0,0.0305760639185388,1.0,Not Specified,0.917,0.649,nan,nan,NLP,2235531373,True
+jobberta-large-f66,0,3.956742446552856,1.0,Not Specified,0.92,0.664,nan,nan,NLP,2235531373,True
+autotrain-flags-3670798043,0,4.145044266449912,1.0,Not Specified,0.949,0.954,nan,nan,Computer Vision,343296365,True
+autotrain-jobberta-23-3671398065,0,4.051202274340627,1.0,Not Specified,0.915,0.603,nan,nan,NLP,1330285549,True
+trainModel_p1,0,0.0092549938060457,1.0,Not Specified,0.972,0.972,nan,nan,NLP,651444341,True
+autotrain-bart_jobs_description-3667398231,0,5.188589459184297,1.0,Not Specified,nan,nan,0.66484,0.53467,NLP,1625537293,True
+EnglishtoOldEnglishV1,0,7.273007332989732,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+EnglishtoOldEnglishV3,0,29.02386292235669,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOldEnglishV2,0,5.451467518019884,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+EnglishtoOldEnglishV4,0,29.249758702505805,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+EnglishtoOldEnglishV5,0,10.382242558236785,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-i-bert-twitter-sentiment-3685798328,0,0.1576902654453995,1.0,Not Specified,0.745,0.728,nan,nan,NLP,995331233,True
+autotrain-idnt-3689198408,0,0.0151076048500345,1.0,Not Specified,0.66,0.341,nan,nan,NLP,467189493,True
+woc_coach_only,0,0.003342450858119,1.0,Not Specified,0.824,0.87,nan,nan,NLP,433320053,True
+autotrain-twitter-currency-regression-3698798560,0,5.819688265631011,1.0,Not Specified,nan,nan,nan,nan,NLP,439479413,True
+SDOHv7,0,0.011347632206498,1.0,Not Specified,0.99,0.99,nan,nan,NLP,737833337,True
+t5base_en_re,0,0.037152189882447,1.0,Not Specified,nan,nan,0.38448,0.36453,NLP,891702929,True
+autotrain-flan_t5_jobs_description_209-3703198648,0,5.965451127503901,1.0,Not Specified,nan,nan,0.23661,0.21084,NLP,990408885,True
+autotrain-flan_t5_large_jobs_description_209-3703498672,0,0.071803380785605,1.0,Not Specified,nan,nan,0.2506299999999999,0.2277799999999999,NLP,3132793669,True
+autotrain-tax_issues-3708498778,0,0.0441028878242611,1.0,Not Specified,0.968,0.967,nan,nan,NLP,2239906741,True
+autotrain-weather-classification-3723199087,0,0.0034994299454859,1.0,Not Specified,0.41,0.4,nan,nan,Computer Vision,94399565,True
+autotrain-weather-classification-3723199086,0,0.0063152072167613,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,343277933,True
+autotrain-weather-classification-3723199089,0,0.0094567553421842,1.0,Not Specified,0.99,0.99,nan,nan,Computer Vision,346869625,True
+autotrain-weather-classification-3723199088,0,0.0067954562891757,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347612049,True
+autotrain-codet5_base_cpsl-3727399183,0,5.24175202670419,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-codet5_base_cpsl-3727399184,0,0.0204505645552222,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-codet5_base_cpsl-3727399185,0,0.0146478647124334,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-codet5_base_cpsl-3727399186,0,3.846331276578152,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-codet5_base_cpsl-3727399187,0,0.016495049956139,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-pick_a_card-3726099223,0,0.07713046775481,1.0,Not Specified,0.792,0.785,nan,nan,Computer Vision,94792973,True
+autotrain-pick_a_card-3726099221,0,0.0660443407031469,1.0,Not Specified,0.981,0.98,nan,nan,Computer Vision,110551729,True
+autotrain-pick_a_card-3726099222,0,0.0850092610285532,1.0,Not Specified,0.909,0.904,nan,nan,Computer Vision,343425581,True
+autotrain-pick_a_card-3726099224,0,22.59524540097308,1.0,Not Specified,0.989,0.989,nan,nan,Computer Vision,347808849,True
+autotrain-pick_a_card-3726099225,0,14.334546926203066,1.0,Not Specified,0.974,0.973,nan,nan,Computer Vision,347017273,True
+indianidproofclassification,0,0.0060102285277883,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-weather-classification-3739699406,0,0.0610247517795645,1.0,Not Specified,0.945,0.949,nan,nan,Computer Vision,110422513,True
+autotrain-weather-classification-3739699408,0,18.10129353152818,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-weather-classification-3739699407,0,0.0526165458286675,1.0,Not Specified,0.952,0.957,nan,nan,Computer Vision,343296365,True
+autotrain-weather-classification-3739699410,0,12.172961992218216,1.0,Not Specified,0.949,0.954,nan,nan,Computer Vision,346888057,True
+autotrain-weather-classification-3739699409,0,11.084609677556031,1.0,Not Specified,0.959,0.963,nan,nan,Computer Vision,347636625,True
+autotrain-test3-3741499453,0,0.016917225770271,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,110401009,True
+autotrain-test3-3741499455,0,6.553923974267747,1.0,Not Specified,0.982,0.983,nan,nan,Computer Vision,94391373,True
+autotrain-test3-3741499454,0,0.0174878954778511,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-test3-3741499457,0,4.475400047856875,1.0,Not Specified,0.998,0.998,nan,nan,Computer Vision,346866553,True
+autotrain-test3-3741499456,0,6.055784660601666,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347607953,True
+autotrain-cz-sort-3752299804,0,4.044332290484004,1.0,Not Specified,0.998,0.885,nan,nan,NLP,1334492789,True
+autotrain-cardamage-3762299975,0,0.6713036785630181,1.0,Not Specified,0.733,0.531,nan,nan,Computer Vision,110397937,True
+autotrain-train-37756100191,0,193.00140560471,1.0,Not Specified,nan,nan,0.5004500000000001,0.3362,NLP,2283804653,True
+autotrain-test-token-classification-37792100226,0,1.3281980015903283,1.0,Not Specified,0.677,0.464,nan,nan,NLP,435774061,True
+autotrain-animals-vs-humans2-37846100283,0,1.5958667599075285,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,346860409,True
+autotrain-animals-vs-humans2-37846100280,0,0.0096302039940934,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,343268717,True
+autotrain-male-vs-femalee-37851100302,0,0.0034341761338042,1.0,Not Specified,0.979,nan,nan,nan,Computer Vision,347599761,True
+swords-attentive_t5_v1,0,0.0251054860314724,1.0,Not Specified,nan,nan,0.6214,0.61331,NLP,2950848513,True
+autotrain-cpsl_28022023-38024100796,0,14.095333378950777,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-cpsl_28022023-38024100798,0,16.339082879848934,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-cpsl_28022023-38024100799,0,9.129177872175122,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-flower-classifier-6-38061100888,0,0.0038337670741491,1.0,Not Specified,0.99,0.99,nan,nan,Computer Vision,346872697,True
+autotrain-text-summa-38210101161,0,0.0038803578366088,1.0,Not Specified,nan,nan,0.13841,0.1246,NLP,242071641,True
+Cylonix_text_sum,0,0.0318800353974076,1.0,Not Specified,nan,nan,0.2389,0.2076599999999999,NLP,2950848513,True
+autotrain-fake-reviews-labelling-37433101195,0,0.0125100043456914,1.0,Not Specified,0.941,0.939,nan,nan,NLP,737768761,True
+autotrain-cpsl_large_01032023-38235101207,0,0.1765813138367071,1.0,Not Specified,nan,nan,nan,nan,NLP,2950733825,True
+RussiantoChukchiV1,0,14.96406670067916,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-flower-classification-6-38312101280,0,0.2369622750892742,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,110407153,True
+RussiantoChukchiV2,0,5.357461110677393,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-auto_train-38325101316,0,0.8412532264765644,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-mona-lisa-detection-38345101350,0,3.616228652448201,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+GPT-NoSleep-355m,0,60.0,1.0,"Oregon, USA",nan,nan,nan,nan,NLP,1444569373,False
+autotrain-img-classifier-march-2023-38397101427,0,0.2885544186587613,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347616145,True
+autotrain-godaddy2-38507101578,0,0.0013755411915266,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+mt5-sum-v1,0,3.857485636182076,1.0,Not Specified,nan,nan,0.0,0.0,NLP,4918519065,True
+autotrain-classify-reviews-38591101687,0,107.85305581130024,1.0,Not Specified,0.684,0.34,nan,nan,NLP,438032501,True
+autotrain-test7-2644pc-linearregr-38619101723,0,3.801725033462415,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-reklambox2-38671101799,0,0.4167271060397732,1.0,Not Specified,0.593,0.136,nan,nan,NLP,439845045,True
+autotrain-translation_english-38691101815,0,45.41212076277246,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-test-3-38732101859,0,0.9466490190669988,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-fake_news_fine_tuned-38761101898,0,1.824945175183436,1.0,Not Specified,0.999,0.999,nan,nan,NLP,267855533,True
+autotrain-t5-base-ft-38781101938,0,1.2404479861099105,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+EnglishtoOldTupiV1,0,4.570027035803065,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+creepy-wapo,0,0.0028780538108779,1.0,Not Specified,0.985,0.857,nan,nan,NLP,737768761,True
+autotrain-creepy-wapo-38909102184,0,0.3414432453230842,1.0,Not Specified,0.985,0.857,nan,nan,NLP,433320053,True
+autotrain-fake_news_fine_tuned_v4-38998102353,0,0.00711258375656,1.0,Not Specified,0.983,0.982,nan,nan,NLP,498662069,True
+autotrain-fake_news_fine_tuned_v4-38998102356,0,5.261861894487811,1.0,Not Specified,0.993,0.993,nan,nan,NLP,498662069,True
+autotrain-long-t5-tglobal-base-16384-book-summary-39278102680,0,15.082265058465753,1.0,Not Specified,nan,nan,0.5282399999999999,0.3997699999999999,NLP,990452905,True
+autotrain-sentiment_analysis-39304102733,0,1.3916852050499846,1.0,Not Specified,0.937,0.938,nan,nan,NLP,556848625,True
+bert-claimcoherence-mini,0,0.5905299701991715,1.0,Not Specified,0.82,0.824,nan,nan,NLP,1334464117,True
+autotrain-claimcoherence-n500-39483103025,0,0.0023152344981197,1.0,Not Specified,0.78,0.804,nan,nan,NLP,1334464117,True
+astrophotography-object-classifier-alpha,0,1.911157752223008,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,344448365,True
+autotrain-spam-39547103148,0,1.3372976003843626,1.0,Not Specified,1.0,1.0,nan,nan,NLP,438007925,True
+autotrain-iptc-es-39574103204,0,0.0015000099579637,1.0,Not Specified,1.0,1.0,nan,nan,NLP,439525557,True
+autotrain-aa-39629103274,0,0.0198628308885719,1.0,Not Specified,0.346,0.103,nan,nan,NLP,1302250229,True
+autotrain-english_translation-39667103325,0,0.0044486875510411,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-map_no_map_twitter_demo-39701103400,0,0.000979668302282,1.0,Not Specified,0.947,nan,nan,nan,Computer Vision,347599761,True
+autotrain-client-message-topics-39730103438,0,0.5874712120343145,1.0,Not Specified,0.996,0.997,nan,nan,NLP,1334468213,True
+autotrain-iemocap_text_4-39809103601,0,0.438477125256298,1.0,Not Specified,0.694,0.697,nan,nan,NLP,438014069,True
+iva_mt_wslot-m2m100_418M-en-pl,8890299,0.68,1.0,Not Specified,nan,nan,nan,nan,NLP,1944201353,False
+autotrain-opus-100-40115104344,0,12.835507584437984,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+Spanish_to_Latino_V2,0,0.0024297260542898,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+Spanish_to_Ladino,0,0.011671825977948,1.0,Not Specified,nan,nan,nan,nan,NLP,2329628725,True
+autotrain-uk-news-slant-classification-40226104645,0,0.0164677703389178,1.0,Not Specified,0.96,0.96,nan,nan,NLP,556851697,True
+fitness_message_classification,0,0.0027673309805279,1.0,Not Specified,0.589,0.403,nan,nan,NLP,556860913,True
+GermantoHunsrikV1,0,0.0077019578034322,1.0,Not Specified,nan,nan,nan,nan,NLP,1200723333,True
+astrophotography-object-classifier-alpha2,0,0.011767756569323,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,344454509,True
+astrophotography-object-classifier-alpha4,0,0.0066292934865041,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,344454509,True
+autotrain-nyx-40340104916,0,1.1040305125054486,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,0,True
+autotrain-aramaic-40367104972,0,0.372501788799609,1.0,Not Specified,nan,nan,nan,nan,NLP,305510213,True
+autotrain-numeric_prediction-40376105012,0,27.469239802379224,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-numeric_prediction-40376105019,0,0.0987566567732708,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-diffusion-emotion-facial-expression-recognition-40429105176,0,0.8103871386449576,1.0,Not Specified,0.847,0.779,nan,nan,Computer Vision,110410225,True
+autotrain-diffusion-emotion-facial-expression-recognition-40429105179,0,0.8786351270318874,1.0,Not Specified,0.866,0.805,nan,nan,Computer Vision,347620241,True
+autotrain-cxr-cfdl-repro-40197105212,0,0.0082321369397393,1.0,Not Specified,0.98,nan,nan,nan,Computer Vision,343268717,True
+autotrain-vision-tcg-40463105224,0,1.6135086188105332,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,348009745,True
+ainu-2-japanese,0,52.20776152155173,1.0,Not Specified,nan,nan,nan,nan,NLP,301229701,False
+autotrain-event_ar_test-40764105491,0,0.4364148951699333,1.0,Not Specified,0.973,0.789,nan,nan,NLP,438007925,True
+article-summarizer-t5-large,0,0.0061140848393105,1.0,Not Specified,nan,nan,0.44548,0.4453,NLP,3132793669,True
+autotrain-mapreader-5000-40830105612,0,0.0080776577350643,1.0,Not Specified,0.995,0.983,nan,nan,Computer Vision,347607953,True
+summarizer_v3,0,3.520254114566687,1.0,Not Specified,nan,nan,0.44176,0.41172,NLP,3132793669,True
+autotrain-event_conflict-40840105627,0,0.0014174377692098,1.0,Not Specified,0.975,0.975,nan,nan,NLP,540852341,True
+autotrain-glenn_ntsa_2-40841105633,0,0.0098203434537638,1.0,Not Specified,0.912,0.764,nan,nan,NLP,1334533813,True
+t5-large-en-de,0,4.2211417553362205,1.0,Not Specified,nan,nan,nan,nan,NLP,2950733825,True
+reverse-summarizer,0,0.0159037893290565,1.0,Not Specified,nan,nan,0.19482,0.15465,NLP,3132793669,True
+dialog-summarizer-t5-large,0,3.254351692657141,1.0,Not Specified,nan,nan,0.50935,0.43216,NLP,3132793669,True
+iva_mt_wslot-m2m100_1.2B-en-pl,8890299,0.68,1.0,Not Specified,nan,nan,nan,nan,NLP,4966633968,False
+text_summarization_48_91_rouge_knowdocument,0,27.26345745623384,1.0,Not Specified,nan,nan,0.4891,0.3879599999999999,NLP,2283804653,True
+autotrain-satellite-image-classification-40975105875,0,2.3259806262831075,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,344442221,True
+CodeExplainer,0,5.393079045128973,1.0,Not Specified,nan,nan,0.29375,0.25445,NLP,2950733825,True
+autotrain-test-41086106044,0,0.187128228983522,1.0,Not Specified,0.1,0.074,nan,nan,Computer Vision,94383181,True
+autotrain-bikes_1-41171106189,0,0.4166541049999939,1.0,Not Specified,0.818,nan,nan,nan,Computer Vision,110394865,True
+multilingual-samsum,0,13.328572874208332,1.0,Not Specified,nan,nan,0.4406799999999999,0.37071,NLP,4918519065,True
+mt5-large-samsum,0,12.703463244389663,1.0,Not Specified,nan,nan,0.44142,0.37127,NLP,4918519065,True
+samsum,0,0.0077793677303344,1.0,Not Specified,nan,nan,0.47592,0.3962299999999999,NLP,1625541389,True
+autotrain-bikes-ag-41243106351,0,1.381064904462668,1.0,Not Specified,0.936,0.936,nan,nan,Computer Vision,347603857,True
+autotrain-bbikes-41250106361,0,1.333999157955412,1.0,Not Specified,0.83,0.829,nan,nan,Computer Vision,347616145,True
+s2g_summ_bart,0,5.638732652622368,1.0,Not Specified,nan,nan,0.17079,0.16808,NLP,3468694113,True
+autotrain-t5-hinglish-to-en,0,0.0035724951002547,1.0,Not Specified,nan,nan,nan,nan,NLP,191650757,True
+autotrain-wx-en-zh-41586107006,0,0.0037032259466193,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-cv-sentiment-41629107126,0,0.707048910768399,1.0,Not Specified,0.864,0.84,nan,nan,NLP,1334472309,True
+EnglishtoOldRussianV1,0,1.2383909090027077,1.0,Not Specified,nan,nan,nan,nan,NLP,2329628725,True
+swissbert,0,0.6,1.0,Not Specified,nan,nan,nan,nan,NLP,0,False
+autotrain-iptc-classification-v2-41840107634,0,0.7917416253329401,1.0,Not Specified,0.732,0.514,nan,nan,NLP,439617781,True
+Marian-en-ar,0,39.58121152223037,1.0,Not Specified,nan,nan,nan,nan,NLP,305510213,True
+autotrain-iptc-classification-v3-41985107904,0,0.7705822753825974,1.0,Not Specified,0.744,0.529,nan,nan,NLP,439620917,True
+autotrain-iptc-classification-v4-42015107919,0,0.845545764970478,1.0,Not Specified,0.758,0.531,nan,nan,NLP,439605493,True
+autotrain-opennohara-thread-title-classification-42043107973,0,0.2737732363891665,1.0,Not Specified,0.938,0.667,nan,nan,NLP,532369769,True
+autotrain-multic-42139108182,0,1.3867154772046042,1.0,Not Specified,0.836,0.835,nan,nan,NLP,438134005,True
+autotrain-test2summbart-42231108366,0,4.976184480111491,1.0,Not Specified,nan,nan,0.05139,0.05056,NLP,3468694113,True
+autotrain-test2summbart-42231108362,0,4.4738873783495,1.0,Not Specified,nan,nan,0.04765,0.04813,NLP,3468694113,True
+t5_pegasus_ch_ans,0,4.429613533710655,1.0,Not Specified,nan,nan,0.06468,0.06485,NLP,1200772485,True
+autotrain-pokemonclassification-42305108508,0,0.342784723518607,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+amber-mines,0,0.4211017716440378,1.0,Not Specified,0.95,nan,nan,nan,Computer Vision,343268717,True
+autotrain-summerswipe-42402108659,0,8.112429648080305,1.0,Not Specified,nan,nan,0.20604,0.1764099999999999,NLP,891623057,True
+autotrain-t5baseparaphrase-42430108692,0,2.6793230772092427,1.0,Not Specified,nan,nan,0.63306,0.62478,NLP,1102414005,True
+autotrain-bartswipe-42462108732,0,5.357796203313839,1.0,Not Specified,nan,nan,0.5234599999999999,0.37443,NLP,1625537293,True
+autotrain-t5te-42492108820,0,2.965259996157936,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+s2g_class_cours,0,0.4838643866239026,1.0,Not Specified,0.845,0.793,nan,nan,NLP,217044653,True
+autotrain-classify-42751109216,0,0.852147336270292,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,346860409,True
+autotrain-names-10k-en-cn-in-kr-jp-vn-42832109361,0,2.3523995441070964,1.0,Not Specified,0.951,0.898,nan,nan,NLP,1334480501,True
+wip-gpt2-finetuned-imdbreviews-fast,133190346,66.0,1.0,"Frankfurt an Main, Germany",nan,nan,nan,nan,NLP,438005109,False
+autotrain-meme-classification-42897109437,0,1.132924473643039,1.0,Not Specified,1.0,1.0,nan,nan,Computer Vision,347599761,True
+autotrain-swipetest-42970109574,0,2.526148177073709,1.0,Not Specified,nan,nan,0.61114,0.4624,NLP,1625537293,True
+autotrain-prop65-43011109672,0,0.5936852940497532,1.0,Not Specified,0.946,0.945,nan,nan,NLP,267855533,True
+TreeClassification,0,0.8942374660281194,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,347644817,False
+it-emotion-analyzer,0,0.4489187526120041,1.0,Not Specified,nan,nan,nan,nan,NLP,439801973,False
+GermantoSwabianV1,0,2.273273133617672,1.0,Not Specified,nan,nan,nan,nan,NLP,295863749,True
+GermantoNorthFrisianV1,0,3.429799463313944,1.0,Not Specified,nan,nan,nan,nan,NLP,295863749,True
+autotrain-cybersecurity-summarization-pegasus-x-book-43369110299,0,13.98857715454734,1.0,Not Specified,nan,nan,0.3786,0.3434,NLP,2274845861,True
+LeafCondition,0,0.4269107292670934,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,346869625,False
+suripe-transformer,0,0.0046968912206003,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-js-classfication-test-2-43390110454,0,3.495241141356263,1.0,Not Specified,0.751,0.678,nan,nan,Computer Vision,347640721,True
+pegasus-reddit-summarizer2,0,85.71551225539321,1.0,Not Specified,nan,nan,0.47072,0.32773,NLP,2283804653,True
+Tree-Condition,0,1.3038362907488008,1.0,Not Specified,nan,nan,nan,nan,Computer Vision,347681745,False
+autotrain-yasniysum-44181111477,0,1.36421018234082,1.0,Not Specified,nan,nan,0.2,0.2,NLP,3468694113,True
+autotrain-banking77-distilroberta-44209111546,0,2.424235975981841,1.0,Not Specified,0.927,0.928,nan,nan,NLP,328750581,True
+autotrain-tableros_factibilidad-44246111620,0,0.5449792702985709,1.0,Not Specified,0.6,0.542,nan,nan,Computer Vision,110401009,True
+autotrain-tableros_factibilidad-44246111621,0,0.6678858266803156,1.0,Not Specified,0.2,0.167,nan,nan,Computer Vision,343274861,True
+autotrain-tableros_factibilidad-44246111622,0,0.1825346039037265,1.0,Not Specified,0.2,0.1,nan,nan,Computer Vision,94391373,True
+autotrain-tableros_factibilidad-44246111623,0,0.7280371574302341,1.0,Not Specified,0.4,0.375,nan,nan,Computer Vision,347607953,True
+autotrain-tableros_factibilidad-44246111624,0,0.3629630434568734,1.0,Not Specified,0.4,0.375,nan,nan,Computer Vision,346866553,True
+autotrain-detection-for-product-location-44269111681,0,2.30199726014708,1.0,Not Specified,0.999,0.999,nan,nan,NLP,556848625,True
+autotrain-detection-for-product-location-44269111684,0,1.9511985418671696,1.0,Not Specified,0.988,0.988,nan,nan,NLP,433320053,True
+autotrain-dialogsumgerman-44305111787,0,86.21246024573398,1.0,Not Specified,nan,nan,0.33702,0.29431,NLP,4918519065,True
+headline-predictor,0,2.960971697133151,1.0,Not Specified,0.94,0.882,nan,nan,NLP,1336423925,True
+autotrain-enfermedadespt2-44370111920,0,0.7148635752326786,1.0,Not Specified,0.95,0.95,nan,nan,Computer Vision,347607953,True
+autotrain-jira-again-44396111956,0,6.270223463049431,1.0,Not Specified,nan,nan,0.20545,0.18502,NLP,2950848513,True
+autotrain-zz-44428111999,0,17.63749609911408,1.0,Not Specified,nan,nan,0.36577,0.3029,NLP,1625537293,True
+autotrain-marianmt-shi-en-fr-44506112181,0,26.0022920107111,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-test-news-44534112235,0,2.552195145818587,1.0,Not Specified,0.333,0.042,nan,nan,Not Specified,0,True
+potato_model,0,0.2585547491917275,1.0,Not Specified,0.923,0.911,nan,nan,Computer Vision,346863481,True
+autotrain-influencer-brand-classification-44707112576,0,0.5009176805435052,1.0,Not Specified,0.869,0.869,nan,nan,NLP,737768761,True
+radiology-report-en-zh-ft-base,0,1.5370817042101073,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-translator-44772112701,0,1.695441563883438,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-translator-44772112704,0,1.6332201411420315,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-t5-base-44767112714,0,15.98247816985612,1.0,Not Specified,nan,nan,0.28704,0.28278,NLP,1102414005,True
+autotrain-telugu_summarization-44817112805,0,553.9241452628997,1.0,Not Specified,nan,nan,0.2522,0.24642,NLP,2329702453,True
+autotrain-telugu_summarization-44817112806,0,304.57370965004566,1.0,Not Specified,nan,nan,0.25042,0.24483,NLP,2329702453,True
+autotrain-telugu_summarization-44817112802,0,306.7675447142532,1.0,Not Specified,nan,nan,0.2587399999999999,0.25267,NLP,2329702453,True
+autotrain-telugu_summarization-44817112803,0,318.4985343917117,1.0,Not Specified,nan,nan,0.25887,0.25306,NLP,2329702453,True
+autotrain-telugu_summarization-44817112804,0,468.9115461709108,1.0,Not Specified,nan,nan,0.25579,0.2501,NLP,2329702453,True
+autotrain-mooyaho_v2_real-44822112832,0,0.0727966831523268,1.0,Not Specified,nan,nan,0.12013,0.11896,NLP,1102414005,True
+autotrain-mooyaho_v4-44949112969,0,0.0714759514027418,1.0,Not Specified,nan,nan,0.20797,0.2055999999999999,NLP,1102414005,True
+autotrain-mooyaho_v5-44979113066,0,0.9105215965400348,1.0,Not Specified,nan,nan,0.23595,0.23442,NLP,1102414005,True
+autotrain-imdb-sentiment-analysis-44994113085,0,0.5768634462494043,1.0,Not Specified,0.565,0.722,nan,nan,Not Specified,0,True
+autotrain-train2-shi-fr-45006113090,0,6.82281507415207,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-dialogsum4-45048113162,0,10.8554870545861,1.0,Not Specified,nan,nan,0.82819,0.82525,NLP,1625537293,True
+bert2,0,0.3063901452083847,1.0,Not Specified,0.825,0.815,nan,nan,NLP,438010997,True
+autotrain-ps-pilot-45085113211,0,0.0026832642071841,1.0,Not Specified,0.829,0.829,nan,nan,NLP,737768761,True
+autotrain-further-train-chatdoctor-45099113239,0,0.6371864100333517,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-translator3-45113113262,0,4.9833884202277225,1.0,Not Specified,nan,nan,nan,nan,NLP,891616913,True
+autotrain-data-45127113281,0,11.772933096301358,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-data-45127113285,0,11.879054179738578,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+summ_arp_org,0,4.2992847624934365,1.0,Not Specified,nan,nan,0.49529,0.46465,NLP,2950848513,True
+autotrain-aaaa-45159113325,0,9.547886962542258,1.0,Not Specified,nan,nan,nan,nan,NLP,2329628725,True
+medical_chat-en-zh,0,2.240193635056679,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+NLP_summarization_model1,0,8.961640862273923,1.0,Not Specified,nan,nan,0.2381899999999999,0.18571,NLP,2279610349,True
+autotrain-nlp-45198113367,0,1.866801699206036,1.0,Not Specified,0.051,0.057,nan,nan,NLP,1335316917,True
+autotrain-moodify-45307113562,0,0.5586165468777098,1.0,Not Specified,nan,nan,nan,nan,NLP,0,True
+autotrain-prknsn-2-45473113800,0,1.051663865934213,1.0,Not Specified,nan,nan,nan,nan,Not Specified,0,True
+autotrain-alpaca-gigo-detector-45529113937,0,0.3078125269826994,1.0,Not Specified,0.825,0.823,nan,nan,NLP,737768761,True
+pegasus-subreddit-comments-summarizer,0,27.833269754820986,1.0,Not Specified,nan,nan,0.51832,0.40226,NLP,2283804653,True
+synopsize-v1.0,0,0.0014579314567438,1.0,Not Specified,nan,nan,0.84624,0.84631,NLP,557971229,True
+autotrain-song_lyrics-45948114663,0,0.2944444228317013,1.0,Not Specified,0.708,0.708,nan,nan,NLP,737768761,True
+autotrain-imdb-sentiment-45954114684,0,1.6951829788409294,1.0,Not Specified,0.953,0.954,nan,nan,NLP,556848625,True
+autotrain-cat_dog-46040114726,0,1.094614881827817,1.0,Not Specified,1.0,nan,nan,nan,Computer Vision,347599761,True
+autotrain-summ_arp_2-46098114797,0,2.584620959475704,1.0,Not Specified,nan,nan,0.5536099999999999,0.47968,NLP,2950848513,True
+alpaca-bad-instruction-detector,0,0.4102361717910936,1.0,Not Specified,0.891,0.887,nan,nan,NLP,737768761,True
+autotrain-evangil-jean-train-46246114854,0,13.333381258423453,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-summ_arp_4-46233114888,0,2.0839852645801367,1.0,Not Specified,nan,nan,0.5520499999999999,0.47973,NLP,2950848513,True
+autotrain-chat-sum-dialogsum-samsum-46317114985,0,3.0774487291128,1.0,Not Specified,nan,nan,0.39115,0.30158,NLP,1625537293,True
+autotrain-translation-test-for-luc-46356115004,0,13.29206069239237,1.0,Not Specified,nan,nan,nan,nan,NLP,4918420761,True
+autotrain-imdb-textclassification-46471115127,0,2.683579313085358,1.0,Not Specified,1.0,1.0,nan,nan,NLP,1421587189,True
+roberta-frame-CP,0,3.313265712444502,1.0,Not Specified,0.999,0.999,nan,nan,NLP,1421587189,True
+minecraft-modpack-quests-transformer,0,1.1513248050762204,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,False
+postnashville_antitrans_telegram-46622115298,0,0.4434488215878769,1.0,Not Specified,0.818,0.707,nan,nan,NLP,737771833,True
+autotrain-activity_parameters-46735115465,0,0.8044039338743204,1.0,Not Specified,0.99,0.782,nan,nan,NLP,1336519661,True
+activity_params_02_the_best,0,0.401256563816351,1.0,Not Specified,0.989,0.815,nan,nan,NLP,1336519661,True
+autotrain-pubmed-medft-tiny-46854115566,0,0.0157860826194656,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-pubmed-tiny-46871115574,0,3.673900197759129,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-trans-pubmed-46884115623,0,5.741513475338592,1.0,Not Specified,nan,nan,nan,nan,NLP,310022533,True
+autotrain-t5-billsum-47010115876,0,0.0111316645461598,1.0,Not Specified,nan,nan,0.2000199999999999,0.17035,NLP,242071641,True
