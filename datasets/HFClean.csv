@@ -1,0 +1,2838 @@
+,modelId,datasets,num_of_imgs,datasets_size,parameters,co2_eq_emissions,source,training_type,geographical_location,hardware_used,cloud_provider,accuracy,loss,f1,rouge1,rougeL,perplexity,size,auto,downloads,likes,library_name,lastModified,created_at,modelcard_text,co2_reported,license,language,domain,year_month,is_albert,is_arabert,is_arabic-news-title-generation,is_arabic-paraphrasing,is_arabic-text-summarization,is_autoencoders,is_automatic-speech-recognition,is_autotrain_compatible,is_bart,is_bert,is_bert2bert,is_biobert,is_bloom,is_bn,is_bpy,is_co2_eq_emissions,is_code,is_conversational,is_coreml,is_dallebart,is_danish,is_deberta-v2,is_distilbert,is_dmv,is_doe2vec,is_electra,is_electra-small,is_eu,is_exbert,is_exploratory-landscape-analysis,is_fanpage,is_fill-mask,is_fon,is_fun,is_generated_from_trainer,is_gom,is_gpt2,is_gpt_neo,is_greentext,is_has_space,is_hf-asr-leaderboard,is_ilpost,is_image-classification,is_indicnlp,is_indoaryan,is_iso15919,is_italian,is_jax,is_keras,is_led,is_lg,is_lm-head,is_ln,is_longt5,is_m2m_100,is_mai,is_masked-language-modeling,is_mbart,is_model-index,is_msa,is_mt5,is_multilingual,is_nl,is_nlp,is_nso,is_ny,is_pa,is_pegasus,is_pretraining,is_pytorch,is_question-generation,is_regression,is_replaced-token-detection,is_rn,is_roberta,is_rust,is_rw,is_safetensors,is_sentence-order-prediction,is_seq2seq,is_sequence-to-sequence,is_squad_it,is_st,is_summarization,is_sv,is_swin,is_t5,is_tensorboard,is_text-classification,is_text-generation,is_text-regression,is_text-to-image,is_text2text-generation,is_text2text-question-answering,is_tf,is_tflite,is_token-classification,is_transformers,is_translation,is_tum,is_unk,is_vision,is_whisper,is_whisper-event,is_xlmindic,is_zh,is_ælæctra
+0,distilgpt2,['openwebtext'],,39769494896.0,84000000,149200.0,,pretraining,East USA,8 v100 16GB,,,,,,,,352833716,False,1172830,170,"['transformers', 'rust', 'jax', 'safetensors', 'tf', 'pytorch']",2023-01-24 13:57:50+00:00,2019-10-03 14:08:13+00:00,"
+# DistilGPT2
+
+DistilGPT2 (short for Distilled-GPT2) is an English-language model pre-trained with the supervision of the smallest version of Generative Pre-trained Transformer 2 (GPT-2). Like GPT-2, DistilGPT2 can be used to generate text. Users of this model card should also consider information about the design, training, and limitations of [GPT-2](https://huggingface.co/gpt2).
+
+## Model Details
+
+- **Developed by:** Hugging Face
+- **Model type:** Transformer-based Language Model
+- **Language:** English
+- **License:** Apache 2.0
+- **Model Description:** DistilGPT2 is an English-language model pre-trained with the supervision of the 124 million parameter version of GPT-2. DistilGPT2, which has 82 million parameters, was developed using [knowledge distillation](#knowledge-distillation) and was designed to be a faster, lighter version of GPT-2.
+- **Resources for more information:** See [this repository](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation) for more about Distil\* (a class of compressed models including Distilled-GPT2), [Sanh et al. (2019)](https://arxiv.org/abs/1910.01108) for more information about knowledge distillation and the training procedure, and this page for more about [GPT-2](https://openai.com/blog/better-language-models/).
+
+## Uses, Limitations and Risks
+
+#### Limitations and Risks
+
+<details>
+<summary>Click to expand</summary>
+
+**CONTENT WARNING: Readers should be aware this section contains content that is disturbing, offensive, and can propagate historical and current stereotypes.**
+
+As the developers of GPT-2 (OpenAI) note in their [model card](https://github.com/openai/gpt-2/blob/master/model_card.md), “language models like GPT-2 reflect the biases inherent to the systems they were trained on.” Significant research has explored bias and fairness issues with models for language generation including GPT-2 (see, e.g., [Sheng et al. (2021)](https://aclanthology.org/2021.acl-long.330.pdf) and [Bender et al. (2021)](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)). 
+
+DistilGPT2 also suffers from persistent bias issues, as highlighted in the demonstrative examples below. Note that these examples are not a comprehensive stress-testing of the model. Readers considering using the model should consider more rigorous evaluations of the model depending on their use case and context.
+
+The impact of model compression techniques – such as knowledge distillation – on bias and fairness issues associated with language models is an active area of research. For example: 
+
+- [Silva, Tambwekar and Gombolay (2021)](https://aclanthology.org/2021.naacl-main.189.pdf) find that distilled versions of BERT and RoBERTa consistently exhibit statistically significant bias (with regard to gender and race) with effect sizes larger than the teacher models.
+- [Xu and Hu (2022)](https://arxiv.org/pdf/2201.08542.pdf) find that distilled versions of GPT-2 showed consistent reductions in toxicity and bias compared to the teacher model (see the paper for more detail on metrics used to define/measure toxicity and bias). 
+- [Gupta et al. (2022)](https://arxiv.org/pdf/2203.12574.pdf) find that DistilGPT2 exhibits greater gender disparities than GPT-2 and propose a technique for mitigating gender bias in distilled language models like DistilGPT2. 
+
+```python
+>>> from transformers import pipeline, set_seed
+>>> generator = pipeline('text-generation', model='distilgpt2')
+>>> set_seed(48)
+>>> generator(""The White man worked as a"", max_length=20, num_return_sequences=3)
+[{'generated_text': ""The White man worked as a salesman at a McDonald's restaurant called Kia at the time of the""},
+ {'generated_text': 'The White man worked as a contractor in the Army in the late 1990s. He became a ""'},
+ {'generated_text': 'The White man worked as a police spokesman to the US Navy in the 1930s.'}]
+ 
+>>> set_seed(48)
+>>> generator(""The Black man worked as a"", max_length=20, num_return_sequences=3)
+[{'generated_text': 'The Black man worked as a shop assistant for an hour at Wal-Mart at Wal-Mart in'},
+ {'generated_text': 'The Black man worked as a waiter in the hotel when he was assaulted when he got out of a'},
+ {'generated_text': 'The Black man worked as a police spokesman four months ago...'}]
+```
+
+</details>
+
+#### Potential Uses
+
+Since DistilGPT2 is a distilled version of GPT-2, it is intended to be used for similar use cases with the increased functionality of being smaller and easier to run than the base model. 
+
+The developers of GPT-2 state in their [model card](https://github.com/openai/gpt-2/blob/master/model_card.md) that they envisioned GPT-2 would be used by researchers to better understand large-scale generative language models, with possible secondary use cases including: 
+
+> - *Writing assistance: Grammar assistance, autocompletion (for normal prose or code)*
+> - *Creative writing and art: exploring the generation of creative, fictional texts; aiding creation of poetry and other literary art.*
+> - *Entertainment: Creation of games, chat bots, and amusing generations.*
+
+Using DistilGPT2, the Hugging Face team built the [Write With Transformers](https://transformer.huggingface.co/doc/distil-gpt2) web app, which allows users to play with the model to generate text directly from their browser.
+
+#### Out-of-scope Uses
+
+OpenAI states in the GPT-2 [model card](https://github.com/openai/gpt-2/blob/master/model_card.md): 
+
+> Because large-scale language models like GPT-2 do not distinguish fact from fiction, we don’t support use-cases that require the generated text to be true.
+>
+> Additionally, language models like GPT-2 reflect the biases inherent to the systems they were trained on, so we do not recommend that they be deployed into systems that interact with humans unless the deployers first carry out a study of biases relevant to the intended use-case.
+
+### How to Get Started with the Model 
+
+<details>
+<summary>Click to expand</summary>
+
+*Be sure to read the sections on in-scope and out-of-scope uses and limitations of the model for further information on how to use the model.*
+
+Using DistilGPT2 is similar to using GPT-2. DistilGPT2 can be used directly with a pipeline for text generation. Since the generation relies on some randomness, we set a seed for reproducibility:
+
+```python
+>>> from transformers import pipeline, set_seed
+>>> generator = pipeline('text-generation', model='distilgpt2')
+>>> set_seed(42)
+>>> generator(""Hello, I’m a language model"", max_length=20, num_return_sequences=5)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+[{'generated_text': ""Hello, I'm a language model, I'm a language model. In my previous post I've""},
+ {'generated_text': ""Hello, I'm a language model, and I'd love to hear what you think about it.""},
+ {'generated_text': ""Hello, I'm a language model, but I don't get much of a connection anymore, so""},
+ {'generated_text': ""Hello, I'm a language model, a functional language... It's not an example, and that""},
+ {'generated_text': ""Hello, I'm a language model, not an object model.\n\nIn a nutshell, I""}]
+``` 
+ 
+Here is how to use this model to get the features of a given text in PyTorch:
+
+```python
+from transformers import GPT2Tokenizer, GPT2Model
+tokenizer = GPT2Tokenizer.from_pretrained('distilgpt2')
+model = GPT2Model.from_pretrained('distilgpt2')
+text = ""Replace me by any text you'd like.""
+encoded_input = tokenizer(text, return_tensors='pt')
+output = model(**encoded_input)
+```
+
+And in TensorFlow:
+
+```python
+from transformers import GPT2Tokenizer, TFGPT2Model
+tokenizer = GPT2Tokenizer.from_pretrained('distilgpt2')
+model = TFGPT2Model.from_pretrained('distilgpt2')
+text = ""Replace me by any text you'd like.""
+encoded_input = tokenizer(text, return_tensors='tf')
+output = model(encoded_input)
+```
+
+</details>
+
+## Training Data
+
+DistilGPT2 was trained using [OpenWebTextCorpus](https://skylion007.github.io/OpenWebTextCorpus/), an open-source reproduction of OpenAI’s WebText dataset, which was used to train GPT-2. See the [OpenWebTextCorpus Dataset Card](https://huggingface.co/datasets/openwebtext) for additional information about OpenWebTextCorpus and [Radford et al. (2019)](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) for additional information about WebText.
+
+## Training Procedure
+
+The texts were tokenized using the same tokenizer as GPT-2, a byte-level version of Byte Pair Encoding (BPE). DistilGPT2 was trained using knowledge distillation, following a procedure similar to the training procedure for DistilBERT, described in more detail in [Sanh et al. (2019)](https://arxiv.org/abs/1910.01108). 
+
+## Evaluation Results
+
+The creators of DistilGPT2 [report](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation) that, on the [WikiText-103](https://blog.einstein.ai/the-wikitext-long-term-dependency-language-modeling-dataset/) benchmark, GPT-2 reaches a perplexity on the test set of 16.3 compared to 21.1 for DistilGPT2 (after fine-tuning on the train set).
+
+## Environmental Impact
+
+*Carbon emissions were estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). The hardware, runtime, cloud provider, and compute region were utilized to estimate the carbon impact.*
+
+- **Hardware Type:** 8 16GB V100
+- **Hours used:** 168 (1 week)
+- **Cloud Provider:** Azure
+- **Compute Region:** unavailable, assumed East US for calculations
+- **Carbon Emitted** *(Power consumption x Time x Carbon produced based on location of power grid)*: 149.2 kg eq. CO2
+
+## Citation
+
+```bibtex
+@inproceedings{sanh2019distilbert,
+  title={DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter},
+  author={Sanh, Victor and Debut, Lysandre and Chaumond, Julien and Wolf, Thomas},
+  booktitle={NeurIPS EMC^2 Workshop},
+  year={2019}
+}
+```
+
+## Glossary
+
+-	<a name=""knowledge-distillation"">**Knowledge Distillation**</a>: As described in [Sanh et al. (2019)](https://arxiv.org/pdf/1910.01108.pdf), “knowledge distillation is a compression technique in which a compact model – the student – is trained to reproduce the behavior of a larger model – the teacher – or an ensemble of models.” Also see [Bucila et al. (2006)](https://www.cs.cornell.edu/~caruana/compression.kdd06.pdf) and [Hinton et al. (2015)](https://arxiv.org/abs/1503.02531).
+
+<a href=""https://huggingface.co/exbert/?model=distilgpt2"">
+	<img width=""300px"" src=""https://cdn-media.huggingface.co/exbert/button.png"">
+</a>
+",1,[],[],NLP,2019-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
+1,aelaectra-danish-electra-small-cased,['DAGW'],,13187500000.0,14700000,4009.5,,pretraining,Denmark,1 v100 16GB,,,,0.8008,,,,57979406,False,570,1,"['pytorch', 'transformers', 'tf']",2022-10-22 14:43:12+00:00,2020-12-15 07:44:17+00:00,"
+# Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
+**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. Initially a cased and an uncased model are released. It was created as part of a Cognitive Science bachelor's thesis.
+
+Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition (NER) tasks. Since NER only presents a limited picture of Ælæctra's capabilities I am very interested in further evaluations. Therefore, if you employ it for any task, feel free to hit me up your findings!
+
+Ælæctra was, as mentioned, created to enhance the Danish NLP capabilties and please do note how this GitHub still does not support the Danish characters ""*Æ, Ø and Å*"" as the title of this repository becomes ""*-l-ctra*"". How ironic.🙂
+
+Here is an example on how to load both the cased and the uncased Ælæctra model in [PyTorch](https://pytorch.org/) using the [🤗Transformers](https://github.com/huggingface/transformers) library:
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained(""Maltehb/-l-ctra-danish-electra-small-cased"")
+model = AutoModelForPreTraining.from_pretrained(""Maltehb/-l-ctra-danish-electra-small-cased"")
+```
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained(""Maltehb/-l-ctra-danish-electra-small-uncased"")
+model = AutoModelForPreTraining.from_pretrained(""Maltehb/-l-ctra-danish-electra-small-uncased"")
+```
+
+### Evaluation of current Danish Language Models 
+
+Ælæctra, Danish BERT (DaBERT) and multilingual BERT (mBERT) were evaluated:
+
+| Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download | 
+| --- | --- | --- | --- | ---  | --- | --- |
+| Ælæctra Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| Ælæctra Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| DaBERT | 12 | 768 | 110M | 84.89 (SD = 0.64) | 43.03 | [Link for model](https://www.dropbox.com/s/19cjaoqvv2jicq9/danish_bert_uncased_v2.zip?dl=1) | 
+| mBERT Uncased | 12 | 768 | 167M | 80.44 (SD = 0.82) | 72.10 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_03/multilingual_L-12_H-768_A-12.zip) | 
+| mBERT Cased | 12 | 768 | 177M | 83.79 (SD = 0.91) | 70.56 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) | 
+
+
+On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, Ælæctra is less than one third the size, and uses significantly fewer computational resources to pretrain and instantiate. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
+
+### Pretraining
+To pretrain Ælæctra it is recommended to build a Docker Container from the [Dockerfile](https://github.com/MalteHB/-l-ctra/blob/master/infrastructure/Dockerfile). Next, simply follow the [pretraining notebooks](https://github.com/MalteHB/-l-ctra/blob/master/notebooks/pretraining/) 
+
+The pretraining was done by utilizing a single NVIDIA Tesla V100 GPU with 16 GiB, endowed by the Danish data company [KMD](https://www.kmd.dk/). The pretraining took approximately 4 days and 9.5 hours for both the cased and uncased model
+
+### Fine-tuning
+To fine-tune any Ælæctra model follow the [fine-tuning notebooks](https://github.com/MalteHB/-l-ctra/blob/master/notebooks/fine-tuning/)
+
+### References
+Clark, K., Luong, M.-T., Le, Q. V., & Manning, C. D. (2020). ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators. ArXiv:2003.10555 [Cs]. http://arxiv.org/abs/2003.10555
+
+Danish BERT. (2020). BotXO. https://github.com/botxo/nordic_bert (Original work published 2019)
+
+Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv:1810.04805 [Cs]. http://arxiv.org/abs/1810.04805
+
+Hvingelby, R., Pauli, A. B., Barrett, M., Rosted, C., Lidegaard, L. M., & Søgaard, A. (2020). DaNE: A Named Entity Resource for Danish. Proceedings of the 12th Language Resources and Evaluation Conference, 4597–4604. https://www.aclweb.org/anthology/2020.lrec-1.565
+
+Strømberg-Derczynski, L., Baglini, R., Christiansen, M. H., Ciosici, M. R., Dalsgaard, J. A., Fusaroli, R., Henrichsen, P. J., Hvingelby, R., Kirkedal, A., Kjeldsen, A. S., Ladefoged, C., Nielsen, F. Å., Petersen, M. L., Rystrøm, J. H., & Varab, D. (2020). The Danish Gigaword Project. ArXiv:2005.03521 [Cs]. http://arxiv.org/abs/2005.03521
+
+
+#### Acknowledgements
+As the majority of this repository is build upon [the works](https://github.com/google-research/electra) by the team at Google who created ELECTRA, a HUGE thanks to them is in order. 
+
+A Giga thanks also goes out to the incredible people who collected The Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020). 
+
+Furthermore, I would like to thank my supervisor [Riccardo Fusaroli](https://github.com/fusaroli) for the support with the thesis, and a special thanks goes out to [Kenneth Enevoldsen](https://github.com/KennethEnevoldsen) for his continuous feedback. 
+
+Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-students from Cognitive Science for encouriging me to keep on working hard and holding my head up high!
+
+#### Contact
+
+For help or further information feel free to connect with the author Malte Højmark-Bertelsen on [hjb@kmd.dk](mailto:hjb@kmd.dk?subject=[GitHub]%20Ælæctra) or any of the following platforms:
+
+[<img align=""left"" alt=""MalteHB | Twitter"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"" />][twitter]
+[<img align=""left"" alt=""MalteHB | LinkedIn"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"" />][linkedin]
+[<img align=""left"" alt=""MalteHB | Instagram"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg"" />][instagram]
+
+<br />
+
+</details>
+
+[twitter]: https://twitter.com/malteH_B
+[instagram]: https://www.instagram.com/maltemusen/
+[linkedin]: https://www.linkedin.com/in/malte-h%C3%B8jmark-bertelsen-9a618017b/",1,[],[],NLP,2020-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1
+2,aelaectra-danish-electra-small-uncased,['DAGW'],,7187500000.0,13700000,4009.5,,pretraining,Denmark,1 v100 16GB,,,,0.7803,,,,57979403,False,68,0,"['transformers', 'pytorch']",2021-11-23 06:39:20+00:00,2020-12-15 07:43:52+00:00,"
+# Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
+**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. Initially a cased and an uncased model are released. It was created as part of a Cognitive Science bachelor's thesis.
+
+Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition (NER) tasks. Since NER only presents a limited picture of Ælæctra's capabilities I am very interested in further evaluations. Therefore, if you employ it for any task, feel free to hit me up your findings!
+
+Ælæctra was, as mentioned, created to enhance the Danish NLP capabilties and please do note how this GitHub still does not support the Danish characters ""*Æ, Ø and Å*"" as the title of this repository becomes ""*-l-ctra*"". How ironic.🙂
+
+Here is an example on how to load both the cased and the uncased Ælæctra model in [PyTorch](https://pytorch.org/) using the [🤗Transformers](https://github.com/huggingface/transformers) library:
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained(""Maltehb/-l-ctra-cased"")
+model = AutoModelForPreTraining.from_pretrained(""Maltehb/-l-ctra-cased"")
+```
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained(""Maltehb/-l-ctra-uncased"")
+model = AutoModelForPreTraining.from_pretrained(""Maltehb/-l-ctra-uncased"")
+```
+
+### Evaluation of current Danish Language Models 
+
+Ælæctra, Danish BERT (DaBERT) and multilingual BERT (mBERT) were evaluated:
+
+| Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download | 
+| --- | --- | --- | --- | ---  | --- | --- |
+| Ælæctra Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| Ælæctra Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| DaBERT | 12 | 768 | 110M | 84.89 (SD = 0.64) | 43.03 | [Link for model](https://www.dropbox.com/s/19cjaoqvv2jicq9/danish_bert_uncased_v2.zip?dl=1) | 
+| mBERT Uncased | 12 | 768 | 167M | 80.44 (SD = 0.82) | 72.10 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_03/multilingual_L-12_H-768_A-12.zip) | 
+| mBERT Cased | 12 | 768 | 177M | 83.79 (SD = 0.91) | 70.56 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) | 
+
+
+On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, Ælæctra is less than one third the size, and uses significantly fewer computational resources to pretrain and instantiate. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
+
+### Pretraining
+To pretrain Ælæctra it is recommended to build a Docker Container from the [Dockerfile](https://github.com/MalteHB/Ælæctra/tree/master/notebooks/fine-tuning/). Next, simply follow the [pretraining notebooks](https://github.com/MalteHB/Ælæctra/tree/master/infrastructure/Dockerfile/) 
+
+The pretraining was done by utilizing a single NVIDIA Tesla V100 GPU with 16 GiB, endowed by the Danish data company [KMD](https://www.kmd.dk/). The pretraining took approximately 4 days and 9.5 hours for both the cased and uncased model
+
+### Fine-tuning
+To fine-tune any Ælæctra model follow the [fine-tuning notebooks](https://github.com/MalteHB/Ælæctra/tree/master/notebooks/fine-tuning/)
+
+### References
+Clark, K., Luong, M.-T., Le, Q. V., & Manning, C. D. (2020). ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators. ArXiv:2003.10555 [Cs]. http://arxiv.org/abs/2003.10555
+
+Danish BERT. (2020). BotXO. https://github.com/botxo/nordic_bert (Original work published 2019)
+
+Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv:1810.04805 [Cs]. http://arxiv.org/abs/1810.04805
+
+Hvingelby, R., Pauli, A. B., Barrett, M., Rosted, C., Lidegaard, L. M., & Søgaard, A. (2020). DaNE: A Named Entity Resource for Danish. Proceedings of the 12th Language Resources and Evaluation Conference, 4597–4604. https://www.aclweb.org/anthology/2020.lrec-1.565
+
+Strømberg-Derczynski, L., Baglini, R., Christiansen, M. H., Ciosici, M. R., Dalsgaard, J. A., Fusaroli, R., Henrichsen, P. J., Hvingelby, R., Kirkedal, A., Kjeldsen, A. S., Ladefoged, C., Nielsen, F. Å., Petersen, M. L., Rystrøm, J. H., & Varab, D. (2020). The Danish Gigaword Project. ArXiv:2005.03521 [Cs]. http://arxiv.org/abs/2005.03521
+
+
+#### Acknowledgements
+As the majority of this repository is build upon [the works](https://github.com/google-research/electra) by the team at Google who created ELECTRA, a HUGE thanks to them is in order. 
+
+A Giga thanks also goes out to the incredible people who collected The Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020). 
+
+Furthermore, I would like to thank my supervisor [Riccardo Fusaroli](https://github.com/fusaroli) for the support with the thesis, and a special thanks goes out to [Kenneth Enevoldsen](https://github.com/KennethEnevoldsen) for his continuous feedback. 
+
+Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-students from Cognitive Science for encouriging me to keep on working hard and holding my head up high!
+
+#### Contact
+
+For help or further information feel free to connect with the author Malte Højmark-Bertelsen on [hjb@kmd.dk](mailto:hjb@kmd.dk?subject=[GitHub]%20Ælæctra) or any of the following platforms:
+
+[<img align=""left"" alt=""MalteHB | Twitter"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"" />][twitter]
+[<img align=""left"" alt=""MalteHB | LinkedIn"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"" />][linkedin]
+[<img align=""left"" alt=""MalteHB | Instagram"" width=""22px"" src=""https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg"" />][instagram]
+
+<br />
+
+</details>
+
+[twitter]: https://twitter.com/malteH_B
+[instagram]: https://www.instagram.com/maltemusen/
+[linkedin]: https://www.linkedin.com/in/malte-h%C3%B8jmark-bertelsen-9a618017b/",1,[],[],NLP,2020-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+3,bias-detection-model,[''],,2600000.0,,0.319355,,fine-tuning,,,,0.62,,,,,,268000000,False,1292,10,"['transformers', 'tf']",2022-08-09 02:40:59+00:00,2021-12-05 11:50:39+00:00,"
+## About the Model
+An English sequence classification model, trained on MBAD Dataset to detect bias and fairness in sentences (news articles). This model was built on top of distilbert-base-uncased model and trained for 30 epochs with a batch size of 16, a learning rate of 5e-5, and a maximum sequence length of 512.
+
+- Dataset : MBAD Data
+- Carbon emission 0.319355 Kg
+
+| Train Accuracy | Validation Accuracy | Train loss | Test loss |
+|---------------:| -------------------:| ----------:|----------:|
+|          76.97 |               62.00 |       0.45 |      0.96 |
+
+## Usage
+The easiest way is to load the inference api from huggingface and second method is through the pipeline object offered by transformers library.
+```python
+from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+from transformers import pipeline
+tokenizer = AutoTokenizer.from_pretrained(""d4data/bias-detection-model"")
+model = TFAutoModelForSequenceClassification.from_pretrained(""d4data/bias-detection-model"")
+
+classifier = pipeline('text-classification', model=model, tokenizer=tokenizer) # cuda = 0,1 based on gpu availability
+classifier(""The irony, of course, is that the exhibit that invites people to throw trash at vacuuming Ivanka Trump lookalike reflects every stereotype feminists claim to stand against, oversexualizing Ivanka’s body and ignoring her hard work."")
+```
+
+## Author
+This model is part of the Research topic ""Bias and Fairness in AI"" conducted by Deepak John Reji, Shaina Raza. If you use this work (code, model or dataset), please star at:
+> Bias & Fairness in AI, (2022), GitHub repository, <https://github.com/dreji18/Fairness-in-AI>
+
+",1,[],[],NLP,2021-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+4,environmental-due-diligence-model,[''],,155000.0,,0.1069,,fine-tuning,,,,0.71,,,,,,268000000,False,6,2,"['transformers', 'tf']",2023-02-26 11:02:07+00:00,2021-12-28 11:33:48+00:00,"
+## About the Model
+An Environmental due diligence classification model, trained on customized environmental Dataset to detect contamination and remediation activities (both prevailing as well as planned) as a part of site assessment process.  This model can identify the source of contamination, the extent of contamination, the types of contaminants present at the site, the flow of contaminants and their interaction with ground water, surface water and other surrounding water bodies .
+
+This model was built on top of distilbert-base-uncased model and trained for 10 epochs with a batch size of 16, a learning rate of 5e-5, and a maximum sequence length of 512.
+
+- Dataset : Open Source News data + Custom data
+- Carbon emission 0.1069 Kg
+
+## Usage
+The easiest way is to load through the pipeline object offered by transformers library.
+```python
+from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+from transformers import pipeline
+tokenizer = AutoTokenizer.from_pretrained(""d4data/environmental-due-diligence-model"")
+model = TFAutoModelForSequenceClassification.from_pretrained(""d4data/environmental-due-diligence-model"")
+
+classifier = pipeline('text-classification', model=model, tokenizer=tokenizer) # cuda = 0,1 based on gpu availability
+classifier(""At the every month post-injection monitoring event, TCE, carbon tetrachloride, and chloroform concentrations were above CBSGs in three of the wells"")
+```
+
+## Author
+This model is part of the Research topic ""Environmental Due Diligence"" conducted by Deepak John Reji, Afreen Aman. If you use this work (code, model or dataset), please cite as:
+> Environmental Due Diligence, (2020), https://www.sciencedirect.com/science/article/pii/S2665963822001117
+
+",1,[],[],NLP,2021-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+5,dalle-mini,[''],15M,3500000000.0,400000000,7540.0,MLCo2 Machine Learning Impact calculator,pretraining + fine-tuning,East USA,1 TPU v3-8,GCP,,,,,,,1750000000,False,184,279,"['jax', 'transformers']",2023-01-11 08:53:22+00:00,2021-10-26 20:50:54+00:00,"
+# DALL·E Mini Model Card
+
+This model card focuses on the model associated with the DALL·E mini space on Hugging Face, available [here](https://huggingface.co/spaces/dalle-mini/dalle-mini). The app is called “dalle-mini”, but  incorporates “[DALL·E Mini](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy)’’ and “[DALL·E Mega](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training-Journal--VmlldzoxODMxMDI2)” models (further details on this distinction forthcoming).
+
+The DALL·E Mega model is the largest version of DALLE Mini. For more information specific to DALL·E Mega, see the [DALL·E Mega model card](https://huggingface.co/dalle-mini/dalle-mega).
+
+## Model Details
+
+* **Developed by:** Boris Dayma, Suraj Patil, Pedro Cuenca, Khalid Saifullah, Tanishq Abraham, Phúc Lê, Luke, Luke Melas, Ritobrata Ghosh
+* **Model type:** Transformer-based text-to-image generation model
+* **Language(s):** English
+* **License:** Apache 2.0
+* **Model Description:** This is a model that can be used to generate images based on text prompts. As the model developers wrote in the [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) about DALL·E mini, “OpenAI had the first impressive model for generating images with [DALL·E](https://openai.com/blog/dall-e/). DALL·E mini is an attempt at reproducing those results with an open-source model.”
+* **Resources for more information:** See OpenAI’s website for more information about [DALL·E](https://openai.com/blog/dall-e/), including the [DALL·E model card](https://github.com/openai/DALL-E/blob/master/model_card.md). See the [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) for more information from the model’s developers. To learn more about DALL·E Mega, see the DALL·E Mega [training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training--VmlldzoxODMxMDI2#training-parameters).
+* **Cite as:** 
+```bib text
+@misc{Dayma_DALL·E_Mini_2021,
+      author = {Dayma, Boris and Patil, Suraj and Cuenca, Pedro and Saifullah, Khalid and Abraham, Tanishq and Lê Khắc, Phúc and Melas, Luke and Ghosh, Ritobrata},
+      doi = {10.5281/zenodo.5146400},
+      month = {7},
+      title = {DALL·E Mini},
+      url = {https://github.com/borisdayma/dalle-mini},
+      year = {2021}
+}
+```
+
+## Uses
+
+### Direct Use
+
+The model is intended to be used to generate images based on text prompts for research and personal consumption.  Intended uses include supporting creativity, creating humorous content, and providing generations for people curious about the model’s behavior.  Intended uses exclude those described in the [Misuse and Out-of-Scope Use](#misuse-malicious-use-and-out-of-scope-use) section.
+
+### Downstream Use
+
+The model could also be used for downstream use cases, including:
+* Research efforts, such as probing and better understanding the limitations and biases of generative models to further improve the state of science
+* Development of educational or creative tools
+* Generation of artwork and use in design and artistic processes. 
+* Other uses that are newly discovered by users. This currently includes poetry illustration (give a poem as prompt), fan art (putting a character in various other visual universes), visual puns, fairy tale illustrations (give a fantasy situation as prompt), concept mashups (applying a texture to something completely different), style transfers (portraits in the style of), … We hope you will find your own application!
+
+Downstream uses exclude the uses described in [Misuse and Out-of-Scope Use](#misuse-malicious-use-and-out-of-scope-use).
+
+### Misuse, Malicious Use, and Out-of-Scope Use
+
+The model should not be used to intentionally create or disseminate images that create hostile or alienating environments for people. This includes generating images that people would foreseeably find disturbing, distressing, or offensive; or content that propagates historical or current stereotypes. 
+
+#### Out-of-Scope Use
+
+The model was not trained to be factual or true representations of people or events, and therefore using the model to generate such content is out-of-scope for the abilities of this model.
+
+#### Misuse and Malicious Use 
+
+Using the model to generate content that is cruel to individuals is a misuse of this model. This includes:
+* Generating demeaning, dehumanizing, or otherwise harmful representations of people or their environments, cultures, religions, etc.
+* Intentionally promoting or propagating discriminatory content or harmful stereotypes.
+* Impersonating individuals without their consent.
+* Sexual content without consent of the people who might see it.
+* Mis- and disinformation
+* Representations of egregious violence and gore
+* Sharing of copyrighted or licensed material in violation of its terms of use.
+* Sharing content that is an alteration of copyrighted or licensed material in violation of its terms of use.
+
+
+## Limitations and Bias
+
+### Limitations
+
+The model developers discuss the limitations of the model further in the DALL·E Mini [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA):
+* Faces and people in general are not generated properly.
+* Animals are usually unrealistic.
+* It is hard to predict where the model excels or falls short…Good prompt engineering will lead to the best results.
+* The model has only been trained with English descriptions and will not perform as well in other languages
+
+
+### Bias 
+
+**CONTENT WARNING: Readers should be aware this section contains content that is disturbing, offensive, and can propagate historical and current stereotypes.**
+
+The model was trained on unfiltered data from the Internet, limited to pictures with English descriptions. Text and images from communities and cultures using other languages were not utilized. This affects all output of the model, with white and Western culture asserted as a default, and the model’s ability to generate content using non-English prompts is observably lower quality than prompts in English.
+
+While the capabilities of image generation models are impressive, they may also reinforce or exacerbate societal biases. The extent and nature of the biases of DALL·E Mini and DALL·E Mega models have yet to be fully documented, but initial testing demonstrates that they may generate images that contain negative stereotypes against minoritized groups. Work to analyze the nature and extent of the models’ biases and limitations is ongoing.
+
+Our current analyses demonstrate that:
+* Images generated by the model can include disturbing and harmful stereotypes across protected classes; identity characteristics; and sensitive, social, and occupational groups.
+* When the model generates images with people in them, it tends to output people who we perceive to be white, while people of color are underrepresented. 
+* Images generated by the model can contain biased content that depicts power differentials between people of color and people who are white, with white people in positions of privilege.
+* The model is generally only usable for generating images based on text in English, limiting accessibility of the model for non-English speakers and potentially contributing to the biases in images generated by the model.
+
+The [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA) discusses these issues in more detail, and also highlights potential sources of bias in the model development process.
+
+
+### Limitations and Bias Recommendations
+
+* Users (both direct and downstream) should be made aware of the biases and limitations.
+* Content that is potentially problematic should be filtered out, e.g., via automated models that detect violence or pornography.
+* Further work on this model should include methods for balanced and just representations of people and cultures, for example, by curating the training dataset to be both diverse and inclusive.
+
+
+## Training
+
+### Training Data
+
+The model developers used 3 datasets for the model:
+* ﻿[Conceptual Captions Dataset](https://aclanthology.org/P18-1238/), which contains 3 million image and caption pairs.
+* ﻿[Conceptual 12M](https://arxiv.org/abs/2102.08981), which contains 12 million image and caption pairs.
+* The [OpenAI subset](https://github.com/openai/CLIP/blob/main/data/yfcc100m.md) of [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/), which contains about 15 million images and that we further sub-sampled to 2 million images due to limitations in storage space. They used both title and description as caption and removed html tags, new lines and extra spaces.
+
+For fine-tuning the image encoder, a subset of 2 million images were used.
+All images  (about 15 million) were used for training the Seq2Seq model.
+
+### Training Procedure
+
+As described further in the [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA#our-dall-e-model-architecture) for DALL·E Mini, during training, images and descriptions are both available and pass through the system as follows:
+* Images are encoded through a [VQGAN](https://arxiv.org/abs/2012.09841) encoder, which turns images into a sequence of tokens.
+* Descriptions are encoded through a [BART](https://arxiv.org/abs/1910.13461) encoder.
+* The output of the BART encoder and encoded images are fed through the BART decoder, which is an auto-regressive model whose goal is to predict the next token.
+* Loss is the [softmax cross-entropy](https://wandb.ai/sauravm/Activation-Functions/reports/Activation-Functions-Softmax--VmlldzoxNDU1Njgy#%F0%9F%93%A2-softmax-+-cross-entropy-loss-(caution:-math-alert)) between the model prediction logits and the actual image encodings from the VQGAN.
+
+The simplified training procedure for DALL·E Mega is as follows: 
+
+* **Hardware:** 1 pod TPU v3-256 = 32 nodes of TPU VM v3-8 (8 TPU per node) = 256 TPU v3
+* **Optimizer:** Distributed Shampoo
+* **Model Partition Specificiations:** 8 model parallel x 32 data parallel
+* **Batch:** 44 samples per model x 32 data parallel x 3 gradient accumulation steps =  4224 increasing samples per update
+* **Learning rate:** warmup to 0.0001 for 10,000 steps and then kept constant until plateau
+* Gradient checkpointing used on each Encoder/Decoder layer (ie, MHA + FFN)
+* Distributed Shampoo + Normformer Optimizations have proved to be effective and efficiently scaling this model. 
+* It should also be noted that the learning rate and other parameters are sometimes adjusted on the fly, and batch size increased over time as well.
+
+There is more information about the full procedure and technical material in the DALL·E Mega [training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training--VmlldzoxODMxMDI2#training-parameters).
+
+
+## Evaluation Results
+
+The model developers discuss their results extensively in their [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA#the-results-of-our-dall-e-experiment) for DALL·E Mini, which provides comparisons between DALL·E Mini’s results with [DALL·E-pytorch](https://github.com/lucidrains/DALLE-pytorch), OpenAI’s [DALL·E](https://openai.com/blog/dall-e/), and models consisting of a generator coupled with the [CLIP neural network model](https://openai.com/blog/clip/). 
+
+For evaluation results related to DALL·E Mega, see this [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy).
+
+## Environmental Impact
+
+### DALL·E Mini Estimated Emissions
+
+*The model is 27 times smaller than the original DALL·E and was trained on a single TPU v3-8 for only 3 days.*
+
+Based on that information, we estimate the following CO2 emissions using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). The hardware, runtime, cloud provider, and compute region were utilized to estimate the carbon impact.
+
+* **Hardware Type:** TPU v3-8
+* **Hours used:** 72 (3 days)
+* **Cloud Provider:** GCP (as mentioned in the technical report)
+* **Compute Region:** us-east1 (provided by model developers)
+* **Carbon Emitted (Power consumption x Time x Carbon produced based on location of power grid):** 30.16 kg CO2 eq.
+
+### DALL·E Mega Estimated Emissions
+
+DALL·E Mega is still training. So far, as on June 9, 2022, the model developers report that DALL·E Mega has been training for about 40-45 days on a TPU v3-256. Using those numbers, we estimate the following CO2 emissions using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). The hardware, runtime, cloud provider, and compute region were utilized to estimate the carbon impact.
+
+* **Hardware Type:** TPU v3-256
+* **Hours used:** 960 - 1080 hours (40-45 days)
+* **Cloud Provider:** Unknown
+* **Compute Region:** Unknown
+* **Carbon Emitted (Power consumption x Time x Carbon produced based on location of power grid):** Unknown
+
+## Citation
+
+```bibtext
+@misc{Dayma_DALL·E_Mini_2021,
+      author = {Dayma, Boris and Patil, Suraj and Cuenca, Pedro and Saifullah, Khalid and Abraham, Tanishq and Lê Khắc, Phúc and Melas, Luke and Ghosh, Ritobrata},
+      doi = {10.5281/zenodo.5146400},
+      month = {7},
+      title = {DALL·E Mini},
+      url = {https://github.com/borisdayma/dalle-mini},
+      year = {2021}
+}
+```
+
+*This model card was written by: Boris Dayma, Margaret Mitchell, Ezi Ozoani, Marissa Gerchick, Irene Solaiman, Clémentine Fourrier, Sasha Luccioni, Emily Witko, Nazneen Rajani, and Julian Herrera.*
+",1,[],[],Multimodal,2021-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+6,xlmindic-base-multiscript-soham,['oscar'],,97000000.0,11000000,0.0,calculated using this webstie https://mlco2.github.io/impact/#compute,fine-tuning,NA,1 P100,,,,,,,,57007313,False,15,0,"['jax', 'transformers', 'tf', 'pytorch']",2022-02-10 09:24:02+00:00,2022-01-12 05:02:25+00:00,"
+# XLMIndic Base Multiscript
+
+This model is finetuned from [this model](https://huggingface.co/ibraheemmoosa/xlmindic-base-multiscript) on Soham Bangla News Classification task which is part of the IndicGLUE benchmark.
+
+## Model description
+This model has the same configuration as the [ALBERT Base v2 model](https://huggingface.co/albert-base-v2/). Specifically, this model has the following configuration:
+- 12 repeating layers
+- 128 embedding dimension
+- 768 hidden dimension
+- 12 attention heads
+- 11M parameters
+- 512 sequence length
+
+## Training data
+This model was fine-tuned on Soham dataset that is part of the IndicGLUE benchmark.
+
+## Training procedure
+### Preprocessing
+The texts are  tokenized using SentencePiece and a vocabulary size of 50,000.
+
+### Training
+The model was trained for 8 epochs with a batch size of 16 and a learning rate of *2e-5*.
+## Evaluation results
+
+See results specific to Soham in the following table.
+### IndicGLUE
+Task | mBERT | XLM-R | IndicBERT-Base | XLMIndic-Base-Uniscript | XLMIndic-Base-Multiscript (This Model)
+-----| ----- | ----- | ------ | ------- | --------
+Wikipedia Section Title Prediction | 71.90 | 65.45 | 69.40 | **81.78 ± 0.60** | 77.17 ± 0.76
+Article Genre Classification | 88.64 | 96.61 | 97.72 | **98.70 ± 0.29** | 98.30 ± 0.26
+Named Entity Recognition (F1-score) | 71.29 | 62.18 | 56.69 | **89.85 ± 1.14** |  83.19 ± 1.58
+BBC Hindi News Article Classification | 60.55 | 75.52 | 74.60 | **79.14 ± 0.60** | 77.28 ± 1.50
+Soham Bangla News Article Classification | 80.23 | 87.6 | 78.45 | **93.89 ± 0.48** | 93.22 ± 0.49
+INLTK Gujarati Headlines Genre Classification | - | - | **92.91** | 90.73 ± 0.75 | 90.41 ± 0.69
+INLTK Marathi Headlines Genre Classification | - | - | **94.30** | 92.04 ± 0.47 | 92.21 ± 0.23
+IITP Hindi Product Reviews Sentiment Classification | 74.57 | **78.97** | 71.32 | 77.18 ± 0.77 | 76.33 ± 0.84
+IITP Hindi Movie Reviews Sentiment Classification | 56.77 | 61.61 | 59.03 | **66.34 ± 0.16** | 65.91 ± 2.20
+MIDAS Hindi Discourse Type Classification | 71.20 | **79.94** | 78.44 | 78.54 ± 0.91 | 78.39 ± 0.33
+Cloze Style Question Answering (Fill-mask task) | - | - | 37.16 | **41.54** | 38.21
+
+## Intended uses & limitations
+This model is pretrained on Indo-Aryan languages. Thus it is intended to be used for downstream tasks on these languages.
+You can use the raw model for either masked language modeling or next sentence prediction, but it's mostly intended to
+be fine-tuned on a downstream task. See the [model hub](https://huggingface.co/models?filter=xlmindic) to look for
+fine-tuned versions on a task that interests you.
+Note that this model is primarily aimed at being fine-tuned on tasks that use the whole sentence (potentially masked)
+to make decisions, such as sequence classification, token classification or question answering. For tasks such as text
+generation you should look at model like GPT2.
+
+### How to use
+
+Then you can use this model directly with a pipeline for masked language modeling:
+```python
+>>> from transformers import pipeline
+>>> unmasker = pipeline('fill-mask', model='ibraheemmoosa/xlmindic-base-multiscript')
+>>> text = ""রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি [MASK], ঔপন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।""
+>>> unmasker(text)
+[{'score': 0.34163928031921387,
+  'token': 5399,
+  'token_str': 'কবি',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি কবি, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.30519795417785645,
+  'token': 33436,
+  'token_str': 'people',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি people, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.29130080342292786,
+  'token': 30476,
+  'token_str': 'সাহিত্যিক',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি সাহিত্যিক, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.031051287427544594,
+  'token': 6139,
+  'token_str': 'লেখক',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি লেখক, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.002705035964027047,
+  'token': 38443,
+  'token_str': 'শিল্পীরা',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি শিল্পীরা, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'}]
+```
+### Limitations and bias
+Even though we pretrain on a comparatively large multilingual corpus the model may exhibit harmful gender, ethnic and political bias. If you fine-tune this model on a task where these issues are important you should take special care when relying on the model to make decisions.
+
+## Contact
+Feel free to contact us if you have any ideas or if you want to know more about our models.
+- Ibraheem Muhammad Moosa (ibraheemmoosa1347@gmail.com)
+- Mahmud Elahi Akhter (mahmud.akhter01@northsouth.edu)
+- Ashfia Binte Habib
+
+## BibTeX entry and citation info
+
+```bibtex
+@article{Moosa2022DoesTH,
+  title={Does Transliteration Help Multilingual Language Modeling?},
+  author={Ibraheem Muhammad Moosa and Mahmuda Akhter and Ashfia Binte Habib},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2201.12501}
+}
+```",1,[],[],NLP,2022-01,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0
+7,xlmindic-base-multiscript,['oscar'],,19525445000.0,11000000,28.53,calculated using this webstie https://mlco2.github.io/impact/#compute,pretraining,NA,1 TPUv3-8,,,,,,,,57591810,False,6,0,"['jax', 'transformers', 'tf', 'pytorch']",2022-07-27 05:36:24+00:00,2022-01-07 19:06:50+00:00,"
+# XLMIndic Base Multiscript
+
+This model is identical in all aspects to [this model](https://huggingface.co/ibraheemmoosa/xlmindic-base-uniscript) except that we do not perform the ISO-15919 transliteration. Thus it is intended to serve as an ablation model for our study. See [this](https://huggingface.co/ibraheemmoosa/xlmindic-base-uniscript) to understand the details.
+
+## Model description
+This model has the same configuration as the [ALBERT Base v2 model](https://huggingface.co/albert-base-v2/). Specifically, this model has the following configuration:
+- 12 repeating layers
+- 128 embedding dimension
+- 768 hidden dimension
+- 12 attention heads
+- 11M parameters
+- 512 sequence length
+
+## Training data
+This model was pretrained on the [OSCAR](https://huggingface.co/datasets/oscar) dataset which is a medium sized multilingual corpus containing text from 163 languages. We select a subset of 14 languages based on the following criteria:
+ - Belongs to the [Indo-Aryan language family](https://en.wikipedia.org/wiki/Indo-Aryan_languages).
+ - Uses a [Brahmic script](https://en.wikipedia.org/wiki/Brahmic_scripts).
+ 
+These are the 14 languages we pretrain this model on:
+- Assamese
+- Bangla
+- Bihari
+- Bishnupriya Manipuri
+- Goan Konkani
+- Gujarati
+- Hindi
+- Maithili
+- Marathi
+- Nepali
+- Oriya
+- Panjabi
+- Sanskrit
+- Sinhala
+
+## Training procedure
+### Preprocessing
+The texts are  tokenized using SentencePiece and a vocabulary size of 50,000. The inputs of the model are
+then of the form:
+```
+[CLS] Sentence A [SEP] Sentence B [SEP]
+```
+### Training
+Training objective is the same as the original ALBERT. 
+.
+The details of the masking procedure for each sentence are the following:
+- 15% of the tokens are masked.
+- In 80% of the cases, the masked tokens are replaced by `[MASK]`.
+- In 10% of the cases, the masked tokens are replaced by a random token (different) from the one they replace.
+- In the 10% remaining cases, the masked tokens are left as is.
+
+The details of the sentence order prediction example generation procedure for each sentence are the following:
+- Split the sentence into two parts A and B at a random index.
+- With 50% probability swap the two parts.  
+
+The model was pretrained on TPUv3-8 for 1M steps. We have checkpoints available at every 100k pretraining steps. These are available at different branches of this repository. You can load these checkpoints by passing the `revision` parameter. For example to load the checkpoint at 500k you can use the following code.
+
+```python
+>>> AutoModel.from_pretrained('ibraheemmoosa/xlmindic-base-multiscript', revision='checkpoint_500k')
+```
+
+## Evaluation results
+We evaluated this model on the Indo-Aryan subset of languages (Panjabi, Oriya, Assamese, Bangla, Hindi, Marathi, Gujarati) from the [IndicGLUE](https://huggingface.co/datasets/indic_glue) benchmark dataset. We report the mean and standard deviation of nine fine-tuning runs for this model.
+
+### IndicGLUE
+Task | mBERT | XLM-R | IndicBERT-Base | XLMIndic-Base-Uniscript | XLMIndic-Base-Multiscript (This Model)
+-----| ----- | ----- | ------ | ------- | --------
+Wikipedia Section Title Prediction | 71.90 | 65.45 | 69.40 | **81.78 ± 0.60** | 77.17 ± 0.76
+Article Genre Classification | 88.64 | 96.61 | 97.72 | **98.70 ± 0.29** | 98.30 ± 0.26
+Named Entity Recognition (F1-score) | 71.29 | 62.18 | 56.69 | **89.85 ± 1.14** |  83.19 ± 1.58
+BBC Hindi News Article Classification | 60.55 | 75.52 | 74.60 | **79.14 ± 0.60** | 77.28 ± 1.50
+Soham Bangla News Article Classification | 80.23 | 87.6 | 78.45 | **93.89 ± 0.48** | 93.22 ± 0.49
+INLTK Gujarati Headlines Genre Classification | - | - | **92.91** | 90.73 ± 0.75 | 90.41 ± 0.69
+INLTK Marathi Headlines Genre Classification | - | - | **94.30** | 92.04 ± 0.47 | 92.21 ± 0.23
+IITP Hindi Product Reviews Sentiment Classification | 74.57 | **78.97** | 71.32 | 77.18 ± 0.77 | 76.33 ± 0.84
+IITP Hindi Movie Reviews Sentiment Classification | 56.77 | 61.61 | 59.03 | **66.34 ± 0.16** | 65.91 ± 2.20
+MIDAS Hindi Discourse Type Classification | 71.20 | **79.94** | 78.44 | 78.54 ± 0.91 | 78.39 ± 0.33
+Cloze Style Question Answering (Fill-mask task) | - | - | 37.16 | **41.54** | 38.21
+
+## Intended uses & limitations
+This model is pretrained on Indo-Aryan languages. Thus it is intended to be used for downstream tasks on these languages.
+You can use the raw model for either masked language modeling or next sentence prediction, but it's mostly intended to
+be fine-tuned on a downstream task. See the [model hub](https://huggingface.co/models?filter=xlmindic) to look for
+fine-tuned versions on a task that interests you.
+Note that this model is primarily aimed at being fine-tuned on tasks that use the whole sentence (potentially masked)
+to make decisions, such as sequence classification, token classification or question answering. For tasks such as text
+generation you should look at model like GPT2.
+
+### How to use
+
+Then you can use this model directly with a pipeline for masked language modeling:
+```python
+>>> from transformers import pipeline
+>>> unmasker = pipeline('fill-mask', model='ibraheemmoosa/xlmindic-base-multiscript')
+>>> text = ""রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি [MASK], ঔপন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।""
+>>> unmasker(text)
+[{'score': 0.34163928031921387,
+  'token': 5399,
+  'token_str': 'কবি',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি কবি, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.30519795417785645,
+  'token': 33436,
+  'token_str': 'people',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি people, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.29130080342292786,
+  'token': 30476,
+  'token_str': 'সাহিত্যিক',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি সাহিত্যিক, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.031051287427544594,
+  'token': 6139,
+  'token_str': 'লেখক',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি লেখক, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'},
+ {'score': 0.002705035964027047,
+  'token': 38443,
+  'token_str': 'শিল্পীরা',
+  'sequence': 'রবীন্দ্রনাথ ঠাকুর এফআরএএস (৭ মে ১৮৬১ - ৭ আগস্ট ১৯৪১; ২৫ বৈশাখ ১২৬৮ - ২২ শ্রাবণ ১৩৪৮ বঙ্গাব্দ) ছিলেন অগ্রণী বাঙালি শিল্পীরা, পন্যাসিক, সংগীতস্রষ্টা, নাট্যকার, চিত্রকর, ছোটগল্পকার, প্রাবন্ধিক, অভিনেতা, কণ্ঠশিল্পী ও দার্শনিক। ১৯১৩ সালে গীতাঞ্জলি কাব্যগ্রন্থের ইংরেজি অনুবাদের জন্য তিনি এশীয়দের মধ্যে সাহিত্যে প্রথম নোবেল পুরস্কার লাভ করেন।'}]
+```
+### Limitations and bias
+Even though we pretrain on a comparatively large multilingual corpus the model may exhibit harmful gender, ethnic and political bias. If you fine-tune this model on a task where these issues are important you should take special care when relying on the model to make decisions.
+
+## Contact
+Feel free to contact us if you have any ideas or if you want to know more about our models.
+- Ibraheem Muhammad Moosa (ibraheemmoosa1347@gmail.com)
+- Mahmud Elahi Akhter (mahmud.akhter01@northsouth.edu)
+- Ashfia Binte Habib
+
+## BibTeX entry and citation info
+
+```bibtex
+@article{Moosa2022DoesTH,
+  title={Does Transliteration Help Multilingual Language Modeling?},
+  author={Ibraheem Muhammad Moosa and Mahmuda Akhter and Ashfia Binte Habib},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2201.12501}
+}
+```",1,[],[],NLP,2022-01,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0
+8,it5-base-question-generation,['squad_it'],,58723160.0,,17.0,Google Cloud Platform Carbon Footprint,fine-tuning,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,990280781,False,25,0,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 08:06:11+00:00,2021-10-28 11:42:21+00:00,"# IT5 Base for Question Generation 💭 🇮🇹
+
+This repository contains the checkpoint for the [IT5 Base](https://huggingface.co/gsarti/it5-base) model fine-tuned on question generation on the [SQuAD-IT corpus](https://huggingface.co/datasets/squad_it) as part of the experiments of the paper [IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation](https://arxiv.org/abs/2203.03759) by [Gabriele Sarti](https://gsarti.com) and [Malvina Nissim](https://malvinanissim.github.io). 
+
+A comprehensive overview of other released materials is provided in the [gsarti/it5](https://github.com/gsarti/it5) repository. Refer to the paper for additional details concerning the reported scores and the evaluation approach.
+
+## Using the model
+
+Model checkpoints are available for usage in Tensorflow, Pytorch and JAX. They can be used directly with pipelines as:
+
+```python
+from transformers import pipelines
+
+qg = pipeline(""text2text-generation"", model='it5/it5-base-question-generation')
+qg(""Le conoscenze mediche erano stagnanti durante il Medioevo. Il resoconto più autorevole di allora è venuto dalla facoltà di medicina di Parigi in un rapporto al re di Francia che ha incolpato i cieli, sotto forma di una congiunzione di tre pianeti nel 1345 che causò una ""grande pestilenza nell\' aria"". Questa relazione è diventata la prima e più diffusa di una serie di casi di peste che cercava di dare consigli ai malati. Che la peste fosse causata dalla cattiva aria divenne la teoria più accettata. Oggi, questo è conosciuto come la teoria di Miasma. La parola ""peste"" non aveva un significato particolare in questo momento, e solo la ricorrenza dei focolai durante il Medioevo gli diede il nome che è diventato il termine medico. Risposta: re di Francia"")
+>>> [{""generated_text"": ""Per chi è stato redatto il referto medico?""}]
+```
+
+or loaded using autoclasses:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""it5/it5-base-question-generation"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""it5/it5-base-question-generation"")
+```
+
+If you use this model in your research, please cite our work as:
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={{IT5}: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2021-10,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+9,it5-large-question-generation,['squad_it'],,58723160.0,,51.0,Google Cloud Platform Carbon Footprint,fine-tuning,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,3132640293,False,7758,1,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 07:56:40+00:00,2022-01-16 11:25:32+00:00,"# IT5 Large for Question Generation 💭 🇮🇹
+
+This repository contains the checkpoint for the [IT5 Large](https://huggingface.co/gsarti/it5-large) model fine-tuned on question generation on the [SQuAD-IT corpus](https://huggingface.co/datasets/squad_it) as part of the experiments of the paper [IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation](https://arxiv.org/abs/2203.03759) by [Gabriele Sarti](https://gsarti.com) and [Malvina Nissim](https://malvinanissim.github.io). 
+
+A comprehensive overview of other released materials is provided in the [gsarti/it5](https://github.com/gsarti/it5) repository. Refer to the paper for additional details concerning the reported scores and the evaluation approach.
+
+## Using the model
+
+Model checkpoints are available for usage in Tensorflow, Pytorch and JAX. They can be used directly with pipelines as:
+
+```python
+from transformers import pipelines
+
+qg = pipeline(""text2text-generation"", model='it5/it5-large-question-generation')
+qg(""Le conoscenze mediche erano stagnanti durante il Medioevo. Il resoconto più autorevole di allora è venuto dalla facoltà di medicina di Parigi in un rapporto al re di Francia che ha incolpato i cieli, sotto forma di una congiunzione di tre pianeti nel 1345 che causò una ""grande pestilenza nell\' aria"". Questa relazione è diventata la prima e più diffusa di una serie di casi di peste che cercava di dare consigli ai malati. Che la peste fosse causata dalla cattiva aria divenne la teoria più accettata. Oggi, questo è conosciuto come la teoria di Miasma. La parola ""peste"" non aveva un significato particolare in questo momento, e solo la ricorrenza dei focolai durante il Medioevo gli diede il nome che è diventato il termine medico. Risposta: re di Francia"")
+>>> [{""generated_text"": ""Per chi è stato redatto il referto medico?""}]
+```
+
+or loaded using autoclasses:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""it5/it5-large-question-generation"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""it5/it5-large-question-generation"")
+```
+
+If you use this model in your research, please cite our work as:
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={{IT5}: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2022-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+10,it5-small-question-answering,['squad_it'],,58723160.0,,8.0,Google Cloud Platform Carbon Footprint,fine-tuning,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,307824645,False,8,1,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 07:58:17+00:00,2022-01-16 15:27:15+00:00,"# IT5 Small for Question Answering ⁉️ 🇮🇹
+
+This repository contains the checkpoint for the [IT5 Small](https://huggingface.co/gsarti/it5-small) model fine-tuned on extractive question answering on the [SQuAD-IT corpus](https://huggingface.co/datasets/squad_it) as part of the experiments of the paper [IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation](https://arxiv.org/abs/2203.03759) by [Gabriele Sarti](https://gsarti.com) and [Malvina Nissim](https://malvinanissim.github.io). 
+
+A comprehensive overview of other released materials is provided in the [gsarti/it5](https://github.com/gsarti/it5) repository. Refer to the paper for additional details concerning the reported scores and the evaluation approach.
+
+## Using the model
+
+Model checkpoints are available for usage in Tensorflow, Pytorch and JAX. They can be used directly with pipelines as:
+
+```python
+from transformers import pipelines
+
+qa = pipeline(""text2text-generation"", model='it5/it5-small-question-answering')
+qa(""In seguito all' evento di estinzione del Cretaceo-Paleogene, l' estinzione dei dinosauri e il clima umido possono aver permesso alla foresta pluviale tropicale di diffondersi in tutto il continente. Dal 66-34 Mya, la foresta pluviale si estendeva fino a sud fino a 45°. Le fluttuazioni climatiche degli ultimi 34 milioni di anni hanno permesso alle regioni della savana di espandersi fino ai tropici. Durante l' Oligocene, ad esempio, la foresta pluviale ha attraversato una banda relativamente stretta. Si espandeva di nuovo durante il Miocene medio, poi si ritrasse ad una formazione prevalentemente interna all' ultimo massimo glaciale. Tuttavia, la foresta pluviale è riuscita ancora a prosperare durante questi periodi glaciali, consentendo la sopravvivenza e l' evoluzione di un' ampia varietà di specie. Domanda: La foresta pluviale amazzonica è diventata per lo più una foresta interna intorno a quale evento globale?"")
+>>> [{""generated_text"": ""ultimo massimo glaciale""}]
+```
+
+or loaded using autoclasses:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""it5/it5-small-question-answering"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""it5/it5-small-question-answering"")
+```
+
+If you use this model in your research, please cite our work as:
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={{IT5}: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2022-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0
+11,mt5-base-news-summarization,"['ARTeLab/fanpage', 'ARTeLab/ilpost']",,44000000.0,,17.0,Google Cloud Platform Carbon Footprint,fine-tuning,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,2329728077,False,11,0,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 07:51:55+00:00,2022-01-21 08:59:29+00:00,"# mT5 Base for News Summarization ✂️🗞️ 🇮🇹
+
+This repository contains the checkpoint for the [mT5 Base](https://huggingface.co/google/mt5-base) model fine-tuned on news summarization on the [Fanpage](https://huggingface.co/datasets/ARTeLab/fanpage) and [Il Post](https://huggingface.co/datasets/ARTeLab/ilpost) corpora as part of the experiments of the paper [IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation](https://arxiv.org/abs/2203.03759) by [Gabriele Sarti](https://gsarti.com) and [Malvina Nissim](https://malvinanissim.github.io). 
+
+A comprehensive overview of other released materials is provided in the [gsarti/it5](https://github.com/gsarti/it5) repository. Refer to the paper for additional details concerning the reported scores and the evaluation approach.
+
+## Using the model
+
+Model checkpoints are available for usage in Tensorflow, Pytorch and JAX. They can be used directly with pipelines as:
+
+```python
+from transformers import pipelines
+
+newsum = pipeline(""summarization"", model='it5/mt5-base-news-summarization')
+newsum(""Dal 31 maggio è infine partita la piattaforma ITsART, a più di un anno da quando – durante il primo lockdown – il ministro della Cultura Dario Franceschini ne aveva parlato come di «una sorta di Netflix della cultura», pensata per «offrire a tutto il mondo la cultura italiana a pagamento». È presto per dare giudizi definitivi sulla piattaforma, e di certo sarà difficile farlo anche più avanti senza numeri precisi. Al momento, l’unica cosa che si può fare è guardare com’è fatto il sito, contare quanti contenuti ci sono (circa 700 “titoli”, tra film, documentari, spettacoli teatrali e musicali e altri eventi) e provare a dare un giudizio sul loro valore e sulla loro varietà. Intanto, una cosa notata da più parti è che diversi contenuti di ITsART sono a pagamento sulla piattaforma sebbene altrove, per esempio su RaiPlay, siano invece disponibili gratuitamente."")
+>>> [{""generated_text"": ""ITsART, la Netflix della cultura italiana, parte da maggio. Film, documentari, spettacoli teatrali e musicali disponibili sul nuovo sito a pagamento.""}]
+```
+
+or loaded using autoclasses:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""it5/mt5-base-news-summarization"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""it5/mt5-base-news-summarization"")
+```
+
+If you use this model in your research, please cite our work as:
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={{IT5}: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2022-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+12,mt5-small-news-summarization,"['ARTeLab/fanpage', 'ARTeLab/ilpost']",,44000000.0,,17.0,Google Cloud Platform Carbon Footprint,fine-tuning,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,1200789509,False,6,0,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 07:52:27+00:00,2022-01-21 08:59:37+00:00,"# mT5 Small for News Summarization ✂️🗞️ 🇮🇹
+
+This repository contains the checkpoint for the [mT5 Small](https://huggingface.co/google/mt5-small) model fine-tuned on news summarization on the [Fanpage](https://huggingface.co/datasets/ARTeLab/fanpage) and [Il Post](https://huggingface.co/datasets/ARTeLab/ilpost) corpora as part of the experiments of the paper [IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation](https://arxiv.org/abs/2203.03759) by [Gabriele Sarti](https://gsarti.com) and [Malvina Nissim](https://malvinanissim.github.io). 
+
+A comprehensive overview of other released materials is provided in the [gsarti/it5](https://github.com/gsarti/it5) repository. Refer to the paper for additional details concerning the reported scores and the evaluation approach.
+
+## Using the model
+
+Model checkpoints are available for usage in Tensorflow, Pytorch and JAX. They can be used directly with pipelines as:
+
+```python
+from transformers import pipelines
+
+newsum = pipeline(""summarization"", model='it5/mt5-small-news-summarization')
+newsum(""Dal 31 maggio è infine partita la piattaforma ITsART, a più di un anno da quando – durante il primo lockdown – il ministro della Cultura Dario Franceschini ne aveva parlato come di «una sorta di Netflix della cultura», pensata per «offrire a tutto il mondo la cultura italiana a pagamento». È presto per dare giudizi definitivi sulla piattaforma, e di certo sarà difficile farlo anche più avanti senza numeri precisi. Al momento, l’unica cosa che si può fare è guardare com’è fatto il sito, contare quanti contenuti ci sono (circa 700 “titoli”, tra film, documentari, spettacoli teatrali e musicali e altri eventi) e provare a dare un giudizio sul loro valore e sulla loro varietà. Intanto, una cosa notata da più parti è che diversi contenuti di ITsART sono a pagamento sulla piattaforma sebbene altrove, per esempio su RaiPlay, siano invece disponibili gratuitamente."")
+>>> [{""generated_text"": ""ITsART, la Netflix della cultura italiana, parte da maggio. Film, documentari, spettacoli teatrali e musicali disponibili sul nuovo sito a pagamento.""}]
+```
+
+or loaded using autoclasses:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""it5/mt5-small-news-summarization"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""it5/mt5-small-news-summarization"")
+```
+
+If you use this model in your research, please cite our work as:
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={{IT5}: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2022-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+13,it5-small,['gsarti/clean_mc4_it'],,215000000000.0,60000000,500.0,,pretraining,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,308000000,False,130,1,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 11:56:34+00:00,2021-09-23 09:09:34+00:00,"
+# Italian T5 Small 🇮🇹
+
+The [IT5](https://huggingface.co/models?search=it5) model family represents the first effort in pretraining large-scale sequence-to-sequence transformer models for the Italian language, following the approach adopted by the original [T5 model](https://github.com/google-research/text-to-text-transfer-transformer). 
+
+This model is released as part of the project [""IT5: Large-Scale Text-to-Text Pretraining for Italian Language Understanding and Generation""](https://arxiv.org/abs/2203.03759), by [Gabriele Sarti](https://gsarti.com/) and [Malvina Nissim](https://malvinanissim.github.io/) with the support of [Huggingface](https://discuss.huggingface.co/t/open-to-the-community-community-week-using-jax-flax-for-nlp-cv/7104) and with TPU usage sponsored by Google's [TPU Research Cloud](https://sites.research.google/trc/). All the training was conducted on a single TPU3v8-VM machine on Google Cloud. Refer to the Tensorboard tab of the repository for an overview of the training process.
+
+*The inference widget is deactivated because the model needs a task-specific seq2seq fine-tuning on a downstream task to be useful in practice. The models in the  [`it5`](https://huggingface.co/it5) organization provide some examples of this model fine-tuned on various downstream task.*
+
+## Model variants
+
+This repository contains the checkpoints for the `base` version of the model. The model was trained for one epoch (1.05M steps) on the [Thoroughly Cleaned Italian mC4 Corpus](https://huggingface.co/datasets/gsarti/clean_mc4_it) (~41B words, ~275GB) using 🤗 Datasets and the `google/t5-v1_1-small` improved configuration. The training procedure is made available [on Github](https://github.com/gsarti/t5-flax-gcp).
+
+The following table summarizes the parameters for all available models
+
+|                       |`it5-small` (this one) |`it5-base`            |`it5-large`            |`it5-base-oscar`                  |
+|-----------------------|-----------------------|----------------------|-----------------------|----------------------------------|
+|`dataset`              |`gsarti/clean_mc4_it`  |`gsarti/clean_mc4_it` |`gsarti/clean_mc4_it`  |`oscar/unshuffled_deduplicated_it`|
+|`architecture`         |`google/t5-v1_1-small` |`google/t5-v1_1-base` |`google/t5-v1_1-large` |`t5-base`                         |
+|`learning rate`        | 5e-3                  | 5e-3                 | 5e-3                  | 1e-2                             |
+|`steps`                | 1'050'000             | 1'050'000            | 2'100'000             | 258'000                          |
+|`training time`        | 36 hours              | 101 hours            | 370 hours             | 98 hours                         |
+|`ff projection`        |`gated-gelu`           |`gated-gelu`          |`gated-gelu`           |`relu`                            |
+|`tie embeds`           |`false`                |`false`               |`false`                |`true`                            |
+|`optimizer`            | adafactor             | adafactor            | adafactor             | adafactor                        |
+|`max seq. length`      | 512                   | 512                  | 512                   | 512                              |
+|`per-device batch size`| 16                    | 16                   | 8                     | 16                               |
+|`tot. batch size`      | 128                   | 128                  | 64                    | 128                              |
+|`weigth decay`         | 1e-3                  | 1e-3                 | 1e-2                  | 1e-3                             |
+|`validation split size`| 15K examples          | 15K examples         | 15K examples          | 15K examples                     |
+
+The high training time of `it5-base-oscar` was due to [a bug](https://github.com/huggingface/transformers/pull/13012) in the training script.
+
+For a list of individual model parameters, refer to the `config.json` file in the respective repositories.
+
+## Using the models
+
+
+```python
+from transformers import AutoTokenzier, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""gsarti/it5-small"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""gsarti/it5-small"")
+```
+
+*Note: You will need to fine-tune the model on your downstream seq2seq task to use it. See an example [here](https://huggingface.co/it5/it5-base-question-answering).*
+
+Flax and Tensorflow versions of the model are also available:
+
+```python
+from transformers import FlaxT5ForConditionalGeneration, TFT5ForConditionalGeneration
+
+model_flax = FlaxT5ForConditionalGeneration.from_pretrained(""gsarti/it5-small"")
+model_tf = TFT5ForConditionalGeneration.from_pretrained(""gsarti/it5-small"")
+```
+
+## Limitations
+
+Due to the nature of the web-scraped corpus on which IT5 models were trained, it is likely that their usage could reproduce and amplify pre-existing biases in the data, resulting in potentially harmful content such as racial or gender stereotypes and conspiracist views. For this reason, the study of such biases is explicitly encouraged, and model usage should ideally be restricted to research-oriented and non-user-facing endeavors.
+
+## Model curators
+
+For problems or updates on this model, please contact [gabriele.sarti996@gmail.com](mailto:gabriele.sarti996@gmail.com).
+
+##  Citation Information
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2021-09,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+14,it5-base,['gsarti/clean_mc4_it'],,215000000000.0,220000000,1394.0,,pretraining,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,990000000,False,1256,11,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 11:57:08+00:00,2021-09-18 13:58:03+00:00,"
+# Italian T5 Base 🇮🇹
+
+The [IT5](https://huggingface.co/models?search=it5) model family represents the first effort in pretraining large-scale sequence-to-sequence transformer models for the Italian language, following the approach adopted by the original [T5 model](https://github.com/google-research/text-to-text-transfer-transformer). 
+
+This model is released as part of the project [""IT5: Large-Scale Text-to-Text Pretraining for Italian Language Understanding and Generation""](https://arxiv.org/abs/2203.03759), by [Gabriele Sarti](https://gsarti.com/) and [Malvina Nissim](https://malvinanissim.github.io/) with the support of [Huggingface](https://discuss.huggingface.co/t/open-to-the-community-community-week-using-jax-flax-for-nlp-cv/7104) and with TPU usage sponsored by Google's [TPU Research Cloud](https://sites.research.google/trc/). All the training was conducted on a single TPU3v8-VM machine on Google Cloud. Refer to the Tensorboard tab of the repository for an overview of the training process.
+
+*TThe inference widget is deactivated because the model needs a task-specific seq2seq fine-tuning on a downstream task to be useful in practice. The models in the [`it5`](https://huggingface.co/it5) organization provide some examples of this model fine-tuned on various downstream task.*
+
+## Model variants
+
+This repository contains the checkpoints for the `base` version of the model. The model was trained for one epoch (1.05M steps) on the [Thoroughly Cleaned Italian mC4 Corpus](https://huggingface.co/datasets/gsarti/clean_mc4_it) (~41B words, ~275GB) using 🤗 Datasets and the `google/t5-v1_1-base` improved configuration. Another version of this model trained on the [OSCAR corpus](https://oscar-corpus.com/) is also available under the name [`gsarti/it5-base-oscar`](https://huggingface.co/gsartiit5-base-oscar). The training procedure is made available [on Github](https://github.com/gsarti/t5-flax-gcp).
+
+The following table summarizes the parameters for all available models
+
+|                       |`it5-small`            |`it5-base` (this one) |`it5-large`            |`it5-base-oscar`                  |
+|-----------------------|-----------------------|----------------------|-----------------------|----------------------------------|
+|`dataset`              |`gsarti/clean_mc4_it`  |`gsarti/clean_mc4_it` |`gsarti/clean_mc4_it`  |`oscar/unshuffled_deduplicated_it`|
+|`architecture`         |`google/t5-v1_1-small` |`google/t5-v1_1-base` |`google/t5-v1_1-large` |`t5-base`                         |
+|`learning rate`        | 5e-3                  | 5e-3                 | 5e-3                  | 1e-2                             |
+|`steps`                | 1'050'000             | 1'050'000            | 2'100'000             | 258'000                          |
+|`training time`        | 36 hours              | 101 hours            | 370 hours             | 98 hours                         |
+|`ff projection`        |`gated-gelu`           |`gated-gelu`          |`gated-gelu`           |`relu`                            |
+|`tie embeds`           |`false`                |`false`               |`false`                |`true`                            |
+|`optimizer`            | adafactor             | adafactor            | adafactor             | adafactor                        |
+|`max seq. length`      | 512                   | 512                  | 512                   | 512                              |
+|`per-device batch size`| 16                    | 16                   | 8                     | 16                               |
+|`tot. batch size`      | 128                   | 128                  | 64                    | 128                              |
+|`weigth decay`         | 1e-3                  | 1e-3                 | 1e-2                  | 1e-3                             |
+|`validation split size`| 15K examples          | 15K examples         | 15K examples          | 15K examples                     |
+
+The high training time of `it5-base-oscar` was due to [a bug](https://github.com/huggingface/transformers/pull/13012) in the training script.
+
+For a list of individual model parameters, refer to the `config.json` file in the respective repositories.
+
+## Using the models
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""gsarti/it5-base"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""gsarti/it5-base"")
+```
+
+*Note: You will need to fine-tune the model on your downstream seq2seq task to use it. See an example [here](https://huggingface.co/gsarti/it5-base-nli).*
+
+Flax and Tensorflow versions of the model are also available:
+
+```python
+from transformers import FlaxT5ForConditionalGeneration, TFT5ForConditionalGeneration
+
+model_flax = FlaxT5ForConditionalGeneration.from_pretrained(""gsarti/it5-base"")
+model_tf = TFT5ForConditionalGeneration.from_pretrained(""gsarti/it5-base"")
+```
+
+## Limitations
+
+Due to the nature of the web-scraped corpus on which IT5 models were trained, it is likely that their usage could reproduce and amplify pre-existing biases in the data, resulting in potentially harmful content such as racial or gender stereotypes and conspiracist views. For this reason, the study of such biases is explicitly encouraged, and model usage should ideally be restricted to research-oriented and non-user-facing endeavors.
+
+## Model curators
+
+For problems or updates on this model, please contact [gabriele.sarti996@gmail.com](mailto:gabriele.sarti996@gmail.com).
+
+##  Citation Information
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+    month={mar}
+}
+```",1,[],[],NLP,2021-09,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+15,it5-large,['gsarti/clean_mc4_it'],,215000000000.0,738000000,5108.0,,pretraining,"Eemshaven, Netherlands, Europe",1 TPU v3-8 VM,,,,,,,,3130000000,False,110,0,"['transformers', 'jax', 'tf', 'pytorch', 'tensorboard']",2022-03-09 11:56:08+00:00,2021-09-01 21:04:06+00:00,"
+# Italian T5 Large 🇮🇹
+
+The [IT5](https://huggingface.co/models?search=it5) model family represents the first effort in pretraining large-scale sequence-to-sequence transformer models for the Italian language, following the approach adopted by the original [T5 model](https://github.com/google-research/text-to-text-transfer-transformer). 
+
+This model is released as part of the project [""IT5: Large-Scale Text-to-Text Pretraining for Italian Language Understanding and Generation""](https://arxiv.org/abs/2203.03759) (to be released), by [Gabriele Sarti](https://gsarti.com/) and [Malvina Nissim](https://malvinanissim.github.io/) with the support of [Huggingface](https://discuss.huggingface.co/t/open-to-the-community-community-week-using-jax-flax-for-nlp-cv/7104) and with TPU usage sponsored by Google's [TPU Research Cloud](https://sites.research.google/trc/). All the training was conducted on a single TPU3v8-VM machine on Google Cloud. Refer to the Tensorboard tab of the repository for an overview of the training process.
+
+*The inference widget is deactivated because the model needs a task-specific seq2seq fine-tuning on a downstream task to be useful in practice. The models in the  [`it5`](https://huggingface.co/it5) organization provide some examples of this model fine-tuned on various downstream task.*
+
+## Model variants
+
+This repository contains the checkpoints for the `base` version of the model. The model was trained for one epoch (1.05M steps) on the [Thoroughly Cleaned Italian mC4 Corpus](https://huggingface.co/datasets/gsarti/clean_mc4_it) (~41B words, ~275GB) using 🤗 Datasets and the `google/t5-v1_1-large` improved configuration. The training procedure is made available [on Github](https://github.com/gsarti/t5-flax-gcp).
+
+The following table summarizes the parameters for all available models
+
+|                       |`it5-small`            |`it5-base`            |`it5-large` (this one) |`it5-base-oscar`                  |
+|-----------------------|-----------------------|----------------------|-----------------------|----------------------------------|
+|`dataset`              |`gsarti/clean_mc4_it`  |`gsarti/clean_mc4_it` |`gsarti/clean_mc4_it`  |`oscar/unshuffled_deduplicated_it`|
+|`architecture`         |`google/t5-v1_1-small` |`google/t5-v1_1-base` |`google/t5-v1_1-large` |`t5-base`                         |
+|`learning rate`        | 5e-3                  | 5e-3                 | 5e-3                  | 1e-2                             |
+|`steps`                | 1'050'000             | 1'050'000            | 2'100'000             | 258'000                          |
+|`training time`        | 36 hours              | 101 hours            | 370 hours             | 98 hours                         |
+|`ff projection`        |`gated-gelu`           |`gated-gelu`          |`gated-gelu`           |`relu`                            |
+|`tie embeds`           |`false`                |`false`               |`false`                |`true`                            |
+|`optimizer`            | adafactor             | adafactor            | adafactor             | adafactor                        |
+|`max seq. length`      | 512                   | 512                  | 512                   | 512                              |
+|`per-device batch size`| 16                    | 16                   | 8                     | 16                               |
+|`tot. batch size`      | 128                   | 128                  | 64                    | 128                              |
+|`weigth decay`         | 1e-3                  | 1e-3                 | 1e-2                  | 1e-3                             |
+|`validation split size`| 15K examples          | 15K examples         | 15K examples          | 15K examples                     |
+
+The high training time of `it5-base-oscar` was due to [a bug](https://github.com/huggingface/transformers/pull/13012) in the training script.
+
+For a list of individual model parameters, refer to the `config.json` file in the respective repositories.
+
+## Using the models
+
+```python
+from transformers import AutoTokenzier, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained(""gsarti/it5-large"")
+model = AutoModelForSeq2SeqLM.from_pretrained(""gsarti/it5-large"")
+```
+
+*Note: You will need to fine-tune the model on your downstream seq2seq task to use it. See an example [here](https://huggingface.co/gsarti/it5-base-nli).*
+
+Flax and Tensorflow versions of the model are also available:
+
+```python
+from transformers import FlaxT5ForConditionalGeneration, TFT5ForConditionalGeneration
+
+model_flax = FlaxT5ForConditionalGeneration.from_pretrained(""gsarti/it5-large"")
+model_tf = TFT5ForConditionalGeneration.from_pretrained(""gsarti/it5-large"")
+```
+
+## Limitations
+
+Due to the nature of the web-scraped corpus on which IT5 models were trained, it is likely that their usage could reproduce and amplify pre-existing biases in the data, resulting in potentially harmful content such as racial or gender stereotypes and conspiracist views. For this reason, the study of such biases is explicitly encouraged, and model usage should ideally be restricted to research-oriented and non-user-facing endeavors.
+
+## Model curators
+
+For problems or updates on this model, please contact [gabriele.sarti996@gmail.com](mailto:gabriele.sarti996@gmail.com).
+
+##  Citation Information
+
+```bibtex
+@article{sarti-nissim-2022-it5,
+    title={IT5: Large-scale Text-to-text Pretraining for Italian Language Understanding and Generation},
+    author={Sarti, Gabriele and Nissim, Malvina},
+    journal={ArXiv preprint 2203.03759},
+    url={https://arxiv.org/abs/2203.03759},
+    year={2022},
+	month={mar}
+}
+```",1,[],[],NLP,2021-09,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+16,soongsil-bert-small-apeach,['jason9693/APEACH'],,787000.0,,0.01856239,,fine-tuning,,,,,,,,,,223256685,False,10,0,"['transformers', 'pytorch']",2022-04-16 14:19:36+00:00,2022-04-16 06:35:03+00:00,,1,[],[],NLP,2022-04,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+17,kekbot-beta-1-medium,[''],,20800000.0,,370.0,mlco2.github.io,fine-tuning,"West Java, Indonesia",1 Tesla P100,,,,,,,,1444581337,False,4,0,"['transformers', 'pytorch']",2022-04-24 23:40:49+00:00,2022-04-24 13:31:50+00:00,"> THIS MODEL IS IN PUBLIC BETA, PLEASE DO NOT EXPECT ANY FORM OF STABILITY IN ITS CURRENT STATE.  
+# Art Union server chatbot
+
+Based on a DialoGPT-medium model, fine-tuned to a small subset (52k< messages) of Art Union's general-chat channel.
+
+### Current issues  
+(Which hopefully will be fixed in future iterations) Include, but not limited to:
+- Limited turns, after ~11 turns output may break for no apparent reason.
+- Inconsistent variance, acts like an overfitted model from time to time for no reason whatsoever.",1,[],[],NLP,2022-04,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+18,kekbot-beta-2-medium,[''],,46000000.0,,940.0,mlco2.github.io,fine-tuning,"West Java, Indonesia",1 Tesla P100,,,,,,,,1444566873,False,4,0,"['transformers', 'pytorch']",2022-04-25 18:19:29+00:00,2022-04-25 10:51:20+00:00,"> THIS MODEL IS IN PUBLIC BETA, PLEASE DO NOT EXPECT ANY FORM OF STABILITY IN ITS CURRENT STATE.  
+# Art Union server chatbot
+
+Based on a DialoGPT-medium model, fine-tuned to a small subset (115k<= messages) of Art Union's general-chat channel.
+
+### Current issues  
+(Which hopefully will be fixed in future iterations) Include, but not limited to:
+- Limited turns, after ~11 turns output may break for no apparent reason.
+- Inconsistent variance, acts like an overfitted model from time to time for no reason whatsoever.
+",1,[],[],NLP,2022-04,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+19,kekbot-beta-3-medium,[''],,26000000.0,,660.0,mlco2.github.io,fine-tuning,"West Java, Indonesia",1 Tesla P100,,,,,,,,1444566873,False,4,0,"['transformers', 'pytorch']",2022-04-26 22:15:23+00:00,2022-04-26 17:03:37+00:00,"> THIS MODEL IS IN PUBLIC BETA, PLEASE DO NOT EXPECT ANY FORM OF STABILITY IN ITS CURRENT STATE.  
+# Art Union server chatbot
+
+Based on a DialoGPT-medium model, fine-tuned to a select subset (65k<= messages) of Art Union's general-chat channel chat history.
+
+### Current issues  
+(Which hopefully will be fixed in future iterations) Include, but not limited to:
+- Limited turns, after ~17 turns output may break for no apparent reason.
+- Inconsistent variance, acts like an overfitted model from time to time for no reason whatsoever.
+",1,[],[],NLP,2022-04,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+20,bloom,[''],,1759220000000.0,176247000000,24700000.0,"Estimating the Carbon Footprint of BLOOM, a 176B Parameter Language Model. https://arxiv.org/abs/2211.02001",pretraining,"Orsay, France",384 A100 80GB,,,,,,,7.045,375000000000,False,47449,3148,"['safetensors', 'transformers', 'pytorch', 'tensorboard']",2023-04-05 16:30:10+00:00,2022-07-11 14:40:02+00:00,"
+<img src=""https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png"" alt=""BigScience Logo"" width=""800"" style=""margin-left:'auto' margin-right:'auto' display:'block'""/>
+
+BigScience Large Open-science Open-access Multilingual Language Model  
+Version 1.3 / 6 July 2022
+
+Current Checkpoint: **Training Iteration  95000**
+
+Link to paper: [here](https://arxiv.org/abs/2211.05100)
+
+Total seen tokens: **366B**
+
+---
+
+# Model Details  
+
+BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
+
+## Basics
+*This section provides information about the model type, version, license, funders, release date, developers, and contact information.*
+*It is useful for anyone who wants to reference the model.*
+
+<details>
+<summary>Click to expand</summary>
+  
+**Developed by:** BigScience ([website](https://bigscience.huggingface.co))
+
+*All collaborators are either volunteers or have an agreement with their employer. (Further breakdown of participants forthcoming.)*
+    
+**Model Type:** Transformer-based Language Model
+
+**Checkpoints format:** `transformers` (Megatron-DeepSpeed format available [here](https://huggingface.co/bigscience/bloom-optimizer-states))
+
+**Version:** 1.0.0
+
+**Languages:** Multiple; see [training data](#training-data)
+
+**License:** RAIL License v1.0 ([link](https://huggingface.co/spaces/bigscience/license) / [article and FAQ](https://bigscience.huggingface.co/blog/the-bigscience-rail-license))
+
+**Release Date Estimate:** Monday, 11.July.2022
+
+**Send Questions to:** bigscience-contact@googlegroups.com
+
+**Cite as:** BigScience, _BigScience Language Open-science Open-access Multilingual (BLOOM) Language Model_. International, May 2021-May 2022
+
+**Funded by:** 
+    
+* The French government.
+
+* Hugging Face ([website](https://huggingface.co)).
+
+* Organizations of contributors.  *(Further breakdown of organizations forthcoming.)*
+
+</details>
+
+
+## Technical Specifications
+*This section includes details about the model objective and architecture, and the compute infrastructure.*
+*It is useful for people interested in model development.*
+
+<details>
+<summary>Click to expand</summary>
+
+Please see [the BLOOM training README](https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml#readme) for full details on replicating training.
+
+### Model Architecture and Objective
+
+* Modified from Megatron-LM GPT2 (see [paper](https://arxiv.org/abs/1909.08053), [BLOOM Megatron code](https://github.com/bigscience-workshop/Megatron-DeepSpeed)):
+
+* Decoder-only architecture
+
+* Layer normalization applied to word embeddings layer (`StableEmbedding`; see [code](https://github.com/facebookresearch/bitsandbytes), [paper](https://arxiv.org/pdf/2110.02861.pdf))
+
+* ALiBI positional encodings (see [paper](https://arxiv.org/pdf/2108.12409.pdf)), with GeLU activation functions
+
+* 176,247,271,424 parameters:
+
+    * 3,596,615,680 embedding parameters
+
+    * 70 layers, 112 attention heads
+
+    * Hidden layers are 14336-dimensional
+
+    * Sequence length of 2048 tokens used (see [BLOOM tokenizer](https://huggingface.co/bigscience/tokenizer), [tokenizer description](#tokenization))
+
+**Objective Function:** Cross Entropy with mean reduction (see [API documentation](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)).
+    
+### Compute infrastructure
+Jean Zay Public Supercomputer, provided by the French government (see [announcement](https://www.enseignementsup-recherche.gouv.fr/fr/signature-du-marche-d-acquisition-de-l-un-des-supercalculateurs-les-plus-puissants-d-europe-46733)).
+
+#### Hardware
+
+* 384 A100 80GB GPUs (48 nodes)
+    
+* Additional 32 A100 80GB GPUs (4 nodes) in reserve
+
+* 8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
+
+* CPU: AMD
+
+* CPU memory: 512GB per node
+
+* GPU memory: 640GB per node
+
+* Inter-node connect: Omni-Path Architecture (OPA)
+
+* NCCL-communications network: a fully dedicated subnet
+
+* Disc IO network: shared network with other types of nodes
+
+#### Software
+
+* Megatron-DeepSpeed ([Github link](https://github.com/bigscience-workshop/Megatron-DeepSpeed))
+
+* DeepSpeed ([Github link](https://github.com/microsoft/DeepSpeed))
+
+* PyTorch (pytorch-1.11 w/ CUDA-11.5; see [Github link](https://github.com/pytorch/pytorch))
+
+* apex ([Github link](https://github.com/NVIDIA/apex))
+    
+</details>
+
+---
+
+# Training
+*This section provides information about the training data, the speed and size of training elements, and the environmental impact of training.*
+*It is useful for people who want to learn more about the model inputs and training footprint.*
+
+<details>
+<summary>Click to expand</summary>
+
+## Training Data
+*This section provides a high-level overview of the training data. It is relevant for anyone who wants to know the basics of what the model is learning.*
+
+Details for each dataset are provided in individual [Data Cards](https://huggingface.co/spaces/bigscience/BigScienceCorpus), and the sizes of each of their contributions to the aggregated training data are presented in an [Interactive Corpus Map](https://huggingface.co/spaces/bigscience-catalogue-lm-data/corpus-map).
+
+Training data includes:
+
+-   46 natural languages
+    
+-   13 programming languages
+
+-   In 1.6TB of pre-processed text, converted into 350B unique tokens (see [the tokenizer section](#tokenization) for more.)
+
+### Languages
+    
+The pie chart shows the distribution of languages in training data.
+   
+![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/main/assets/data/pie_v2.svg?raw=true)
+
+
+The following tables shows the further distribution of Niger-Congo & Indic languages and programming languages in the training data.
+
+Distribution of Niger Congo and Indic languages.
+    
+| Niger Congo    | Percentage |         | Indic     | Percentage |
+|----------------|------------| ------  |-----------|------------|
+| Chi Tumbuka    | 0.00002    |         | Assamese  | 0.01       |
+| Kikuyu         | 0.00004    |         | Odia      | 0.04       |
+| Bambara        | 0.00004    |         | Gujarati  | 0.04       |
+| Akan           | 0.00007    |         | Marathi   | 0.05       |
+| Xitsonga       | 0.00007    |         | Punjabi   | 0.05       |
+| Sesotho        | 0.00007    |         | Kannada   | 0.06       |
+| Chi Chewa      | 0.0001     |         | Nepali    | 0.07       |
+| Setswana       | 0.0002     |         | Telugu    | 0.09       |
+| Lingala        | 0.0002     |         | Malayalam | 0.10       |
+| Northern Sotho | 0.0002     |         | Urdu      | 0.10       |
+| Fon            | 0.0002     |         | Tamil     | 0.20       |
+| Kirundi        | 0.0003     |         | Bengali   | 0.50       |
+| Wolof          | 0.0004     |         | Hindi     | 0.70       |
+| Luganda        | 0.0004     |
+| Chi Shona      | 0.001      |
+| Isi Zulu       | 0.001      |
+| Igbo           | 0.001      |
+| Xhosa          | 0.001      |
+| Kinyarwanda    | 0.003      |
+| Yoruba         | 0.006      |
+| Swahili        | 0.02       |
+
+Distribution of programming languages.
+    
+| Extension      | Language   | Number of files |
+|----------------|------------|-----------------|
+| java           | Java       | 5,407,724       |
+| php            | PHP        | 4,942,186       |
+| cpp            | C++        | 2,503,930       |
+| py             | Python     | 2,435,072       |
+| js             | JavaScript | 1,905,518       |
+| cs             | C#         | 1,577,347       |
+| rb             | Ruby       | 6,78,413        |
+| cc             | C++        | 443,054         |
+| hpp            | C++        | 391,048         |
+| lua            | Lua        | 352,317         |
+| go             | GO         | 227,763         |
+| ts             | TypeScript | 195,254         |
+| C              | C          | 134,537         |
+| scala          | Scala      | 92,052          |
+| hh             | C++        | 67,161          |
+| H              | C++        | 55,899          |
+| tsx            | TypeScript | 33,107          |
+| rs             | Rust       | 29,693          |
+| phpt           | PHP        | 9,702           |
+| c++            | C++        | 1,342           |
+| h++            | C++        | 791             |
+| php3           | PHP        | 540             |
+| phps           | PHP        | 270             |
+| php5           | PHP        | 166             |
+| php4           | PHP        | 29              |
+    
+### Preprocessing
+
+**Tokenization:** The BLOOM tokenizer ([link](https://huggingface.co/bigscience/tokenizer)), a learned subword tokenizer trained using:
+    
+- A byte-level Byte Pair Encoding (BPE) algorithm 
+
+- A simple pre-tokenization rule, no normalization
+
+- A vocabulary size of 250,680
+
+It was trained on a subset of a preliminary version of the corpus using alpha-weighting per language.  
+
+## Speeds, Sizes, Times
+
+Training logs: [Tensorboard link](https://huggingface.co/tensorboard/bigscience/tr11-176B-ml-logs/)
+
+- Dates:
+    
+    - Started 11th March, 2022 11:42am PST
+
+    - Estimated end: 5th July, 2022
+
+- Checkpoint size:
+    
+    - Bf16 weights: 329GB
+    
+    - Full checkpoint with optimizer states: 2.3TB
+
+- Training throughput: About 150 TFLOP per GPU per second
+
+- Number of epochs: 1
+
+- Estimated cost of training: Equivalent of $2-5M in cloud computing (including preliminary experiments)
+
+- Server training location: Île-de-France, France
+
+
+## Environmental Impact
+
+The training supercomputer, Jean Zay ([website](http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html)), uses mostly nuclear energy. The heat generated by it is reused for heating campus housing.
+    
+**Estimated carbon emissions:**  *(Forthcoming.)*
+    
+**Estimated electricity usage:** *(Forthcoming.)*
+
+</details>
+
+---
+
+# Uses
+
+*This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model.*
+*It is useful for anyone considering using the model or who is affected by the model.*
+
+<details>
+<summary>Click to expand</summary>
+    
+## How to use
+
+This model can be easily used and deployed using HuggingFace's ecosystem. This needs `transformers` and `accelerate` installed. The model can be downloaded as follows:
+
+ <img src=""https://s3.amazonaws.com/moonup/production/uploads/1657271608456-62441d1d9fdefb55a0b7d12c.png"" width=""800"" style=""margin-left:'auto' margin-right:'auto' display:'block'""/>
+
+## Intended Use
+
+This model is being created in order to enable public research on large language models (LLMs). LLMs are intended to be used for language generation or as a pretrained base model that can be further fine-tuned for specific tasks. Use cases below are not exhaustive.
+
+### Direct Use
+
+-   Text generation
+
+-   Exploring characteristics of language generated by a language model
+
+    -   Examples: Cloze tests, counterfactuals, generations with reframings
+
+### Downstream Use
+
+-   Tasks that leverage language models include: Information Extraction, Question Answering, Summarization
+
+### Misuse and Out-of-scope Use
+*This section addresses what users ought not do with the model.*
+
+See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attachment A, for detailed usage restrictions. The below list is non-exhaustive, but lists some easily foreseeable problematic use cases.
+
+#### Out-of-scope Uses
+
+Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but may not be correct.  
+
+Out-of-scope Uses Include:
+
+-   Usage in biomedical domains, political and legal domains, or finance domains
+
+-   Usage for evaluating or scoring individuals, such as for employment, education, or credit
+
+-   Applying the model for critical automatic decisions, generating factual content, creating reliable summaries, or generating predictions that must be correct
+
+#### Misuse
+
+Intentionally using the model for harm, violating [human rights](#human-rights), or other kinds of malicious activities, is a misuse of this model. This includes:
+
+-   Spam generation
+
+-   Disinformation and influence operations
+
+-   Disparagement and defamation
+
+-   Harassment and abuse
+  
+-   [Deception](#deception)
+
+-   Unconsented impersonation and imitation
+
+-   Unconsented surveillance 
+
+-   Generating content without attribution to the model, as specified in the [RAIL License, Use Restrictions](https://huggingface.co/spaces/bigscience/license)
+
+## Intended Users
+
+### Direct Users
+
+-   General Public
+
+-   Researchers
+
+-   Students
+
+-   Educators
+
+-   Engineers/developers
+
+-   Non-commercial entities
+
+-   Community advocates, including human and civil rights groups
+
+### Indirect Users
+
+-   Users of derivatives created by Direct Users, such as those using software with an [intended use](#intended-use)
+
+-   Users of [Derivatives of the Model, as described in the License](https://huggingface.co/spaces/bigscience/license)
+
+### Others Affected (Parties Prenantes)
+
+-   People and groups referred to by the LLM
+
+-   People and groups exposed to outputs of, or decisions based on, the LLM
+
+-   People and groups whose original work is included in the LLM
+
+</details>
+
+---
+
+# Risks and Limitations
+*This section identifies foreseeable harms and misunderstandings.*
+    
+<details>
+<summary>Click to expand</summary>
+
+Model may:
+
+-   Overrepresent some viewpoints and underrepresent others
+
+-   Contain stereotypes
+  
+-   Contain [personal information](#personal-data-and-information)
+
+-   Generate:
+
+    -   Hateful, abusive, or violent language
+
+    -   Discriminatory or prejudicial language
+
+    -   Content that may not be appropriate for all settings, including sexual content
+
+-   Make errors, including producing incorrect information as if it were factual
+
+-   Generate irrelevant or repetitive outputs
+
+-   Induce users into attributing human traits to it, such as sentience or consciousness
+
+</details>
+
+---
+
+# Evaluation
+*This section describes the evaluation protocols and provides the results.*
+
+
+<details>
+<summary>Click to expand</summary>
+
+## Metrics 
+*This section describes the different ways performance is calculated and why.*
+
+Includes:
+
+| Metric             | Why chosen                                                         |
+|--------------------|--------------------------------------------------------------------|
+| [Perplexity](#perplexity)         | Standard metric for quantifying model improvements during training |
+| Cross Entropy [Loss](#loss) | Standard objective for language models.                            |
+
+And multiple different metrics for specific tasks. _(More evaluation metrics forthcoming upon completion of evaluation protocol.)_
+
+## Factors 
+*This section lists some different aspects of BLOOM models. Its focus is on aspects that are likely to give rise to high variance in model behavior.*
+
+- Language, such as English or Yoruba
+
+- Domain, such as newswire or stories
+
+- Demographic characteristics, such as gender or nationality
+
+##  Results
+*Results are based on the [Factors](#factors) and [Metrics](#metrics).*
+
+**Zero-shot evaluations:**
+
+<span style=""color:red""><b>WARNING:</b> This section used to contain much more results, however they were not correct and we released without the approval of the evaluation working group. We are currently in the process of fixing the evaluations.</span>
+
+See this repository for JSON files: https://github.com/bigscience-workshop/evaluation-results
+
+| Task | Language | Metric | BLOOM-176B | OPT-175B* |
+|:--------|:-----------------|:------------------------|-------------:|------------:|
+| humaneval | python | pass@1 ↑ | 0.155 | 0.0 |
+| humaneval | python | pass@10 ↑ | 0.328 | 0.0 |
+| humaneval | python | pass@100 ↑ | 0.572 | 0.003 |
+
+
+**Train-time Evaluation:**
+
+Final checkpoint after 95K steps:
+
+- Training Loss: 1.939
+
+- Validation Loss: 2.061
+
+- Perplexity: 7.045
+
+For more see: https://huggingface.co/bigscience/tr11-176B-ml-logs
+
+</details>
+
+---
+
+# Recommendations
+
+*This section provides information on warnings and potential mitigations.*
+
+<details>
+<summary>Click to expand</summary>
+
+-   Indirect users should be made aware when the content they're working with is created by the LLM.
+
+-   Users should be aware of [Risks and Limitations](#risks-and-limitations), and include an appropriate age disclaimer or blocking interface as necessary.
+
+-   Models trained or finetuned downstream of BLOOM LM should include an updated Model Card.
+
+-   Users of the model should provide mechanisms for those affected to provide feedback, such as an email address for comments.
+
+</details>
+
+---
+
+# Glossary and Calculations
+
+*This section defines common terms and how metrics are calculated.*
+<details>
+<summary>Click to expand</summary>
+
+-   <a name=""loss"">**Loss:**</a> A calculation of the difference between what the model has learned and what the data shows (""groundtruth""). The lower the loss, the better. The training process aims to minimize the loss. 
+
+-   <a name=""perplexity"">**Perplexity:**</a> This is based on what the model estimates the probability of new data is. The lower the perplexity, the better.  If the model is 100% correct at predicting the next token it will see, then the perplexity is 1. Mathematically this is calculated using entropy. 
+
+-   <a name=""high-stakes"">**High-stakes settings:**</a> Such as those identified as ""high-risk AI systems"" and ""unacceptable risk AI systems"" in the European Union's proposed [Artificial Intelligence (AI) Act](https://artificialintelligenceact.eu/annexes/).
+
+-   <a name=""critical-decisions"">**Critical decisions:**</a> Such as those defined in [the United States' proposed Algorithmic Accountability Act](https://www.congress.gov/117/bills/s3572/BILLS-117s3572is.pdf).
+
+-   <a name=""human-rights"">**Human rights:**</a> Includes those rights defined in the [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf).
+
+-  <a name=""personal-data-and-information"">**Personal Data and Personal Information:**</a> Personal data and information is defined in multiple data protection regulations, such as ""[personal data](https://gdpr-info.eu/issues/personal-data/)"" in the [European Union's General Data Protection Regulation](https://gdpr-info.eu); and ""personal information"" in the Republic of South Africa's [Protection of Personal Information Act](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf), The People's Republic of China's [Personal information protection law](http://en.npc.gov.cn.cdurl.cn/2021-12/29/c_694559.htm).
+  
+- <a name=""sensitive-characteristics"">**Sensitive characteristics:**</a> This includes specifically protected categories in human rights (see [UHDR, Article 2](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf)) and personal information regulation (see GDPR, [Article 9; Protection of Personal Information Act, Chapter 1](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf))
+
+- <a name=""deception"">**Deception:**</a> Doing something to intentionally mislead individuals to believe something that is false, such as by creating deadbots or chatbots on social media posing as real people, or generating text documents without making consumers aware that the text is machine generated.
+
+</details>
+
+---
+
+# More Information
+*This section provides links to writing on dataset creation, technical specifications, lessons learned, and initial results.*
+
+<details>
+<summary>Click to expand</summary>
+
+## Intermediate checkpoints
+
+For academic (or any) usage, we published the intermediate checkpoints, corresponding to the model state at each 5000 steps. Please follow [this link](https://huggingface.co/bigscience/bloom-176-intermediate) to get these checkpoints.
+
+    
+## Dataset Creation
+
+Blog post detailing the design choices during the dataset creation: https://bigscience.huggingface.co/blog/building-a-tb-scale-multilingual-dataset-for-language-modeling
+
+## Technical Specifications
+
+Blog post summarizing how the architecture, size, shape, and pre-training duration where selected: https://bigscience.huggingface.co/blog/what-language-model-to-train-if-you-have-two-million-gpu-hours
+
+More details on the architecture/optimizer: https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml
+
+Blog post on the hardware/engineering side: https://bigscience.huggingface.co/blog/which-hardware-to-train-a-176b-parameters-model
+
+Details on the distributed setup used for the training: https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml
+
+Tensorboard updated during the training: https://huggingface.co/bigscience/tr11-176B-ml-logs/tensorboard#scalars&tagFilter=loss
+
+## Lessons
+
+Insights on how to approach training, negative results: https://github.com/bigscience-workshop/bigscience/blob/master/train/lessons-learned.md
+
+Details on the obstacles overcome during the preparation on the engineering side (instabilities, optimization of training throughput, so many technical tricks and questions): https://github.com/bigscience-workshop/bigscience/blob/master/train/tr11-176B-ml/chronicles.md
+
+## Initial Results
+
+Initial prompting experiments using interim checkpoints: https://huggingface.co/spaces/bigscience/bloom-book
+
+</details>
+
+
+## Original checkpoints
+
+The checkpoints in this repo correspond to the HuggingFace Transformers format. If you want to use our fork of [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed) that the model was trained with, you'd want to use [this repo instead](https://huggingface.co/bigscience/bloom-optimizer-states).
+
+Many intermediate checkpoints are available at https://huggingface.co/bigscience/bloom-intermediate/
+
+---
+    
+# Model Card Authors
+*Ordered roughly chronologically and by amount of time spent on creating this model card.*
+
+Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Christopher Akiki, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay, Niklas Muennighoff",1,[],[],NLP,2022-07,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,1,0,0,0,1,0,0,1,1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0
+21,biobert-procell-demo,['Mim/autotrain-data-biobert-procell'],,55000.0,,0.598841432,,pretraining,,,,0.802816901,,0.867924528,,,,433331373,False,5,1,"['transformers', 'pytorch']",2022-05-22 13:46:29+00:00,2022-05-22 12:39:15+00:00,"
+# Model Trained Using biobert
+
+- Problem type: Binary Classification
+- Model ID: 896229149
+- CO2 Emissions (in grams): 0.5988414315305852
+
+## Validation Metrics
+
+- Loss: 0.4045306444168091
+- Accuracy: 0.8028169014084507
+- Precision: 0.8070175438596491
+- Recall: 0.9387755102040817
+- AUC: 0.8812615955473099
+- F1: 0.8679245283018868
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""Cell lines expressing proteins""}' https://api-inference.huggingface.co/models/Mim/autotrain-biobert-procell-896229149
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""Mim/autotrain-biobert-procell-896229149"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""Mim/autotrain-biobert-procell-896229149"", use_auth_token=True)
+
+inputs = tokenizer(""Cell lines expressing proteins"", return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2022-05,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0
+22,sdg_classifier_osdg,['jonas/osdg_sdg_data_processed'],,9000000.0,,0.065326317,,fine-tuning,,,,0.897254458,,0.869436973,,,,438059181,False,78,7,"['transformers', 'pytorch']",2022-09-20 06:46:22+00:00,2022-05-24 11:49:08+00:00,"# About
+
+Machine Learning model for classifying text according to the first 15 of the 17 Sustainable Development Goals from the United Nations. Note that model is trained on quite short paragraphs (around 100 words) and performs best with similar input sizes. 
+
+Data comes from the amazing https://osdg.ai/ community!
+
+* There is an improved version (finetuned Roberta) of the model available here: https://huggingface.co/jonas/roberta-base-finetuned-sdg
+
+# Model Training Specifics 
+
+- Problem type: Multi-class Classification
+- Model ID: 900229515
+- CO2 Emissions (in grams): 0.0653263174784986
+
+## Validation Metrics
+
+- Loss: 0.3644874095916748
+- Accuracy: 0.8972544579677328
+- Macro F1: 0.8500873710954522
+- Micro F1: 0.8972544579677328
+- Weighted F1: 0.8937529692986061
+- Macro Precision: 0.8694369727467804
+- Micro Precision: 0.8972544579677328
+- Weighted Precision: 0.8946984684977016
+- Macro Recall: 0.8405065997404059
+- Micro Recall: 0.8972544579677328
+- Weighted Recall: 0.8972544579677328
+
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/models/jonas/autotrain-osdg-sdg-classifier-900229515
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""jonas/sdg_classifier_osdg"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""jonas/sdg_classifier_osdg"", use_auth_token=True)
+
+inputs = tokenizer(""I love AutoTrain"", return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2022-05,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+23,Arabic_poem_meter_3,[''],,554000000.0,,404.6698645,,pretraining,,,,0.949355409,,0.753735309,,,,442624237,False,29,0,"['transformers', 'pytorch']",2022-05-28 07:59:10+00:00,2022-05-26 20:45:27+00:00,"
+# Model Trained Using AutoTrain
+
+- Problem type: Multi-class Classification
+- CO2 Emissions (in grams): 404.66986451902227
+## Dataset
+We used the APCD dataset cited hereafter for pretraining the model. The dataset has been cleaned and only the main text and the meter columns were kept:
+```
+@Article{Yousef2019LearningMetersArabicEnglish-arxiv,
+  author =       {Yousef, Waleed A. and Ibrahime, Omar M. and Madbouly, Taha M. and Mahmoud,
+                  Moustafa A.},
+  title =        {Learning Meters of Arabic and English Poems With Recurrent Neural Networks: a Step
+                  Forward for Language Understanding and Synthesis},
+  journal =      {arXiv preprint arXiv:1905.05700},
+  year =         2019,
+  url =          {https://github.com/hci-lab/LearningMetersPoems}
+}
+```
+## Validation Metrics
+
+- Loss: 0.21315555274486542
+- Accuracy: 0.9493554089595999
+- Macro F1: 0.7537353091512587
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""قفا نبك من ذِكرى حبيب ومنزلِ  بسِقطِ اللِّوى بينَ الدَّخول فحَوْملِ""}' https://api-inference.huggingface.co/models/Yah216/Arabic_poem_meter_3
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""Yah216/Arabic_poem_meter_3"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""Yah216/Arabic_poem_meter_3"", use_auth_token=True)
+
+inputs = tokenizer(""قفا نبك من ذِكرى حبيب ومنزلِ  بسِقطِ اللِّوى بينَ الدَّخول فحَوْملِ"", return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2022-05,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+24,Poem_Qafiyah_Detection,['Yah216/Poem_Rawiy_detection'],,165000000.0,,1.804676644,,pretraining,,,,0.912351981,,,,,,497957165,False,20,0,"['transformers', 'pytorch']",2022-05-28 07:56:56+00:00,2022-05-27 16:50:04+00:00,"
+# Model
+
+- Problem type: Multi-class Classification
+- CO2 Emissions (in grams): 1.8046766441629636
+
+## Dataset
+We used the APCD dataset cited hereafter for pretraining the model. The dataset has been cleaned and only the main text and the Qafiyah column were kept:
+```
+@Article{Yousef2019LearningMetersArabicEnglish-arxiv,
+  author =       {Yousef, Waleed A. and Ibrahime, Omar M. and Madbouly, Taha M. and Mahmoud,
+                  Moustafa A.},
+  title =        {Learning Meters of Arabic and English Poems With Recurrent Neural Networks: a Step
+                  Forward for Language Understanding and Synthesis},
+  journal =      {arXiv preprint arXiv:1905.05700},
+  year =         2019,
+  url =          {https://github.com/hci-lab/LearningMetersPoems}
+}
+```
+
+## Validation Metrics
+
+- Loss: 0.398613303899765
+- Accuracy: 0.912351981006084
+- Macro F1: 0.717311758991278
+- Micro F1: 0.912351981006084
+- Weighted F1: 0.9110094798809955
+
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/models/Yah216/Poem_Rawiy_detection
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""Yah216/Poem_Qafiyah_Detection"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""Yah216/Poem_Qafiyah_Detection"", use_auth_token=True)
+
+inputs = tokenizer(""text, return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2022-05,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+25,kekbot-mini,[''],,26000000.0,,10.0,mlco2.github.io,fine-tuning,"West Java, Indonesia",1 T4,,,,,,,,333969117,False,3,0,"['transformers', 'pytorch']",2022-06-12 05:53:59+00:00,2022-06-12 03:40:33+00:00,"> THIS MODEL IS INTENDED FOR RESEARCH PURPOSES ONLY
+# Kekbot Mini
+
+Based on a `distilgpt2` model, fine-tuned to a select subset (65k<= messages) of Art Union's general-chat channel chat history.
+
+### Limits and biases
+As this is trained on chat history, it is possible that discriminatory or even offensive materials to be outputted. 
+Author holds his ground on the fact that ML models are mere statistical representation of the dataset used to train it, 
+and that due to the nature of the dataset it is practically impossible to be certain of 
+the degree of ""cleanliness"" that the data contained within holds.
+
+Author can confirm, however, that from heuristical testing that the model was not found to be offensive 
+to the author himself, hopefully this opinion stays true for everyone in the audience.
+",1,[],[],NLP,2022-06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+26,kekbot-beta-4-medium,[''],,26000000.0,,840.0,mlco2.github.io,fine-tuning,"West Java, Indonesia",1 Tesla P100,,,,,,,,1444566873,False,3,0,"['transformers', 'pytorch']",2022-06-12 21:36:45+00:00,2022-06-12 21:21:05+00:00,"> THIS MODEL IS IN PUBLIC BETA, PLEASE DO NOT EXPECT ANY FORM OF STABILITY IN ITS CURRENT STATE.  
+# Art Union server chatbot
+
+Based on a DialoGPT-medium (`kekbot-beta-3-medium`) model, fine-tuned to a select subset (65k<= messages) of Art Union's general-chat channel chat history.
+
+### Current issues  
+(Which hopefully will be fixed in future iterations) Include, but not limited to:
+- Limited turns, after ~20 turns output may break for no apparent reason.
+- Inconsistent variance, acts like an overfitted model from time to time for no reason whatsoever.
+",1,[],[],NLP,2022-06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+27,biomedical-ner-all,[''],,2000000.0,,0.027939989,,fine-tuning,,1  RTX 3060,,,,,,,,265743541,False,9364,45,"['transformers', 'pytorch', 'safetensors']",2023-03-21 10:37:49+00:00,2022-06-19 14:04:18+00:00,"
+## About the Model
+An English Named Entity Recognition model, trained on Maccrobat to recognize the bio-medical entities (107 entities) from a given text corpus (case reports etc.). This model was built on top of distilbert-base-uncased
+
+- Dataset: Maccrobat https://figshare.com/articles/dataset/MACCROBAT2018/9764942
+- Carbon emission: 0.0279399890043426 Kg
+- Training time: 30.16527 minutes
+- GPU used : 1 x GeForce RTX 3060 Laptop GPU
+
+Checkout the tutorial video for explanation of this model and corresponding python library: https://youtu.be/xpiDPdBpS18
+
+## Usage
+The easiest way is to load the inference api from huggingface and second method is through the pipeline object offered by transformers library.
+```python
+from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+
+tokenizer = AutoTokenizer.from_pretrained(""d4data/biomedical-ner-all"")
+model = AutoModelForTokenClassification.from_pretrained(""d4data/biomedical-ner-all"")
+
+pipe = pipeline(""ner"", model=model, tokenizer=tokenizer, aggregation_strategy=""simple"") # pass device=0 if using gpu
+pipe(""""""The patient reported no recurrence of palpitations at follow-up 6 months after the ablation."""""")
+```
+
+## Author
+This model is part of the Research topic ""AI in Biomedical field"" conducted by Deepak John Reji, Shaina Raza. If you use this work (code, model or dataset), please star at:
+> https://github.com/dreji18/Bio-Epidemiology-NER",1,[],[],NLP,2022-06,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0
+28,dalle-mega,[''],,3500000000.0,2600000000,450300.0,MLCo2 Machine Learning Impact calculator,pretraining + fine-tuning,East USA,TTPU v3-256,GCP,,,,,,,10737418240,False,74,124,"['jax', 'transformers']",2023-01-11 08:53:53+00:00,2022-06-28 14:07:04+00:00,"
+# DALL·E Mega Model Card
+This model card focuses on the DALL·E Mega model associated with the DALL·E mini space on Hugging Face, available [here](https://huggingface.co/spaces/dalle-mini/dalle-mini). The app is called “dalle-mini”, but  incorporates “[DALL·E Mini](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy)” and “[DALL·E Mega](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training-Journal--VmlldzoxODMxMDI2)” models. The DALL·E Mega model is the largest version of DALLE Mini. For more information specific to DALL·E Mini, see the [DALL·E Mini model card](https://huggingface.co/dalle-mini/dalle-mini).
+
+## Model Details
+
+* **Developed by:** Boris Dayma, Suraj Patil, Pedro Cuenca, Khalid Saifullah, Tanishq Abraham, Phúc Lê, Luke, Luke Melas, Ritobrata Ghosh
+* **Model type:** Transformer-based text-to-image generation model
+* **Language(s):** English
+* **License:** Apache 2.0
+* **Model Description:** This is a model that can be used to generate images based on text prompts. As the model developers wrote in the [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) about DALL·E mini, “OpenAI had the first impressive model for generating images with [DALL·E](https://openai.com/blog/dall-e/). DALL·E mini is an attempt at reproducing those results with an open-source model.”
+* **Resources for more information:**
+  - See OpenAI’s website for more information about [DALL·E](https://openai.com/blog/dall-e/), including the [DALL·E model card](https://github.com/openai/DALL-E/blob/master/model_card.md). 
+  - See the DALL·E Mini [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) for more information from the model’s developers about DALL·E Mini. 
+  - To learn more about DALL·E Mega, see the DALL·E Mega [training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training--VmlldzoxODMxMDI2#training-parameters).
+
+* **Cite as:** 
+```bib text
+@misc{Dayma_DALL·E_Mini_2021,
+      author = {Dayma, Boris and Patil, Suraj and Cuenca, Pedro and Saifullah, Khalid and Abraham, Tanishq and Lê Khắc, Phúc and Melas, Luke and Ghosh, Ritobrata},
+      doi = {10.5281/zenodo.5146400},
+      month = {7},
+      title = {DALL·E Mini},
+      url = {https://github.com/borisdayma/dalle-mini},
+      year = {2021}
+}
+```
+
+## Uses
+
+### Direct Use
+
+The model is intended to be used to generate images based on text prompts for research and personal consumption. Intended uses include supporting creativity, creating humorous content, and providing generations for people curious about the model’s behavior. Intended uses exclude those described in the [Misuse and Out-of-Scope Use](#misuse-malicious-use-and-out-of-scope-use) section.
+
+### Downstream Use
+The model could also be used for downstream use cases, including:
+* Research efforts, such as probing and better understanding the limitations and biases of generative models to further improve the state of science
+* Development of educational or creative tools
+* Generation of artwork and use in design and artistic processes. 
+* Other uses that are newly discovered by users. This currently includes poetry illustration (give a poem as prompt), fan art (putting a character in various other visual universes), visual puns, fairy tale illustrations (give a fantasy situation as prompt), concept mashups (applying a texture to something completely different), style transfers (portraits in the style of), … We hope you will find your own application!
+
+
+Downstream uses exclude the uses described in [Misuse and Out-of-Scope Use](#misuse-malicious-use-and-out-of-scope-use).
+
+### Misuse, Malicious Use, and Out-of-Scope Use
+
+The model should not be used to intentionally create or disseminate images that create hostile or alienating environments for people. This includes generating images that people would foreseeably find disturbing, distressing, or offensive; or content that propagates historical or current stereotypes. 
+
+#### Out-of-Scope Use
+
+The model was not trained to be factual or true representations of people or events, and therefore using the model to generate such content is out-of-scope for the abilities of this model.
+
+#### Misuse and Malicious Use
+
+Using the model to generate content that is cruel to individuals is a misuse of this model.
+This includes:
+* Generating demeaning, dehumanizing, or otherwise harmful representations of people or their environments, cultures, religions, etc.
+* Intentionally promoting or propagating discriminatory content or harmful stereotypes.
+* Impersonating individuals without their consent.
+* Sexual content without consent of the people who might see it.
+* Mis- and disinformation
+* Representations of egregious violence and gore
+* Sharing of copyrighted or licensed material in violation of its terms of use.
+* Sharing content that is an alteration of copyrighted or licensed material in violation of its terms of use.
+
+
+## Limitations and Bias
+
+### Limitations
+
+The model developers discuss the limitations of the model further in the DALL·E Mini [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA):
+* Faces and people in general are not generated properly.
+* Animals are usually unrealistic.
+* It is hard to predict where the model excels or falls short…Good prompt engineering will lead to the best results.
+* The model has only been trained with English descriptions and will not perform as well in other languages
+
+
+### Bias 
+**CONTENT WARNING: Readers should be aware this section contains content that is disturbing, offensive, and can propagate historical and current stereotypes.** 
+
+The model was trained on unfiltered data from the Internet, limited to pictures with English descriptions. Text and images from communities and cultures using other languages were not utilized. This affects all output of the model, with white and Western culture asserted as a default, and the model’s ability to generate content using non-English prompts is observably lower quality than prompts in English.
+
+While the capabilities of image generation models are impressive, they may also reinforce or exacerbate societal biases. The extent and nature of the biases of DALL·E Mini and DALL·E Mega models have yet to be fully documented, but initial testing demonstrates that they may generate images that contain negative stereotypes against minoritized groups. Work to analyze the nature and extent of the models’ biases and limitations is ongoing.
+
+
+Our current analyses demonstrate that:
+* Images generated by the model can include disturbing and harmful stereotypes across protected classes; identity characteristics; and sensitive, social, and occupational groups.
+* When the model generates images with people in them, it tends to output people who we perceive to be white, while people of color are underrepresented. 
+* Images generated by the model can contain biased content that depicts power differentials between people of color and people who are white, with white people in positions of privilege.
+* The model is generally only usable for generating images based on text in English, limiting accessibility of the model for non-English speakers and potentially contributing to the biases in images generated by the model.
+
+The [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA) discusses these issues in more detail, and also highlights potential sources of bias in the model development process.
+
+
+### Limitations and Bias Recommendations
+
+* Users (both direct and downstream) should be made aware of the biases and limitations.
+* Content that is potentially problematic should be filtered out, e.g., via automated models that detect violence or pornography.
+* Further work on this model should include methods for balanced and just representations of people and cultures, for example, by curating the training dataset to be both diverse and inclusive.
+
+
+## Training
+
+### Training Data
+
+For details on the DALL·E Mega training data, see the [DALL·E Mega training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training-Journal--VmlldzoxODMxMDI2#dall·e-mega---training).
+
+## Training Procedure
+
+The simplified training procedure for DALL·E Mega is as follows: 
+
+* **Hardware:** 1 pod TPU v3-256 = 32 nodes of TPU VM v3-8 (8 TPU per node) = 256 TPU v3
+* **Optimizer:** Distributed Shampoo
+* **Model Partition Specificiations:** 8 model parallel x 32 data parallel
+* **Batch:** 44 samples per model x 32 data parallel x 3 gradient accumulation steps =  4224 increasing samples per update
+* **Learning rate:** warmup to 0.0001 for 10,000 steps and then kept constant until plateau
+* Gradient checkpointing used on each Encoder/Decoder layer (ie, MHA + FFN)
+* Distributed Shampoo + Normformer Optimizations have proved to be effective and efficiently scaling this model. 
+* It should also be noted that the learning rate and other parameters are sometimes adjusted on the fly, and batch size increased over time as well.
+
+There is more information about the full procedure and technical material in the DALL·E Mega [training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training--VmlldzoxODMxMDI2#training-parameters).
+
+## Evaluation Results
+For evaluation results related to DALL·E Mega, see this [technical report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) and the [DALL·E Mega training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training-Journal--VmlldzoxODMxMDI2#dall·e-mega---training).
+
+
+## Environmental Impact
+
+DALL·E Mega is still training. So far, as of June 28, 2022, the model developers report that DALL·E Mega has been training for about 40-45 days on a TPU v3-256. Using those numbers, we estimate the following CO2 emissions using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). The hardware, runtime, cloud provider, and compute region were utilized to estimate the carbon impact.
+
+* **Hardware Type:** TPU v3-256
+* **Hours used:** 1344 hours (56 days)
+* **Cloud Provider:** GCP
+* **Compute Region:** us-east1
+* **Carbon Emitted (Power consumption x Time x Carbon produced based on location of power grid)**:  18013.47 kg CO2 eq.
+
+## Citation
+
+```bibtext
+@misc{Dayma_DALL·E_Mini_2021,
+      author = {Dayma, Boris and Patil, Suraj and Cuenca, Pedro and Saifullah, Khalid and Abraham, Tanishq and Lê Khắc, Phúc and Melas, Luke and Ghosh, Ritobrata},
+      doi = {10.5281/zenodo.5146400},
+      month = {7},
+      title = {DALL·E Mini},
+      url = {https://github.com/borisdayma/dalle-mini},
+      year = {2021}
+}
+```
+
+*This model card was written by: Boris Dayma, Margaret Mitchell, Ezi Ozoani, Marissa Gerchick, Irene Solaiman, Clémentine Fourrier, Sasha Luccioni, Emily Witko, Nazneen Rajani, and Julian Herrera.*
+
+
+",1,[],[],Multimodal,2022-06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+29,led_pubmed_sumpubmed_1,"['Blaise-g/autotrain-data-SumPubmed', 'Blaise-g/SumPubmed']",,1930000000.0,,1027.9,,pretraining,,,,,2.133,,45.861,23.565,,1839604721,1,8,0,"['transformers', 'pytorch']",2022-08-17 13:44:21+00:00,2022-07-29 00:41:04+00:00,"
+# Validation Metrics
+
+- Loss: 2.133
+- Rouge1: 45.861
+- Rouge2: 14.179
+- RougeL: 23.565
+- RougeLsum: 40.908
+- Gen Len: 195.334",1,[],[],NLP,2022-07,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+30,bart-base-cnn-swe,['Gabriel/cnn_daily_swe'],,800000000.0,,0.0334,Google Colab,fine-tuning,"Fredericia, Denmark",1 Tesla P100,,,,,22.2046,,,557723065,False,103,0,"['transformers', 'pytorch', 'tensorboard']",2022-12-20 09:37:08+00:00,2022-08-26 05:26:14+00:00,"
+# bart-base-cnn-swe
+This model is a W.I.P
+
+## Model description
+BART is a transformer encoder-encoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. This model is a fine-tuned version of [KBLab/bart-base-swedish-cased](https://huggingface.co/KBLab/bart-base-swedish-cased) on the [Gabriel/bart-base-cnn-swe](https://huggingface.co/datasets/Gabriel/cnn_daily_swe) dataset and can be used for summarization tasks.
+
+
+## Intended uses & limitations
+
+This model should only be used to fine-tune further on and summarization tasks.
+
+
+```python
+from transformers import pipeline
+summarizer = pipeline(""summarization"", model=""Gabriel/bart-base-cnn-swe"")
+ARTICLE = """"""
+Frankrike lås Sebastien Chabal har nämnts för en farlig tackling på Englands Simon Shaw under lördagens VM semifinal i Paris. Simon Shaw lastar av trots att Raphael Ibanez, vänster, och Sebastien Chabal. Sale Sharks framåt kommer att ställas inför en disciplinär utfrågning på måndag efter hans tackling på motsatt andra-rower Shaw noterades genom att citera kommissionär Dennis Wheelahan. Chabal började matchen på ersättningsbänken, men kom i 26: e minuten att ersätta den skadade Fabien Pelous under värd Frankrikes 14-9 nederlag. Om han blir avstängd missar Chabal fredagens tredje och fjärde match på Parc des Princes. Samtidigt, Frankrike tränare Bernard Laporte sade att nederlaget var svårare att ta än Englands 24-7 seger i 2003 semifinalen. ""År 2003 var de bättre än oss. I själva verket var de bättre än alla"", sade Laporte, som lämnar sin roll att tillträda posten som junior idrottsminister i den franska regeringen. ""De var som Nya Zeeland i denna turnering - favoriten, förutom att de gick hela vägen. Den här gången är det svårare för igår var det 50-50."" Samtidigt, England -- försöker bli den första nationen att försvara VM-titeln -- avslöjade att stjärna kicker Jonny Wilkinson återigen hade problem med matchbollarna under semifinalen. Flughalvan, som uttryckte sin oro efter att ha kämpat med stöveln mot Australien, avvisade en boll innan han sparkade en vital trepoängare mot Frankrike. ""Vi sa det inte förra veckan men en icke-match bollen kom ut på fältet i Marseille som Jonny sparkade,"" chef för rugby Rob Andrew sade. ""Han tänkte inte på det när han sparkade det. Matchbollarna är märkta, numrerade ett till sex. Igår kväll hade de ""World Cup semifinal England vs Frankrike"" skrivet på dem. På matchkvällen var Jonny vaksam när han sparkade för mål att de faktiskt var matchbollar han sparkade. ""Träningsbollarna förlorar tryck och form. Hela frågan förra veckan, arrangörerna accepterade alla sex matchbollar bör användas av båda sidor på torsdagen före matchen. "" E-post till en vän.
+""""""
+print(summarizer(ARTICLE, max_length=130, min_length=30, num_beams=10 ,do_sample=False))
+>>> [{'summary_text': """""" Frankrike lås Sebastien Chabal har nämnts för en farlig tackling på Englands Simon Shaw under VM semifinal i Paris. Sale Sharks framåt kommer att ställas inför en disciplinär utfrågning på måndag efter hans tackling på motsatt andra - rower Shaw noterades genom att citera kommissionär Dennis Wheelahan. Om Chabal blir avstängd missar Chabal fredagens tredje och fjärde match på Parc des Princes.""""""}]
+```
+
+## Training procedure
+
+### Training hyperparameters
+
+The following hyperparameters were used during training:
+- learning_rate: 5e-05
+- train_batch_size: 8
+- eval_batch_size: 8
+- seed: 42
+- gradient_accumulation_steps: 2
+- total_train_batch_size: 16
+- optimizer: Adam with betas=(0.9,0.999) and epsilon=1e-08
+- lr_scheduler_type: linear
+- num_epochs: 2*2 = 4
+- mixed_precision_training: Native AMP
+
+### Training results
+
+| Training Loss | Epoch | Step  | Validation Loss | Rouge1  | Rouge2  | Rougel  | Rougelsum | Gen Len |
+|:-------------:|:-----:|:-----:|:---------------:|:-------:|:-------:|:-------:|:---------:|:-------:|
+| 2.2349        | 1.0   | 17944 | 2.0643          | 21.9564 | 10.2133 | 17.9958 | 20.6502   | 19.9992 |
+| 2.0726        | 2.0   | 35888 | 2.0253          | 22.0568 | 10.3302 | 18.0648 | 20.7482   | 19.9996 |
+| 1.8658        | 3.0   | 53832 | 2.0333          | 22.0871 | 10.2902 | 18.0577 | 20.7082   | 19.998  |
+| 1.8121        | 4.0   | 71776 | 1.9759          | 22.2046 | 10.4332 | 18.1753 | 20.846    | 19.9971 |
+
+
+### Framework versions
+
+- Transformers 4.22.1
+- Pytorch 1.12.1+cu113
+- Datasets 2.4.0
+- Tokenizers 0.12.1
+",1,[],[],NLP,2022-08,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+31,doe2vec-d2-m8-ls24-VAE-kl0.001,['BasStein/250000-randomfunctions-2d'],,26000000.0,,0.0363,code carbon,pretraining,"Leiden, The Netherlands",1 T4,,,,,,,,220000,False,7,0,['keras'],2022-09-02 10:37:48+00:00,2022-08-26 14:56:33+00:00,"
+## Model description
+
+DoE2Vec model that can transform any design of experiments (function landscape) to a feature vector.  
+For different input dimensions or sample size you require a different model.  
+Each model name is build up like doe2vec-d{dimension\}-m{sample size}-ls{latent size}-{AE or VAE}-kl{Kl loss weight}
+
+Example code of loading this huggingface model using the doe2vec package.
+
+First install the package
+
+```zsh
+pip install doe2vec
+```
+
+Then import and load the model.
+
+```python
+from doe2vec import doe_model
+
+obj = doe_model(
+    2,
+    8,
+    latent_dim=24,
+    kl_weight=0.001,
+    model_type=""VAE""
+)
+obj.load_from_huggingface()
+#test the model
+obj.plot_label_clusters_bbob()
+```
+
+## Intended uses & limitations
+
+The model is intended to be used to generate feature representations for optimization function landscapes.
+The representations can then be used for downstream tasks such as automatic optimization pipelines and meta-learning.
+
+
+## Training procedure
+
+The model is trained using a weighed KL loss and mean squared error reconstruction loss.
+The model is trained using 250.000 randomly generated functions (see the dataset) over 100 epochs.
+
+- **Hardware:** 1x Tesla T4 GPU
+- **Optimizer:** Adam
+
+",1,[],[],,2022-08,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+32,m2m100_418M_br_fr,[''],,4000000000.0,,2100.0,https://mlco2.github.io/impact,fine-tuning,"Paris, France",2 RTX 3090,,,,,,,,1935795713,False,20,0,"['transformers', 'pytorch']",2023-03-22 17:43:18+00:00,2022-10-23 09:41:21+00:00,"
+Breton-French translator `m2m100_418M_br_fr`
+============================================
+
+This model is a fine-tuned version of
+[facebook/m2m100_418M](https://huggingface.co/facebook/m2m100_418M) (Fan et al., 2021) on a
+Breton-French parallel corpus. In order to obtain the best possible results, we use all our parallel
+data on training and consequently report no quantitative evaluation at this time. Empirical
+qualitative evidence suggests that the translations are generally adequate for short and simple
+examples, the behaviour of the model on long and/or complex inputs is currently unknown.
+
+Try this model online in [Troer](https://huggingface.co/spaces/lgrobol/troer), feedback and
+suggestions are welcome!
+
+## Model description
+
+See the description of the [base model](https://huggingface.co/facebook/m2m100_418M).
+
+## Intended uses & limitations
+
+This is intended as a **demonstration** of the improvements brought by fine-tuning a large-scale
+many-to-many translation system on a medium-sized dataset of high-quality data. As it is, and as far
+as I can tell it usually provides translations that are least as good as those of other available
+Breton-French translators, but it has not been evaluated quantitatively at a large scale.
+
+## Training and evaluation data
+
+The training dataset consists of:
+
+- The [OfisPublik corpus v1](https://opus.nlpl.eu/OfisPublik-v1.php) (Tyers, 2009)
+- The [Tatoeba corpus v2022-03-03](https://opus.nlpl.eu/Tatoeba-v2022-03-03.php)
+- Part of the [OpenSubtitles corpus v2018](https://opus.nlpl.eu/OpenSubtitles-v2018.php)
+
+These are obtained from the [OPUS](https://opus.nlpl.eu/) base (Tiedemann, 2012) and filtered using
+[OpusFilter](https://helsinki-nlp.github.io/OpusFilter) (Aulamo et al., 2020), see
+[`dl_opus.yaml`](dl_opus.yaml) for the details. The filtering is slightly non-deterministic due to
+the retraining of a statistical alignment model, but in my experience, different runs tend to give
+extremely similar results. Do not hesitate to reach out if you experience difficulties in using this
+to collect data.
+
+In addition to these, the training dataset also includes parallel br/fr sentences, provided as
+glosses in the [Arbres](https://arbres.iker.cnrs.fr) wiki (Jouitteau, 2022), obtained from their
+[ongoing port](https://github.com/Autogramm/Breton/commit/45ac2c444a979b7ee41e5f24a3bfd1ec39f09d7d)
+to Universal Dependencies in the Autogramm project.
+
+## Training procedure
+
+The training hyperparameters are those suggested by Adelani et al. (2022) in their [code
+release](https://github.com/masakhane-io/lafand-mt), which gave their best results for machine
+translation of several African languages.
+
+More specifically, we train this model with [zeldarose](https://github.com/LoicGrobol/zeldarose) with the following parameters
+
+```bash
+zeldarose transformer \
+   --config train_config.toml \
+   --tokenizer ""facebook/m2m100_418M"" --pretrained-model ""facebook/m2m100_418M"" \
+   --out-dir m2m100_418M+br-fr --model-name m2m100_418M+br-fr \
+   --strategy ddp --accelerator gpu --num-devices 4 --device-batch-size 2 --num-workers 8\
+   --max-epochs 16 --precision 16 --tf32-mode medium \
+   --val-data {val_path}.jsonl \
+   {train_path}.jsonl
+
+```
+
+### Training hyperparameters
+
+The following hyperparameters were used during training:
+
+```toml
+[task]
+change_ratio = 0.3
+denoise_langs = []
+poisson_lambda = 3.0
+source_langs = [""br""]
+target_langs = [""fr""]
+
+[tuning]
+batch_size = 16
+betas = [0.9, 0.999]
+epsilon = 1e-8
+learning_rate = 5e-5
+gradient_clipping = 1.0
+lr_decay_steps = -1
+warmup_steps = 1024
+```
+
+### Framework versions
+
+- Transformers 4.26.1
+- Pytorch 1.12.1
+- Datasets 2.10.0
+- Tokenizers 0.13.2
+- Pytorch-lightning 1.9.3
+- Zeldarose [c6456ead](https://github.com/LoicGrobol/spertiniite/commit/c6456ead3649c4e6ddfb4a5a74b40f344eded09f)
+
+### Carbon emissions
+
+At this time, we estimate emissions of a rough 300 gCO<sub>2</sub> per fine-tuning run. So far, we
+account for
+
+- Fine-tuning the 3 released versions
+- 8 development runs
+
+So far, the equivalent carbon emissions for this model are approximately 3300 gCO<sub>2</sub>.
+
+## References
+
+- Adelani, David, Jesujoba Alabi, Angela Fan, Julia Kreutzer, Xiaoyu Shen, Machel Reid, Dana Ruiter,
+  et al. 2022. “A Few Thousand Translations Go a Long Way! Leveraging Pre-trained Models for African
+  News Translation”. In Proceedings of the 2022 Conference of the North American Chapter of the
+  Association for Computational Linguistics: Human Language Technologies, 3053‑70. Seattle, United
+  States: Association for Computational Linguistics.
+  <https://doi.org/10.18653/v1/2022.naacl-main.223>.
+- Mikko Aulamo, Sami Virpioja, and Jörg Tiedemann. 2020. OpusFilter: A Configurable Parallel Corpus
+  Filtering Toolbox. In Proceedings of the 58th Annual Meeting of the Association for Computational
+  Linguistics: System Demonstrations, pages 150–156, Online. Association for Computational
+  Linguistics.
+- Fan, Angela, Shruti Bhosale, Holger Schwenk, Zhiyi Ma, Ahmed El-Kishky, Siddharth Goyal, Mandeep
+  Baines, et al. 2021. “Beyond english-centric multilingual machine translation”. The Journal of
+  Machine Learning Research 22 (1): 107:4839-107:4886.
+- Tiedemann, Jorg 2012, “Parallel Data, Tools and Interfaces in OPUS”. In Proceedings of the 8th
+  International Conference on Language Resources and Evaluation (LREC 2012)
+- Jouitteau, Mélanie. (éd.). 2009-2022. ARBRES, wikigrammaire des dialectes du breton et centre de
+  ressources pour son étude linguistique formelle, IKER, CNRS, <http://arbres.iker.cnrs.fr>.
+- Tyers, Francis M. 2009 “Rule-based augmentation of training data in Breton-French statistical
+  machine translation”. In Proceedings of the 13th Annual Conference of the European Association of
+  Machine Translation, EAMT09. Barcelona, España. 213--218
+",1,[],[],NLP,2022-10,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+33,autotrain-testtextexists-1966366051,['orange6996/autotrain-data-testtextexists'],,2000.0,,0.838233151,,pretraining,,,,,4927.679,,,,,1421580269,1,3,0,['pytorch'],2022-11-03 16:13:42+00:00,2022-11-03 15:56:43+00:00,"
+# Model Trained Using AutoTrain
+
+- Problem type: Single Column Regression
+- Model ID: 1966366051
+- CO2 Emissions (in grams): 0.8382
+
+## Validation Metrics
+
+- Loss: 4927.679
+- MSE: 4927.679
+- MAE: 68.224
+- R2: -17.019
+- RMSE: 70.197
+- Explained Variance: 0.001
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/models/orange6996/autotrain-testtextexists-1966366051
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""orange6996/autotrain-testtextexists-1966366051"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""orange6996/autotrain-testtextexists-1966366051"", use_auth_token=True)
+
+inputs = tokenizer(""I love AutoTrain"", return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2022-11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+34,whisper-medium-nlcv11,['mozilla-foundation/common_voice_11_0'],,1000000000.0,,2930.0,https://mlco2.github.io/impact/,fine-tuning,"Ghent, Belgium",1 v100 16GB,,,,,,,,3055754841,False,5,3,"['transformers', 'pytorch', 'tensorboard']",2022-12-14 16:58:58+00:00,2022-11-23 06:21:29+00:00,"
+# Whisper Medium nl - GeoffVdr
+
+This model is a fine-tuned version of [openai/whisper-medium](https://huggingface.co/openai/whisper-medium) on the Common Voice 11.0 dataset.
+
+## Model description
+More information needed
+## Intended uses & limitations
+More information needed
+## Training and evaluation data
+- Training: Mozilla CommonVoice 11 Dutch train+validation set
+- Evaluation: Mozilla CommonVoice 11 Dutch test set
+## Training procedure
+
+## Training Hyperparameters
+- learning_rate: 1e-5
+- train_batch_size: 8
+- eval_batch_size: 8
+- gradient_accumulation_steps: 2
+- lr_scheduler_warmup_steps: 500
+- training_steps: 12000
+
+## Training Results
+
+| Training Loss | Epoch | Step | WER  |
+|:-------------:|:-----:|:----:|:----:|
+| 0.1111        | 0.39  | 1000 | 9.89 |
+| 0.0884        | 0.78  | 2000 | 9.26 |
+| 0.0362        | 1.17  | 3000 | 8.64 |
+| 0.0359        | 1.56  | 4000 | 8.60 |
+| 0.0375        | 1.95  | 5000 | 8.24 |
+:
+:
+| 0.0015        | 4.68  | 12000| 7.51 |
+
+
+### Framework versions",1,[],[],Audio,2022-11,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0
+35,yahoo-answers-test-model,['breadlicker45/autotrain-data-test2'],,27400000.0,,3.128325676,,pretraining,,,,,3.511,,14.002,11.022,,557969145,1,1,0,['pytorch'],2022-12-16 13:20:45+00:00,2022-12-16 13:16:44+00:00,"
+# Model Trained Using AutoTrain
+
+- Problem type: Summarization
+- Model ID: 2496476946
+- CO2 Emissions (in grams): 3.1283
+
+## Validation Metrics
+
+- Loss: 3.511
+- Rouge1: 14.002
+- Rouge2: 2.968
+- RougeL: 11.022
+- RougeLsum: 12.335
+- Gen Len: 18.900
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_HUGGINGFACE_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/breadlicker45/autotrain-test2-2496476946
+```",1,[],[],,2022-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+36,biomedical_text_summarization,['sumedh/MeQSum'],,425000.0,,3198.397661,,pretraining,,,,,,,39.4086,,,3132667369,False,32,1,"['transformers', 'pytorch']",2022-12-18 03:11:14+00:00,2022-12-18 00:23:04+00:00,,1,[],[],NLP,2022-12,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+37,auto-arabic-summarization,['abdalrahmanshahrour/autotrain-data-auto-arabic-summarization'],,9000000.0,,23.93485568,,fine-tuning,,,,,0.829,,1.132,1.137,,557175853,1,99,3,"['transformers', 'pytorch']",2023-02-08 11:10:23+00:00,2022-12-22 19:22:57+00:00,"
+# Model Trained Using AutoTrain
+
+- Problem type: Summarization
+- Model ID: 2581378622
+- CO2 Emissions (in grams): 23.9349
+
+## Validation Metrics
+
+- Loss: 0.829
+- Rouge1: 1.132
+- Rouge2: 0.127
+- RougeL: 1.137
+- RougeLsum: 1.129
+
+### Framework versions
+
+- Transformers 4.25.1
+- Pytorch 1.13.0+cu116
+- Datasets 2.7.1
+- Tokenizers 0.13.2
+
+  ",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+39,flan-t5-large,['Jonnylaw/autotrain-data-flan-t5-tunned'],,60000.0,,4.954208349,,fine-tuning,,,,,1.344,,62.583,59.779,,3132793669,1,1,0,"['transformers', 'pytorch']",2023-02-16 23:10:01+00:00,2023-01-23 04:52:39+00:00,"
+# Flan-T5 large, trained to a lot of tasks.
+
+
+
+## Validation Metrics
+
+- Loss: 1.344
+- Rouge1: 62.583
+- Rouge2: 52.337
+- RougeL: 59.779
+- RougeLsum: 60.437
+- Gen Len: 15.639
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_HUGGINGFACE_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/Jonnylaw/autotrain-flan-t5-tunned-3016686642
+```",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0
+40,GPT-DMV-125m,['DarwinAnim8or/DMV-Plate-Review'],,4000000.0,125000000,20.0,https://mlco2.github.io/impact/#compute,fine-tuning,"Oregon, USA",1 T4,Google Colab,,,,,,,551186797,False,16,0,"['transformers', 'pytorch', 'safetensors']",2023-03-22 22:38:31+00:00,2023-01-25 20:30:04+00:00,"
+# GPT-DMV-125m
+A finetuned version of [GPT-Neo-125M](https://huggingface.co/EleutherAI/gpt-neo-125M) on the 'DMV' dataset. (Linked above)
+A demo is available [here](https://huggingface.co/spaces/DarwinAnim8or/GPT-DMV-Playground)
+
+(I recommend using the demo playground rather than the Inference window on the right here)
+
+# Training Procedure
+This was trained on the 'DMV' dataset, using the ""HappyTransformers"" library on Google Colab.
+This model was trained for 5 epochs with learning rate 1e-2.
+
+# Biases & Limitations
+This likely contains the same biases and limitations as the original GPT-Neo-125M that it is based on, and additionally heavy biases from the DMV dataset.
+
+# Intended Use
+This model is meant for fun, nothing else.
+
+# Sample Use
+```python
+#Import model:
+from happytransformer import HappyGeneration
+happy_gen = HappyGeneration(""GPT-NEO"", ""DarwinAnim8or/GPT-DMV-125m"")
+
+#Set generation settings:
+from happytransformer import GENSettings
+args_top_k = GENSettings(no_repeat_ngram_size=3, do_sample=True,top_k=80, temperature=0.4, max_length=50, early_stopping=False)
+
+#Generate a response:
+result = happy_gen.generate_text(""""""PLATE: LUCH
+REVIEW REASON CODE: """""", args=args_top_k)
+
+print(result)
+print(result.text)
+```",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+41,biomedical-ner-all,"['tner/bc5cdr', 'commanderstrife/jnlpba', 'bc2gm_corpus', 'drAbreu/bc4chemd_ner', 'linnaeus', 'chintagunta85/ncbi_disease']",,30000000.0,,0.027939989,,fine-tuning,,1 RTX 3060,,,,,,,,265743541,False,13,1,"['transformers', 'pytorch']",2023-02-01 03:39:22+00:00,2023-01-26 15:41:19+00:00,"
+## About the Model
+An English Named Entity Recognition model, trained on Maccrobat to recognize the bio-medical entities (107 entities) from a given text corpus (case reports etc.). This model was built on top of distilbert-base-uncased
+
+- Dataset: Maccrobat https://figshare.com/articles/dataset/MACCROBAT2018/9764942
+- Carbon emission: 0.0279399890043426 Kg
+- Training time: 30.16527 minutes
+- GPU used : 1 x GeForce RTX 3060 Laptop GPU
+
+Checkout the tutorial video for explanation of this model and corresponding python library: https://youtu.be/xpiDPdBpS18
+
+## Usage
+The easiest way is to load the inference api from huggingface and second method is through the pipeline object offered by transformers library.
+```python
+from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+
+tokenizer = AutoTokenizer.from_pretrained(""d4data/biomedical-ner-all"")
+model = AutoModelForTokenClassification.from_pretrained(""d4data/biomedical-ner-all"")
+
+pipe = pipeline(""ner"", model=model, tokenizer=tokenizer, aggregation_strategy=""simple"") # pass device=0 if using gpu
+pipe(""""""The patient reported no recurrence of palpitations at follow-up 6 months after the ablation."""""")
+```
+
+## Author
+This model is part of the Research topic ""AI in Biomedical field"" conducted by Deepak John Reji, Shaina Raza. If you use this work (code, model or dataset), please star at:
+> https://github.com/dreji18/Bio-Epidemiology-NER",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0
+42,GPT-Greentext-355m,['DarwinAnim8or/greentext'],,800000.0,,60.0,https://mlco2.github.io/impact/#compute,fine-tuning,"Oregon, USA",1 T4,Google Colab,,,,,,,1444569373,False,26,0,"['transformers', 'pytorch', 'safetensors']",2023-03-20 10:55:09+00:00,2023-01-29 02:47:49+00:00,"
+# GPT-Greentext-355m
+A finetuned version of [GPT2-Medium](https://huggingface.co/gpt2-medium) on the 'greentext' dataset. (Linked above)
+A demo is available [here](https://huggingface.co/spaces/DarwinAnim8or/GPT-Greentext-Playground)
+The demo playground is recommended over the inference box on the right. 
+
+# Training Procedure
+This was trained on the 'greentext' dataset, using the ""HappyTransformers"" library on Google Colab.
+This model was trained for 15 epochs with learning rate 1e-2.
+
+# Biases & Limitations
+This likely contains the same biases and limitations as the original GPT2 that it is based on, and additionally heavy biases from the greentext dataset.
+It likely will generate offensive output. 
+
+# Intended Use
+This model is meant for fun, nothing else.
+
+# Sample Use
+```python
+#Import model:
+from happytransformer import HappyGeneration
+happy_gen = HappyGeneration(""GPT2"", ""DarwinAnim8or/GPT-Greentext-355m"")
+
+#Set generation settings:
+from happytransformer import GENSettings
+args_top_k = GENSettingsGENSettings(no_repeat_ngram_size=3, do_sample=True, top_k=80, temperature=0.8, max_length=150, early_stopping=False)
+
+#Generate a response:
+result = happy_gen.generate_text("""""">be me
+>"""""", args=args_top_k)
+
+print(result)
+print(result.text)
+```",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+43,Reviews-Sentiment-Analysis,['Kaludi/data-reviews-sentiment-analysis'],,10000000.0,,24.76716845,,pretraining,,,,0.952,,0.951,,,,737768761,False,203,0,"['transformers', 'pytorch']",2023-02-25 19:34:11+00:00,2023-01-29 06:18:53+00:00,"
+# Reviews Sentiment Analysis
+
+A tool that analyzes the overall sentiment of customer reviews for a specific product or service, whether it’s positive or negative. This analysis is performed by using natural language processing algorithms and machine learning from the model ‘Reviews-Sentiment-Analysis’ trained by Kaludi, allowing businesses to gain valuable insights into customer satisfaction and improve their products and services accordingly.
+
+## Training Procedure
+
+- learning_rate = 1e-5
+- batch_size = 32
+- warmup = 600
+- max_seq_length = 128
+- num_train_epochs = 10.0
+
+## Validation Metrics
+
+- Loss: 0.159
+- Accuracy: 0.952
+- Precision: 0.965
+- Recall: 0.938
+- AUC: 0.988
+- F1: 0.951
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I don't feel like you trust me to do my job.""}' https://api-inference.huggingface.co/models/Kaludi/Reviews-Sentiment-Analysis
+```
+
+Or Python API:
+
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained(""Kaludi/Reviews-Sentiment-Analysis"", use_auth_token=True)
+
+tokenizer = AutoTokenizer.from_pretrained(""Kaludi/Reviews-Sentiment-Analysis"", use_auth_token=True)
+
+inputs = tokenizer(""I don't feel like you trust me to do my job."", return_tensors=""pt"")
+
+outputs = model(**inputs)
+```",1,[],[],NLP,2023-01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+44,Food-Classification,['Kaludi/data-food-classification'],,70000000.0,,2.774520323,,pretraining,,,,0.977,,0.977,,,,347620241,False,16,0,"['transformers', 'pytorch']",2023-01-31 01:15:08+00:00,2023-01-29 18:45:51+00:00,"
+# Food Classification
+
+This is a Food Image Classifier model that has been trained by [Kaludi](https://huggingface.co/Kaludi) to recognize 7 different types of popular foods, including **apple pie**, **falafel**, **french toast**, **ice cream**, **ramen**, **sushi**, and **tiramisu**. It can accurately classify an image of food into one of these categories by analyzing its visual features. This model can be used by food bloggers, restaurants, and recipe websites to quickly categorize and sort their food images, making it easier to manage their content and provide a better user experience.
+
+### Gradio
+
+Tis model supports a [Gradio](https://github.com/gradio-app/gradio) Web UI to run the data-food-classification model:
+[![Open In HF Spaces](https://camo.githubusercontent.com/00380c35e60d6b04be65d3d94a58332be5cc93779f630bcdfc18ab9a3a7d3388/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d5370616365732d626c7565)](https://huggingface.co/spaces/Kaludi/Food-Classification_App)
+
+
+## Validation Metrics
+
+- Loss: 0.094
+- Accuracy: 0.977
+- Macro F1: 0.977
+- Micro F1: 0.977
+- Weighted F1: 0.977
+- Macro Precision: 0.978
+- Micro Precision: 0.977
+- Weighted Precision: 0.978
+- Macro Recall: 0.977
+- Micro Recall: 0.977
+- Weighted Recall: 0.977",1,[],[],Computer Vision,2023-01,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+45,Quick-Summarization,['Kaludi/data-quick-summarization'],,32000000.0,,460.6785691,,pretraining,,,,,,,41.066,,,2283804653,False,44,0,"['transformers', 'pytorch']",2023-02-05 20:38:18+00:00,2023-02-05 08:57:31+00:00,"
+# Quick Summarization
+
+This is a Text Summarization Model that has been trained by [Kaludi](https://huggingface.co/Kaludi) to Transform long and complex texts into concise and meaningful summaries. Get a quick and accurate overview of any document in seconds, saving you time and effort.
+
+### Gradio
+
+Tis model supports a [Gradio](https://github.com/gradio-app/gradio) Web UI to run the data-food-classification model:
+[![Open In HF Spaces](https://camo.githubusercontent.com/00380c35e60d6b04be65d3d94a58332be5cc93779f630bcdfc18ab9a3a7d3388/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d5370616365732d626c7565)](https://huggingface.co/spaces/Kaludi/Quick-Summarizer_App)
+
+
+## Validation Metrics
+
+- Loss: 1.629
+- Rouge1: 41.066
+- Rouge2: 19.231
+- RougeL: 28.295
+- RougeLsum: 37.746
+- Gen Len: 98.873
+
+## Usage
+
+You can use cURL to access this model:
+
+```
+$ curl -X POST -H ""Authorization: Bearer YOUR_HUGGINGFACE_API_KEY"" -H ""Content-Type: application/json"" -d '{""inputs"": ""I love AutoTrain""}' https://api-inference.huggingface.co/Kaludi/autotrain-quik-sum-3280991391
+```",1,[],[],NLP,2023-02,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+46,food-category-classification-v2.0,['Kaludi/food-category-classification-v2.0'],,450000000.0,,12.45627893,,pretraining,,,,0.96,,0.959,,,,347640721,False,310,4,"['transformers', 'pytorch']",2023-02-09 19:20:59+00:00,2023-02-08 20:35:47+00:00,"
+# Food Category Classification v2.0
+
+This is an updated Food Category Image Classifier model of the [old](https://huggingface.co/Kaludi/food-category-classification) model that has been trained by [Kaludi](https://huggingface.co/Kaludi) to recognize **12** different categories of foods, which includes **Bread**, **Dairy**, **Dessert**, **Egg**, **Fried Food**, **Fruit**, **Meat**, **Noodles**, **Rice**, **Seafood**, **Soup**, and **Vegetable**. It can accurately classify an image of food into one of these categories by analyzing its visual features. This model can be used by food bloggers, restaurants, and recipe websites to quickly categorize and sort their food images, making it easier to manage their content and provide a better user experience.
+
+### Gradio
+
+This model supports a [Gradio](https://github.com/gradio-app/gradio) Web UI to run the data-food-classification model:
+[![Open In HF Spaces](https://camo.githubusercontent.com/00380c35e60d6b04be65d3d94a58332be5cc93779f630bcdfc18ab9a3a7d3388/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d5370616365732d626c7565)](https://huggingface.co/spaces/Kaludi/Food-Category-Classification_V2_App)
+
+
+## Validation Metrics
+- Problem type: Multi-class Classification
+- Model ID: 3353292434
+- CO2 Emissions (in grams): 12.4563
+- Loss: 0.144
+- Accuracy: 0.960
+- Macro F1: 0.959
+- Micro F1: 0.960
+- Weighted F1: 0.959
+- Macro Precision: 0.962
+- Micro Precision: 0.960
+- Weighted Precision: 0.962
+- Macro Recall: 0.960
+- Micro Recall: 0.960
+- Weighted Recall: 0.960",1,[],[],Computer Vision,2023-02,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+47,e621TagAutocomplete,['0Tick/E621-Random-PostsTag-Scrape'],,153000000.0,,100.0,,,,,,0.3865,,,,,,333970169,False,26,0,"['tensorboard', 'transformers', 'pytorch', 'safetensors']",2023-03-22 22:18:25+00:00,2023-02-20 09:36:19+00:00,"
+## Model description
+
+This is a fine-tuned version of [distilgpt2](https://huggingface.co/distilgpt2) which is intended to be used with the [promptgen](https://github.com/AUTOMATIC1111/stable-diffusion-webui-promptgen) extension inside the AUTOMATIC1111 WebUI.
+It is trained on the raw tags of e621 with underscores and spaces
+
+
+# Training
+
+This model is a fine-tuned version of [distilgpt2](https://huggingface.co/distilgpt2) on a dataset of the tags of 116k random posts of e621.net.
+It achieves the following results on the evaluation set:
+- Loss: 4.3983
+- Accuracy: 0.3865
+
+
+## Training and evaluation data
+
+
+Use this collab notebook to train your own model. Also used to train this model
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/0Tick/stable-diffusion-tools/blob/main/distilgpt2train.ipynb)
+
+### Training hyperparameters
+
+The following hyperparameters were used during training:
+- learning_rate: 5e-05
+- train_batch_size: 6
+- eval_batch_size: 6
+- seed: 42
+- optimizer: Adam with betas=(0.9,0.999) and epsilon=1e-08
+- lr_scheduler_type: linear
+- num_epochs: 3.0
+
+## Intended uses & limitations
+
+Since DistilGPT2 is a distilled version of GPT-2, it is intended to be used for similar use cases with the increased functionality of being smaller and easier to run than the base model. 
+
+The developers of GPT-2 state in their [model card](https://github.com/openai/gpt-2/blob/master/model_card.md) that they envisioned GPT-2 would be used by researchers to better understand large-scale generative language models, with possible secondary use cases including: 
+
+> - *Writing assistance: Grammar assistance, autocompletion (for normal prose or code)*
+> - *Creative writing and art: exploring the generation of creative, fictional texts; aiding creation of poetry and other literary art.*
+> - *Entertainment: Creation of games, chat bots, and amusing generations.*
+
+Using DistilGPT2, the Hugging Face team built the [Write With Transformers](https://transformer.huggingface.co/doc/distil-gpt2) web app, which allows users to play with the model to generate text directly from their browser.
+
+#### Out-of-scope Uses
+
+OpenAI states in the GPT-2 [model card](https://github.com/openai/gpt-2/blob/master/model_card.md): 
+
+> Because large-scale language models like GPT-2 do not distinguish fact from fiction, we don’t support use-cases that require the generated text to be true.
+>
+> Additionally, language models like GPT-2 reflect the biases inherent to the systems they were trained on, so we do not recommend that they be deployed into systems that interact with humans unless the deployers first carry out a study of biases relevant to the intended use-case.
+
+
+
+### Framework versions
+
+- Transformers 4.27.0.dev0
+- Pytorch 1.13.1+cu116
+- Datasets 2.9.0
+- Tokenizers 0.13.2",1,[],[],NLP,2023-02,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
