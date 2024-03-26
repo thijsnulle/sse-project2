@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Popup</title>
+  <style>
+    body {
+      width: 250px;
+      height: 200px;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+	
+	.prediction {
+	  -webkit-text-stroke: 0.2px black;
+	}
+  </style>
+</head>
+
+<body>
+  <label for="domain">Domain:</label>
+  <select id="domain">
+    <option value="Computer Vision">Computer Vision</option>
+    <option value="NLP">NLP</option>
+    <option value="Not Specified">Other</option>
+  </select>
+
+  <label for="datasetSize">Dataset Size (bytes):</label>
+  <input type="number" id="datasetSize" placeholder="Enter dataset size">
+
+  <button id="submitBtn">Submit</button>
+  
+  <div class="prediction" id="prediction">See your predicted Co2 equivalence in grams here:</div>
+
+  <script src="autoscore.js"></script>
+</body>
+
+</html>

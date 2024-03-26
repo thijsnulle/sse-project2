@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Ecolabel",
+  "version": "1.0",
+
+  "description": "Adds a Co2 equivalence label to all webpages with models on huggingface.co.",
+  
+  "permissions": [
+    "activeTab"
+  ],
+
+  "icons": {
+    "48": "icons/econ-48.png",
+	"96": "icons/econ-96.png"
+  },
+
+  "browser_action": {
+    "default_popup": "ecolabel.html"
+  }
+
+}

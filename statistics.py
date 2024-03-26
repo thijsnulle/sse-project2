@@ -1,8 +1,9 @@
 import csv, math, re
 from dataclasses import dataclass
-from scipy.stats import ttest_ind
+from scipy.stats import ttest_ind, probplot
 import numpy as np
-
+import scipy.stats as stats
+import matplotlib as plt
 @dataclass
 class CarbonEmission:
     model_id: str
@@ -150,7 +151,7 @@ def comparison():
 
         dataset_size = format_large_number(carbon_emission.size)
 
-        print(f'{str(i+1).rjust(2)}.\t{carbon_emission.model_id[:20].ljust(20)}\t{float(mantissa):.2f}e{exponent}\t{dataset_size}\t\t{'✓' if carbon_emission.auto else ''}')
+        print(f'{str(i+1).rjust(2)}.\t{carbon_emission.model_id[:20].ljust(20)}\t{float(mantissa):.2f}e{exponent}\t{dataset_size}\t\t\t{'✓' if carbon_emission.auto else ''}')
 
     print()
     print('===== Top 25 least efficient models =====')
@@ -161,7 +162,7 @@ def comparison():
 
         dataset_size = format_large_number(carbon_emission.size)
 
-        print(f'{str(i+1).rjust(2)}.\t{carbon_emission.model_id[:20].ljust(20)}\t{float(mantissa):.2f}e{exponent}\t{dataset_size}\t\t{'✓' if carbon_emission.auto else ''}')
+        print(f'{str(i+1).rjust(2)}.\t{carbon_emission.model_id[:20].ljust(20)}\t{float(mantissa):.2f}e{exponent}\t{dataset_size}\t\t\t{'✓' if carbon_emission.auto else ''}')
 
     total_non_auto = sum(1 for x in carbon_emissions if not x.auto)
     total_auto = sum(1 for x in carbon_emissions if x.auto)
@@ -185,6 +186,19 @@ def comparison():
         print("There is a statistically significant difference between automatic and non-automatic model emissions.")
     else:
         print("There is no statistically significant difference between automatic and non-automatic model emissions.")
+
+def create_carbon_emissions_file():
+    carbon_emissions = load()
+    carbon_emissions = [x for x in carbon_emissions if x.size > 0 and x.co2_emission > 0]
+
+    auto_carbon_emissions = [x for x in carbon_emissions if x.auto]
+    sorted_auto_carbon_emissions = sorted(carbon_emissions, key=lambda x: x.co2_emission)
+
+    sorted_auto_carbon_emissions_grams = [x.co2_emission for x in sorted_auto_carbon_emissions]
+
+    # write array to file
+    np_grams = np.array(sorted_auto_carbon_emissions_grams)
+    np_grams.tofile('sorted_auto_carbon_emissions')
 
 if __name__ == '__main__':
     comparison()
