@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to render the prediction in the popup
   function renderPrediction(prediction, colour) {
     const predictionElement = document.getElementById("prediction");
-    predictionElement.textContent = "Prediction: " + prediction + " grams";
+	console.log(typeof prediction[0]);
+    predictionElement.textContent = "Prediction: " + prediction[0].toFixed(2) + " grams";
     predictionElement.style.color = colour;
   }
 });

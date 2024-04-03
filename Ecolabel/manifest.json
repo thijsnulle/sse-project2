@@ -3,7 +3,7 @@
   "name": "Ecolabel",
   "version": "1.0",
 
-  "description": "Adds a Co2 equivalence label to all webpages with models on huggingface.co.",
+  "description": "Adds a CO2 equivalence predictor to huggingface.co.",
   
   "permissions": [
     "activeTab"
@@ -17,5 +17,4 @@
   "browser_action": {
     "default_popup": "ecolabel.html"
   }
-
 }
